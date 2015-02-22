@@ -1,0 +1,58 @@
+" :filetype pattern1, pattern2 defaultprogram,program2
+" :fileviewer pattern1, pattern2 consoleviewer
+
+" dir
+fileviewer */ tree %f
+
+" txt
+filetype *.txt vim %f
+
+" img
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif
+    \ gpicview %c
+
+" audio
+filetype *.mp3,*.wav,*.flac,*.ogg,*.m4a
+    \ vlc %f
+
+" video
+filextype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.mov
+    \ vlc %f
+
+" playlist
+filetype *.m3u
+    \ vlc %f
+
+" office
+filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd
+    \ libreoffice %f &
+
+" pdf
+filetype *.pdf apvlv %f
+
+" djvu
+filetype *.djvu djview %f
+
+" ebook
+filetype *.fb2,*.mobi,*.epub,*.chm fbreader %f
+
+" web
+filetype *.html,*.htm vim %f
+"fileviewer *.html,*.htm google-chrome %f
+
+" archives
+filetype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
+    \ file-roller %c
+fileviewer *.tgz,*.tar.gz tar -tzf %c
+fileviewer *.tbz2,*.tar.bz2 tar -tjf %c
+fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
+fileviewer *.7z	7z l %c
+fileviewer *.rar rar l %c
+fileviewer *.gz gzip -l %c
+
+" wine
+filetype *.exe wine %f
+
+" tux guitar
+filetype *.tg,*.gp,*.gp3,*.gp4,*.gp5
+    \ tuxguitar %f

@@ -1,0 +1,48 @@
+set nocompatible
+set shortmess+=I
+
+set nobackup
+set nowritebackup
+set noswapfile
+set autoread
+
+set history=128
+set undolevels=1024
+
+set mouse=a
+set backspace=indent,eol,start
+set clipboard=unnamedplus
+
+set t_Co=256
+set background=dark
+
+set laststatus=2
+set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+set showcmd
+set ruler
+set showmode
+
+set number
+set nowrap
+set sidescroll=20
+set cursorline
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+set showmatch
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+set splitright
+
+au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
+au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
+
+source ~/.vim/mappings.vim
+source ~/.vim/plugins_settings.vim

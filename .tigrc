@@ -1,0 +1,1 @@
+bind generic p !git push origin %(branch)
