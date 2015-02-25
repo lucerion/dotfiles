@@ -223,5 +223,6 @@ bindsym $mod2+Print exec scrot -s
 exec xset b off
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 exec syndaemon -t -K -i 1 -d
+#exec xrdb -merge ~/.Xresources
 #exec timidity -iA -Os
 #exec xrandr --output LVDS1 --left-of VGA1

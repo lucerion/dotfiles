@@ -44,5 +44,9 @@ set splitright
 au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
 au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
 
-source ~/.vim/mappings.vim
-source ~/.vim/plugins_settings.vim
+if filereadable(expand('~/.vim/mappings.vim'))
+  source ~/.vim/mappings.vim
+endif
+if filereadable(expand('~/.vim/plugins.settings.vim'))
+  source ~/.vim/plugins.settings.vim
+endif
