@@ -87,8 +87,6 @@ let g:user_emmet_leader_key = '<C-e>'
 au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
 au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
 
-command! Ghist Extradite
-
 if filereadable(expand('~/.vim/mappings.vim'))
   source ~/.vim/mappings.vim
 endif

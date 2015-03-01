@@ -22,9 +22,6 @@ noremap <C-k> <C-w>k
 
 noremap <Leader>g  :Ack!<Space>
 
-noremap <Leader>ob :CtrlPBuffer<CR>
-noremap <Leader>of :CtrlP<CR>
-
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
 
@@ -34,12 +31,8 @@ map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunNearestSpec()<CR>
 map <Leader>rr :call RunLastSpec()<CR>
 
-vmap v     <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-
-noremap <Leader>fs :VimFilerCurrentDir -split -horizontal -force-quit<CR>
-noremap <Leader>fv :VimFilerSplit -force-quit<CR>
-noremap <Leader>ff :VimFiler -find -split -horizontal -force-quit<CR>
+noremap <Leader>fs :VimFilerSplit -horizontal -find -force-quit<CR>
+noremap <Leader>fv :VimFilerSplit -find -force-quit<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
@@ -56,6 +49,7 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>O      <Plug>(vimfiler_expand_tree_recursive)
   nmap <buffer>s      <Plug>(vimfiler_split_edit_file)
   nmap <buffer>v      <Plug>(vimfiler_toggle_mark_current_line)
+  nmap <buffer><expr>t vimfiler#do_switch_action('tabopen')
   nmap <buffer>?      <Plug>(vimfiler_help)
   nmap <buffer>gs     <Plug>(vimfiler_toggle_safe_mode)
   nmap <buffer>r      <Plug>(vimfiler_rename_file)
@@ -71,5 +65,4 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>!      <Plug>(vimfiler_execute_shell_command)
   nmap <buffer>e      <Plug>(vimfiler_execute_external_filer)
   nmap <buffer>cd     <Plug>(vimfiler_cd_input_directory)
-  nmap <buffer><expr>t vimfiler#do_switch_action('tabopen')
 endfunc
