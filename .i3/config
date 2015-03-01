@@ -33,6 +33,7 @@ client.urgent           #000000 #900000 #ffffff
 
 ## close
 bindsym $mod+w kill
+bindsym $mod+button1 kill
 
 ## change focus
 
@@ -96,7 +97,6 @@ bindsym $mod+e floating toggle
 ## change focus between tiling/floating windows
 bindsym $mod+a focus mode_toggle
 
-focus_follows_mouse no
 floating_modifier $mod
 
 
