@@ -20,10 +20,13 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
-noremap <Leader>g  :Ack!<Space>
+noremap <Leader>g :Ack!<Space>
+noremap <Leader>f :FindAll<Space>
 
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
+
+noremap <Leader>nw :WidenRegion<CR>
 
 map <Leader>ra :call RunAllSpecs()<CR>
 map <Leader>rd :call RunDirSpecs()<CR>
@@ -31,8 +34,8 @@ map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunNearestSpec()<CR>
 map <Leader>rr :call RunLastSpec()<CR>
 
-noremap <Leader>fs :VimFilerSplit -horizontal -find -force-quit<CR>
-noremap <Leader>fv :VimFilerSplit -find -force-quit<CR>
+noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
+noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()

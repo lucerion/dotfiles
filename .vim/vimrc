@@ -57,7 +57,9 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
 
 let g:ack_default_options =
-  \ " -s -H --nocolor --nogroup --nofollow --column --smart-case --ignore-dir=tmp --ignore-file=match:/.gitignore/"
+  \ ' -s -H --nocolor --nogroup --nofollow --column --smart-case' .
+  \ ' --ignore-dir=tmp --ignore-dir=log' .
+  \ ' --ignore-file=match:/.gitignore/ --ignore-file=match:/.*.log/'
 
 let g:SuperTabDefaultCompletionType = 'context'
 
@@ -83,6 +85,8 @@ let g:extra_whitespace_ignored_filetypes =
   \ ['vimfiler', 'vimfiler:default', 'vimfiler:explorer']
 
 let g:user_emmet_leader_key = '<C-e>'
+
+let g:find_all_ignore = ['tmp']
 
 au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
 au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
