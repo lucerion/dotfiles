@@ -4,13 +4,9 @@ nmap <F2>      :VimFilerExplorer<CR>
 vmap <F2> <Esc>:VimFilerExplorer<CR>i
 imap <F2> <Esc>:VimFilerExplorer<CR>i
 
-nmap <F3>      :UndotreeToggle<CR>
-vmap <F3> <Esc>:UndotreeToggle<CR>i
-imap <F3> <Esc>:UndotreeToggle<CR>i
-
-nmap <F4>      :TagbarToggle<CR>
-vmap <F4> <Esc>:TagbarToggle<CR>i
-imap <F4> <Esc>:TagbarToggle<CR>i
+nmap <F3>      :TagbarToggle<CR>
+vmap <F3> <Esc>:TagbarToggle<CR>i
+imap <F3> <Esc>:TagbarToggle<CR>i
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -20,8 +16,10 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
-noremap <Leader>g :Ack!<Space>
+noremap <Leader>gr :Ack!<Space>
 noremap <Leader>f :FindAll<Space>
+
+noremap <Leader>gs :Gstatus<CR>
 
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
