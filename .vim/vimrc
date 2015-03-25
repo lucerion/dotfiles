@@ -94,3 +94,7 @@ au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
 if filereadable(expand('~/.vim/mappings.vim'))
   source ~/.vim/mappings.vim
 endif
+
+if filereadable(expand('~/.vim/vimrc.local'))
+  source ~/.vim/vimrc.local
+endif

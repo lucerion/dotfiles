@@ -2,3 +2,4 @@
 .vim/bundle
 .vifm/vifminfo
 .vifm/marks
+.vim/vimrc.local
