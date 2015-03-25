@@ -64,6 +64,7 @@ let g:ack_default_options =
   \ ' --ignore-file=match:/.gitignore/ --ignore-file=match:/.*.log/'
 
 let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextTextOmniPrecedence = []
 
 let g:tagbar_compact = 1
 
@@ -83,6 +84,9 @@ let g:extra_whitespace_ignored_filetypes =
 let g:user_emmet_leader_key = '<C-e>'
 
 let g:find_all_ignore = ['tmp']
+
+let g:vim_tags_auto_generate = 0
+let g:vim_tags_ctags_binary = 'ripper-tags'
 
 au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
 au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
