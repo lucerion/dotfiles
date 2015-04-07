@@ -35,6 +35,9 @@ map <Leader>rr :call RunLastSpec()<CR>
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 
+noremap <Leader>of :CtrlPBufTagAll<CR>
+noremap <Leader>ot :CtrlPTag<CR>
+
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
   nmap <buffer>q      <Plug>(vimfiler_hide)
