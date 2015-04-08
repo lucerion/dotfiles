@@ -93,4 +93,4 @@ alias rsp='rspec'
 
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
 
-marks=~/.bookmarks; [ -f $marks ] && . $marks
+marks=~/.aliases.local; [ -f $marks ] && . $marks

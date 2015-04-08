@@ -29,6 +29,12 @@ bindkey -e
 export EDITOR='vim'
 export VISUAL='vim'
 
+case $TERM in
+  xterm*)
+    precmd () { print -Pn "\e]0;%n@%m: %~\a" }
+  ;;
+esac
+
 if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
