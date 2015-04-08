@@ -17,8 +17,8 @@ setopt complete_aliases
 
 zstyle ':completion:*' menu select
 
-export PROMPT='%~> '
-export RPROMPT='%n@%M'
+export PROMPT="%~> "
+export RPROMPT="%n@%M"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=4096
@@ -30,7 +30,7 @@ export EDITOR='vim'
 export VISUAL='vim'
 
 case $TERM in
-  xterm*)
+  xterm*|rxvt*)
     precmd () { print -Pn "\e]0;%n@%m: %~\a" }
   ;;
 esac

@@ -61,7 +61,7 @@ let g:ctrlp_funky_syntax_highlight = 1
 let g:ack_default_options =
   \ ' -s -H --nocolor --nogroup --nofollow --column --smart-case' .
   \ ' --ignore-dir=tmp --ignore-dir=log' .
-  \ ' --ignore-file=match:/.gitignore/ --ignore-file=match:/.*.log/'
+  \ ' --ignore-file=match:/.gitignore/'
 
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextTextOmniPrecedence = []
