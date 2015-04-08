@@ -1,12 +1,18 @@
-alias lla='ls -la'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+alias ls='ls --color=auto'
+alias lla='ls -lA'
 
 alias mkfile='touch'
 alias rmr='rm -rf'
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ~='cd ~'
-function -() { cd -; }
+if [ -n "$BASH" ]; then
+  alias ..='cd ..'
+  alias ...='cd ../..'
+  alias ~='cd ~'
+  function -() { cd -; }
+fi
 
 alias grep='grep -ins --color'
 alias rgrep='rgrep -ins --color'
@@ -55,6 +61,7 @@ alias grm='git rm'
 alias gs='git status'
 alias gst='git status'
 alias gsh='git stash'
+
 alias ts='tig status'
 
 alias rl='rails'
@@ -86,4 +93,4 @@ alias rsp='rspec'
 
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
 
-marks=~/.bash_bookmarks; [ -f $marks ] && . $marks
+marks=~/.bookmarks; [ -f $marks ] && . $marks
