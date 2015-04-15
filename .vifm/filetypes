@@ -8,25 +8,22 @@ fileviewer */ tree %f
 filetype *.txt vim %f
 
 " img
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif
-    \ gpicview %c
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif gpicview %c
 filetype *.svg google-chrome %f
 
 " audio
-filetype *.mp3,*.wav,*.flac,*.ogg,*.m4a
-    \ vlc %f
+filetype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f
 
 " video
 filextype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.mov
-    \ vlc %f
+  \ vlc %f
 
 " playlist
-filetype *.m3u
-    \ vlc %f
+filetype *.m3u vlc %f
 
 " office
 filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd
-    \ libreoffice %f &
+  \ libreoffice %f &
 
 " pdf
 filetype *.pdf apvlv %f
@@ -43,7 +40,7 @@ filetype *.html,*.htm vim %f
 
 " archives
 filetype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
-    \ file-roller %c
+  \ file-roller %c
 fileviewer *.tgz,*.tar.gz tar -tzf %c
 fileviewer *.tbz2,*.tar.bz2 tar -tjf %c
 fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
@@ -55,5 +52,4 @@ fileviewer *.gz gzip -l %c
 filetype *.exe wine %f
 
 " tux guitar
-filetype *.tg,*.gp,*.gp3,*.gp4,*.gp5
-    \ tuxguitar %f
+filetype *.tg,*.gp,*.gp3,*.gp4,*.gp5 tuxguitar %f

@@ -134,7 +134,7 @@ bindsym $mod+Shift+asterisk move workspace 8
 bindsym $mod+Shift+parenleft move workspace 9
 bindsym $mod+Shift+parenright move workspace 10
 
-bindsym $mod+u workspace back_and_forth
+bindsym $mod+apostrophe workspace back_and_forth
 bindsym $mod+Shift+U move container to workspace back_and_forth
 
 workspace_layout tabbed

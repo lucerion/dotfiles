@@ -14,9 +14,6 @@
 " %i ingore command output
 " !! - wait after finish
 
-let $terminal = "xterm"
-let $vim = "xterm -e vim"
-
 command df df -h %m 2> /dev/null
 command dirsize du -sh %m
 command size du -shc %f %m
@@ -27,16 +24,16 @@ command umount sudo umount
 
 command diff vimdiff %f %F
 command run !! ./%f
+command term !xterm %a
 command tree !!tree %f -aF
-command vim $vim
+command vim !vim %a
 command rsync !!rsync %a
 command git !!git %a
-command tig !tig status
 command rails !!rails %a
 command rake !!rake %a
 command bundle !!bundle %a
 command rspec !!rspec %a
-command config :execute ':!vim $MYVIFMRC'
+command config :vim $MYVIFMRC
 
 command zip zip -r %f.zip %f
 command unzip unzip %f
@@ -54,4 +51,3 @@ command unbz tar -jxvf %f
 " aliases
 command hist :history
 command man :apropos %a
-command term $terminal
