@@ -15,7 +15,7 @@
 " !! - wait after finish
 
 command df df -h %m 2> /dev/null
-command dirsize du -sh %m
+command dirsize du -sh %S
 command size du -shc %f %m
 
 command blkid sudo blkid %m
