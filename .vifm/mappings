@@ -1,4 +1,3 @@
-nmap <bs> h
 nmap rl :rlink<cr>
 nmap al :alink<cr>
 nmap S :sort<cr>
@@ -9,20 +8,18 @@ nmap yp :clone<cr>
 nmap yr :rsync -r --progress %c %D<cr>
 nmap cd :cd<space>
 nmap cs ga
-nmap I :vim %f &<cr>
+nmap I :term -e vim %f &<cr>
 nmap cf :touch<space>
 nmap dc :mkdir<space>
 nmap s :find<space>
 nmap gr :grep<space>
-nmap gn :cd . %f<cr>
-nmap gb :cd -<cr>
 nmap -  :cd ..<cr>
 nmap zc :filter<space>
 nmap cc :change<cr>
 
-nmap ot :execute ':!xterm &'<cr>
-nmap ov :execute ':!xterm -e vim &'<cr>
-nmap cv :execute ':!xterm -e vim %f &'<cr>
+nmap ot :term<cr>
+nmap ov :vim<cr>
+nmap cv :term -e vim %f &<cr>
 nmap rv :rename<cr>
 
 " yank into the clipboard
@@ -43,5 +40,5 @@ nmap <f5> :copy<cr>
 nmap <f6> :move<cr>
 nmap <f7> :mkdir<space>
 nmap <f8> :delete<cr>
-nmap <f9> :terminal<cr>
+nmap <f9> :term<cr>
 nmap <f10> :exit<cr>
