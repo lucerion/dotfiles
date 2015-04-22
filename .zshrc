@@ -1,6 +1,7 @@
-autoload -U compinit && compinit
-autoload -U promptinit && promptinit
-autoload -U colors && colors
+autoload -Uz compinit && compinit
+autoload -Uz promptinit && promptinit
+autoload -Uz colors && colors
+autoload -Uz edit-command-line
 
 setopt autocd
 setopt extended_glob
@@ -17,6 +18,8 @@ setopt complete_aliases
 
 zstyle ':completion:*' menu select
 
+zle -N edit-command-line
+
 export PROMPT="%~> "
 export RPROMPT="%n@%M"
 
@@ -25,6 +28,7 @@ HISTSIZE=4096
 SAVEHIST=4096
 
 bindkey -e
+bindkey "^X^E" edit-command-line
 
 export EDITOR='vim'
 export VISUAL='vim'
