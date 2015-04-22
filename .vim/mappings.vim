@@ -69,4 +69,6 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>!      <Plug>(vimfiler_execute_shell_command)
   nmap <buffer>e      <Plug>(vimfiler_execute_external_filer)
   nmap <buffer>cd     <Plug>(vimfiler_cd_input_directory)
+  nmap <buffer>gs     <Plug>(vimfiler_find)
+  nmap <buffer>gr     <Plug>(vimfiler_grep)
 endfunc
