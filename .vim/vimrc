@@ -88,6 +88,8 @@ let g:find_all_ignore = ['tmp']
 let g:vim_tags_auto_generate = 0
 let g:vim_tags_ctags_binary = 'ripper-tags'
 
+let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+
 au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
 au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
 
