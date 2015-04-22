@@ -4,6 +4,8 @@ alias vdir='vdir --color=auto'
 alias ls='ls --color=auto'
 alias lla='ls -lA'
 
+alias jobs='jobs -l'
+
 alias mkfile='touch'
 alias rmr='rm -rf'
 
