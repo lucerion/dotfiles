@@ -45,6 +45,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 source ~/.vim/plugins.vim
+if filereadable(expand('~/.vim/plugins.local.vim'))
+  source ~/.vim/plugins.local.vim
+endif
 call vundle#end()
 syntax on
 filetype plugin indent on
@@ -77,9 +80,6 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = 'x'
-
-let g:extra_whitespace_ignored_filetypes =
-  \ ['vimfiler', 'vimfiler:default', 'vimfiler:explorer']
 
 let g:user_emmet_leader_key = '<C-e>'
 
