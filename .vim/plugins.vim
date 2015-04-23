@@ -2,8 +2,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tomasr/molokai'
 Plugin 'airblade/vim-rooter'
 Plugin 'mkitt/tabline.vim'
-Plugin 'Shougo/unite.vim' " vimfiler, neossh
-Plugin 'Shougo/vimproc.vim' " neossh
+Plugin 'Shougo/unite.vim'   " depend: vimfiler, neossh
+Plugin 'Shougo/vimproc.vim' " depend: neossh
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/neossh.vim'
 Plugin 'szw/vim-tags'
@@ -24,7 +24,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'edsono/vim-matchit' " vim-ruby-refactoring
+Plugin 'edsono/vim-matchit' " depend: vim-ruby-refactoring
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
@@ -36,14 +36,13 @@ Plugin 'groenewege/vim-less'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-haml'
 Plugin 'mattn/emmet-vim'
-Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate
-Plugin 'tomtom/tlib_vim' " snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils' " depend: snipmate
+Plugin 'tomtom/tlib_vim'              " depend: snipmate
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'int3/vim-extradite'
-Plugin 'takahirojin/gbr.vim'
 Plugin 'bogado/file-line'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kshenoy/vim-signature'
