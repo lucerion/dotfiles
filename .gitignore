@@ -3,3 +3,4 @@
 .vifm/vifminfo
 .vifm/marks
 .vim/vimrc.local
+.vim/plugins.local.vim

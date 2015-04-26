@@ -26,11 +26,11 @@ noremap <Leader>s :SplitjoinSplit<CR>
 
 noremap <Leader>nw :WidenRegion<CR>
 
-map <Leader>ra :call RunAllSpecs()<CR>
-map <Leader>rd :call RunDirSpecs()<CR>
-map <Leader>rf :call RunCurrentSpecFile()<CR>
-map <Leader>rl :call RunNearestSpec()<CR>
-map <Leader>rr :call RunLastSpec()<CR>
+map <Leader>ra :RSpecRunAll<CR>
+map <Leader>rd :RSpecRunCurrentDir<CR>
+map <Leader>rf :RSpecRunCurrentFile<CR>
+map <Leader>rl :RSpecRunNearest<CR>
+map <Leader>rr :RSpecRunLast<CR>
 
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>

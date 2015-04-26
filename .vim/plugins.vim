@@ -28,7 +28,7 @@ Plugin 'edsono/vim-matchit' " depend: vim-ruby-refactoring
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
-Plugin 'lucerion/vim-rspec'
+Plugin 'lucerion/vim-test-runner'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'

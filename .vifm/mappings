@@ -17,8 +17,8 @@ nmap -  :cd ..<cr>
 nmap zc :filter<space>
 nmap cc :change<cr>
 
-nmap ot :term<cr>
-nmap ov :vim<cr>
+nmap ot :term &<cr>
+nmap ov :vim &<cr>
 nmap cv :term -e vim %f &<cr>
 nmap rv :rename<cr>
 
