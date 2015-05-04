@@ -90,8 +90,17 @@ let g:vim_tags_ctags_binary = 'ripper-tags'
 
 let g:monster#completion#rcodetools#backend = 'async_rct_complete'
 
-au BufRead,BufNewFile *.rb setl makeprg=ruby\ %
-au BufRead,BufNewFile *.html setl makeprg=google-chrome\ %
+aug set_makeprg
+  au!
+  au FileType ruby setl makeprg=ruby\ %
+  au FileType html setl makeprg=google-chrome\ %
+aug END
+
+aug auto_reload
+  au!
+  au BufWritePost vimrc,vimrc.local,plugins.vim,plugins.local.vim,mappings.vim
+    \ source $MYVIMRC
+aug END
 
 if filereadable(expand('~/.vim/mappings.vim'))
   source ~/.vim/mappings.vim
