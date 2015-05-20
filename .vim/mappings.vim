@@ -1,15 +1,15 @@
 let mapleader = " "
 
-nmap <F2>      :VimFilerExplorer -no-focus<CR>
-vmap <F2> <Esc>:VimFilerExplorer -no-focus<CR>gv
-imap <F2> <Esc>:VimFilerExplorer -no-focus<CR>i
-
-nmap <F3>      :TagbarToggle<CR>
-vmap <F3> <Esc>:TagbarToggle<CR>gv
-imap <F3> <Esc>:TagbarToggle<CR>i
+nmap <F2> :VimFilerExplorer<CR>
+nmap <F3> :TagbarToggle<CR>
 
 noremap <S-l> gt
 noremap <S-h> gT
+
+noremap <Leader>tl :tabmove +1<CR>
+noremap <Leader>th :tabmove -1<CR>
+noremap <Leader>tL :tabmove <CR>
+noremap <Leader>tH :tabmove 0<CR>
 
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
@@ -23,8 +23,6 @@ noremap <Leader>gs :Gstatus<CR>
 
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
-
-noremap <Leader>nw :WidenRegion<CR>
 
 map <Leader>ra :RSpecRunAll<CR>
 map <Leader>rd :RSpecRunCurrentDir<CR>
