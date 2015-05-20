@@ -1,3 +1,125 @@
+func! s:vundle_init()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+  source ~/.vim/plugins.vim
+  if filereadable(expand('~/.vim/plugins.local.vim'))
+    source ~/.vim/plugins.local.vim
+  endif
+  call vundle#end()
+endfunc
+
+
+" vim options
+
+set nocompatible
+set shortmess+=I
+
+set nobackup
+set nowritebackup
+set noswapfile
+set autoread
+
+set history=128
+set undolevels=1024
+
+set mouse=a
+set backspace=indent,eol,start
+set clipboard=unnamedplus
+
+set t_Co=256
+set background=dark
+
+set laststatus=2
+set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+set showcmd
+set ruler
+set showmode
+
+set number
+set nowrap
+set sidescroll=20
+set cursorline
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+set showmatch
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+set splitright
+
+filetype off
+
+call s:vundle_init()
+
+syntax on
+filetype plugin indent on
+
+colorscheme molokai
+
+augroup vimrc_auto_reload
+  autocmd!
+  autocmd BufWritePost vimrc,vimrc.local,plugins.vim,plugins.local.vim
+    \ source $MYVIMRC
+augroup END
+
+augroup set_makeprg
+  autocmd!
+  autocmd FileType ruby setl makeprg=ruby\ %
+  autocmd FileType html setl makeprg=google-chrome\ %
+augroup END
+
+
+" plugins options
+
+let g:ctrlp_reuse_window = 'help\|quickfix'
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_extensions = ['git_branch']
+let g:ctrlp_funky_syntax_highlight = 1
+
+let g:ack_default_options =
+  \ ' -s -H --nocolor --nogroup --nofollow --column --smart-case' .
+  \ ' --ignore-dir=tmp --ignore-dir=log' .
+  \ ' --ignore-file=match:/.gitignore/'
+
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextTextOmniPrecedence = []
+
+let g:tagbar_compact = 1
+
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_no_default_key_mappings = 1
+let g:vimfiler_expand_jump_to_first_child = 0
+let g:vimfiler_ignore_pattern = ''
+let g:vimfiler_time_format = '%Y-%m-%d %H:%M'
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_readonly_file_icon = 'x'
+call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
+
+let g:user_emmet_leader_key = '<C-e>'
+
+let g:find_all_ignore = ['tmp']
+
+let g:vim_tags_auto_generate = 0
+let g:vim_tags_ctags_binary = 'ripper-tags'
+
+let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+
+let g:extra_whitespace_ignored_filetypes = ['vimfiler']
+
+
+" mappings
+
 let mapleader = " "
 
 nmap <F2> :VimFilerExplorer<CR>
@@ -69,3 +191,8 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>gr       <Plug>(vimfiler_grep)
   nmap <buffer>?        <Plug>(vimfiler_help)
 endfunc
+
+
+if filereadable(expand('~/.vim/vimrc.local'))
+  source ~/.vim/vimrc.local
+endif
