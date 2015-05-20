@@ -80,6 +80,7 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = 'x'
+call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
 
 let g:user_emmet_leader_key = '<C-e>'
 
@@ -89,6 +90,8 @@ let g:vim_tags_auto_generate = 0
 let g:vim_tags_ctags_binary = 'ripper-tags'
 
 let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+
+let g:extra_whitespace_ignored_filetypes = ['vimfiler']
 
 aug set_makeprg
   au!
