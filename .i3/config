@@ -184,11 +184,7 @@ bar {
 
 ## dmenu
 set $params -nb "#111" -nf "#fff" -sb "#222" -fn "7x14"
-
 bindsym $mod2+m exec dmenu_run $params
-bindsym $mod+m exec sudo dmenu_run $params -p "sudo"
-bindsym $mod2+c exec $term -e `dmenu_path | dmenu -p "term" $params ${1+"$@"}`
-bindsym $mod+c exec sudo $term -e `dmenu_path | dmenu -p "sudo term" $params ${1+"$@"}`
 
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
