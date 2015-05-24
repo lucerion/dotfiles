@@ -1,111 +1,115 @@
-set $mod Mod4
+set $mod  Mod4
 set $mod2 Mod1
 
-
 set $term i3-sensible-terminal
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec $term; move left
 
-bindsym $mod+Shift+E exit
-bindsym $mod+Shift+R restart
+bindsym $mod+Return       exec $term
+bindsym $mod+$mod2+Return exec $term; move left
+
+bindsym $mod+Shift+e exit
+bindsym $mod+Shift+r restart
 
 bindsym $mod+x exec $term -e vim ~/.i3/config
 bindsym $mod+z reload
 
 
-## fonts (ISO 10646 = unicode)
+# fonts (ISO 10646 = unicode)
 set $font-terminus -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-set $font-fixed -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
-set $font-sans pango:Sans 12px
-set $font-play pango:Play 14px
+set $font-fixed    -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
+set $font-sans      pango:Sans 12px
+set $font-play      pango:Play 14px
 
 font $font-terminus
 
-
-## colors               border  background text
+# colors                border  background text
 client.unfocused        #111111 #000000 #888888
 client.focused          #333333 #151515 #eeeeee
 client.focused_inactive #222222 #111111 #dddddd
 client.urgent           #000000 #900000 #ffffff
 
+# border style [none, normal, 1pixel, toggle]
+bindsym $mod+b border toggle
 
-### containers
 
-## close
+## containers
+
+# close
+
 bindsym $mod+w kill
 bindsym $mod+button1 kill
 
-## change focus
+# focus
 
-bindsym $mod+j focus left
-bindsym $mod+k focus up
-bindsym $mod+l focus down
-bindsym $mod+semicolon focus right
+bindsym $mod+j          focus left
+bindsym $mod+k          focus up
+bindsym $mod+l          focus down
+bindsym $mod+semicolon  focus right
 
-bindsym $mod2+j focus left
-bindsym $mod2+k focus up
-bindsym $mod2+l focus down
+bindsym $mod2+j         focus left
+bindsym $mod2+k         focus up
+bindsym $mod2+l         focus down
 bindsym $mod2+semicolon focus right
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-## move window
-
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move up
-bindsym $mod+Shift+L move down
-bindsym $mod+Shift+colon move right
-
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-## split orientation
-
-bindsym $mod+h split horizontal
-bindsym $mod+v split vertical
-
-bindsym $mod+y layout toggle split
-bindsym $mod+t layout tabbed
-
-bindsym $mod+Shift+t split horizontal; layout tabbed
-bindsym $mod+Shift+s split vertical; layout stacking
-
-## focus the parent/child container
+bindsym $mod+Left       focus left
+bindsym $mod+Down       focus down
+bindsym $mod+Up         focus up
+bindsym $mod+Right      focus right
 
 bindsym $mod+p focus parent
 bindsym $mod+n focus child
 
+# move
+
+bindsym $mod+Shift+J     move left
+bindsym $mod+Shift+K     move up
+bindsym $mod+Shift+L     move down
+bindsym $mod+Shift+colon move right
+
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+# split
+
+bindsym $mod+h split horizontal
+bindsym $mod+v split vertical
+
+# layouts
+
+bindsym $mod+y       layout toggle all
+bindsym $mod+t       layout tabbed
+bindsym $mod+s       layout stacking
+bindsym $mod+Shift+h layout splith
+bindsym $mod+Shift+v layout splitv
+
+workspace_layout tabbed
+
+# fullscreen
+
 bindsym $mod+f fullscreen
 
-bindsym $mod+period move scratchpad
-bindsym $mod+Shift+greater scratchpad show; floating disable
+# floating
 
-## border style [none, normal, 1pixel, toggle]
-bindsym $mod+b border toggle
-
-
-### floating
-
-## toggle tiling/floating
 bindsym $mod+e floating toggle
-
-## change focus between tiling/floating windows
 bindsym $mod+a focus mode_toggle
 
 floating_modifier $mod
 
+# scratchpad
 
-### workspaces
+bindsym $mod+period        move scratchpad
+bindsym $mod+Shift+greater scratchpad show; floating disable
 
-## switch to workspace
+
+## workspaces
+
+# switch to workspace
 
 bindsym $mod+o workspace next
 bindsym $mod+i workspace prev
+
+bindsym $mod+apostrophe workspace back_and_forth
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -118,49 +122,45 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-## move container to workspace
+# move container to workspace
 
 bindsym $mod+Shift+O move container to workspace next
 bindsym $mod+Shift+I move container to workspace prev
 
-bindsym $mod+Shift+exclam move workspace 1
-bindsym $mod+Shift+at move workspace 2
-bindsym $mod+Shift+numbersign move workspace 3
-bindsym $mod+Shift+dollar move workspace 4
-bindsym $mod+Shift+percent move workspace 5
+bindsym $mod+Shift+exclam      move workspace 1
+bindsym $mod+Shift+at          move workspace 2
+bindsym $mod+Shift+numbersign  move workspace 3
+bindsym $mod+Shift+dollar      move workspace 4
+bindsym $mod+Shift+percent     move workspace 5
 bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8
-bindsym $mod+Shift+parenleft move workspace 9
-bindsym $mod+Shift+parenright move workspace 10
+bindsym $mod+Shift+ampersand   move workspace 7
+bindsym $mod+Shift+asterisk    move workspace 8
+bindsym $mod+Shift+parenleft   move workspace 9
+bindsym $mod+Shift+parenright  move workspace 10
 
-bindsym $mod+apostrophe workspace back_and_forth
-bindsym $mod+Shift+U move container to workspace back_and_forth
-
-workspace_layout tabbed
 workspace_auto_back_and_forth yes
 
 
 mode "resize" {
-    bindsym k resize grow up 10 px or 10 ppt
-    bindsym l resize grow down 10px or 10 ppt
-    bindsym j resize grow right 10 px or 10 ppt
-    bindsym semicolon resize grow left 10px or 10 ppt
+    bindsym k          resize grow   up    10px
+    bindsym l          resize grow   down  10px
+    bindsym j          resize grow   right 10px
+    bindsym semicolon  resize grow   left  10px
 
-    bindsym $mod+l resize shrink up 10 px or 10 ppt
-    bindsym $mod+k resize shrink down 10px or 10 ppt
-    bindsym $mod+j resize shrink left 10px or 10 ppt
-    bindsym $mod+colon resize shrink right 10 px or 10 ppt
+    bindsym $mod+l     resize shrink up    10px
+    bindsym $mod+k     resize shrink down  10px
+    bindsym $mod+j     resize shrink left  10px
+    bindsym $mod+colon resize shrink right 10px
 
-    bindsym Up resize grow up 10 px or 10 ppt
-    bindsym Down resize grow down 10px or 10 ppt
-    bindsym Left resize grow left 10px or 10 ppt
-    bindsym Right resize grow right 10 px or 10 ppt
+    bindsym Up         resize grow   up    10px
+    bindsym Down       resize grow   down  10px
+    bindsym Left       resize grow   left  10px
+    bindsym Right      resize grow   right 10px
 
-    bindsym $mod+Down resize shrink up 10 px or 10 ppt
-    bindsym $mod+Up resize shrink down 10px or 10 ppt
-    bindsym $mod+Right resize shrink left 10px or 10 ppt
-    bindsym $mod+Left resize shrink right 10 px or 10 ppt
+    bindsym $mod+Down  resize shrink up    10px
+    bindsym $mod+Up    resize shrink down  10px
+    bindsym $mod+Right resize shrink left  10px
+    bindsym $mod+Left  resize shrink right 10px
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -180,20 +180,23 @@ bar {
 }
 
 
-### key bindings
+## key bindings
 
-## dmenu
-set $params -nb "#111" -nf "#fff" -sb "#222" -fn "7x14"
-bindsym $mod2+m exec dmenu_run $params
+# dmenu
+set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "7x14"
+bindsym $mod2+m exec dmenu_run $dmenu_options
+bindsym $mod2+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
 
+# backlight
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
 
+# volume
 bindcode 123 exec amixer -c 0 -q set Master 5dB+ unmute
 bindcode 122 exec amixer -c 0 -q set Master 5dB- unmute
 bindcode 121 exec amixer -c 0 -q set Master toggle
 
-# next, play, prev, stop
+# player (next, play, prev, stop)
 bindcode 171 exec vlc
 bindcode 172 exec vlc
 bindcode 173 exec vlc
@@ -214,7 +217,7 @@ bindsym $mod2+Print exec scrot -s
 #bindsym Ctrl+$mod2+l exec i3lock -u -d -c 000000
 
 
-### startup
+## startup
 
 exec xset b off
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
