@@ -113,8 +113,6 @@ let g:find_all_ignore = ['tmp']
 let g:vim_tags_auto_generate = 0
 let g:vim_tags_ctags_binary = 'ripper-tags'
 
-let g:monster#completion#rcodetools#backend = 'async_rct_complete'
-
 let g:extra_whitespace_ignored_filetypes = ['vimfiler']
 
 
@@ -191,6 +189,25 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>gr       <Plug>(vimfiler_grep)
   nmap <buffer>?        <Plug>(vimfiler_help)
 endfunc
+
+autocmd BufRead * call s:override_showmotion_highlight()
+func! s:override_showmotion_highlight()
+  highlight ShowMotion_SmallMotionGroup cterm=NONE      ctermbg=NONE ctermfg=DarkRed
+  highlight ShowMotion_BigMotionGroup   cterm=underline ctermbg=NONE ctermfg=DarkRed
+  highlight ShowMotion_CharSearchGroup  cterm=NONE      ctermbg=NONE ctermfg=DarkMagenta
+endfunc
+nmap w <Plug>(show-motion-both-w)
+nmap W <Plug>(show-motion-both-W)
+nmap b <Plug>(show-motion-both-b)
+nmap B <Plug>(show-motion-both-B)
+nmap e <Plug>(show-motion-both-e)
+nmap E <Plug>(show-motion-both-E)
+nmap f <Plug>(show-motion-f)
+nmap t <Plug>(show-motion-t)
+nmap F <Plug>(show-motion-F)
+nmap T <Plug>(show-motion-T)
+nmap ; <Plug>(show-motion-;)
+nmap , <Plug>(show-motion-,)
 
 
 if filereadable(expand('~/.vim/vimrc.local'))
