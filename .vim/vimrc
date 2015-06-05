@@ -8,6 +8,8 @@ func! s:vundle_init()
   call vundle#end()
 endfunc
 
+comm! Reload source $MYVIMRC
+
 
 " vim options
 
@@ -62,12 +64,6 @@ syntax on
 filetype plugin indent on
 
 colorscheme molokai
-
-augroup vimrc_auto_reload
-  autocmd!
-  autocmd BufWritePost vimrc,vimrc.local,plugins.vim,plugins.local.vim
-    \ source $MYVIMRC
-augroup END
 
 augroup set_makeprg
   autocmd!
