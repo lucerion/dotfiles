@@ -186,7 +186,7 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>?        <Plug>(vimfiler_help)
 endfunc
 
-autocmd BufRead * call s:override_showmotion_highlight()
+autocmd BufEnter * call s:override_showmotion_highlight()
 func! s:override_showmotion_highlight()
   highlight ShowMotion_SmallMotionGroup cterm=NONE      ctermbg=NONE ctermfg=DarkRed
   highlight ShowMotion_BigMotionGroup   cterm=underline ctermbg=NONE ctermfg=DarkRed
