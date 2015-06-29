@@ -8,8 +8,7 @@ func! s:vundle_init()
   call vundle#end()
 endfunc
 
-comm! Reload source $MYVIMRC
-
+comm! Restart source $MYVIMRC
 
 " vim options
 
@@ -21,7 +20,7 @@ set nowritebackup
 set noswapfile
 set autoread
 
-set history=128
+set history=1024
 set undolevels=1024
 
 set mouse=a
@@ -36,10 +35,12 @@ set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
 set showcmd
 set ruler
 set showmode
+set wildmenu
 
 set number
 set nowrap
-set sidescroll=20
+set scrolloff=1
+set sidescrolloff=5
 set cursorline
 
 set incsearch
@@ -49,10 +50,12 @@ set smartcase
 
 set showmatch
 
+set smarttab
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set autoindent
 
 set splitright
 
