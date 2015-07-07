@@ -208,6 +208,13 @@ nmap T <Plug>(show-motion-T)
 nmap ; <Plug>(show-motion-;)
 nmap , <Plug>(show-motion-,)
 
+func! IsSearch()
+  return getcmdtype() == '/' || getcmdtype() == '?'
+endfunc
+cmap <expr> <S-Tab> IsSearch() ? "\<Plug>CmdlineCompletionBackward" : "<S-Tab>"
+cmap <expr> <Tab> IsSearch() ? "\<Plug>CmdlineCompletionForward" : "<Tab>"
+set wildcharm=<Tab>
+
 
 if filereadable(expand('~/.vim/vimrc.local'))
   source ~/.vim/vimrc.local
