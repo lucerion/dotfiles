@@ -114,13 +114,12 @@ let g:vim_tags_ctags_binary = 'ripper-tags'
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler']
 
+let delimitMate_expand_cr = 1
+
 
 " mappings
 
 let mapleader = " "
-
-nmap <F2> :VimFilerExplorer<CR>
-nmap <F3> :TagbarToggle<CR>
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -137,8 +136,6 @@ noremap <C-k> <C-w>k
 
 noremap <Leader>gr :Ack!<Space>
 noremap <Leader>gf :FindAll<Space>
-
-noremap <Leader>gs :Gstatus<CR>
 
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
@@ -186,34 +183,8 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>!        <Plug>(vimfiler_execute_shell_command)
   nmap <buffer>gf       <Plug>(vimfiler_find)
   nmap <buffer>gr       <Plug>(vimfiler_grep)
-  nmap <buffer>?        <Plug>(vimfiler_help)
+  nmap <buffer>g?       <Plug>(vimfiler_help)
 endfunc
-
-autocmd BufEnter * call s:override_showmotion_highlight()
-func! s:override_showmotion_highlight()
-  highlight ShowMotion_SmallMotionGroup cterm=NONE      ctermbg=NONE ctermfg=DarkRed
-  highlight ShowMotion_BigMotionGroup   cterm=underline ctermbg=NONE ctermfg=DarkRed
-  highlight ShowMotion_CharSearchGroup  cterm=NONE      ctermbg=NONE ctermfg=DarkMagenta
-endfunc
-nmap w <Plug>(show-motion-both-w)
-nmap W <Plug>(show-motion-both-W)
-nmap b <Plug>(show-motion-both-b)
-nmap B <Plug>(show-motion-both-B)
-nmap e <Plug>(show-motion-both-e)
-nmap E <Plug>(show-motion-both-E)
-nmap f <Plug>(show-motion-f)
-nmap t <Plug>(show-motion-t)
-nmap F <Plug>(show-motion-F)
-nmap T <Plug>(show-motion-T)
-nmap ; <Plug>(show-motion-;)
-nmap , <Plug>(show-motion-,)
-
-func! IsSearch()
-  return getcmdtype() == '/' || getcmdtype() == '?'
-endfunc
-cmap <expr> <S-Tab> IsSearch() ? "\<Plug>CmdlineCompletionBackward" : "<S-Tab>"
-cmap <expr> <Tab> IsSearch() ? "\<Plug>CmdlineCompletionForward" : "<Tab>"
-set wildcharm=<Tab>
 
 
 if filereadable(expand('~/.vim/vimrc.local'))
