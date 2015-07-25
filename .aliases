@@ -23,6 +23,8 @@ alias cal='ncal -M -C'
 alias df='df -h'
 alias du='du -sh'
 
+alias free='free -h'
+
 alias mnt='sudo mount'
 alias unmnt='sudo umount'
 alias blkid='sudo blkid'
