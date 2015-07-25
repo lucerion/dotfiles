@@ -49,5 +49,4 @@ command bz tar -jcvf %f.tar.gz %f
 command unbz tar -jxvf %f
 
 " aliases
-command hist :history
 command man :apropos %a

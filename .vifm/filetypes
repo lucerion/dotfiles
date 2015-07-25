@@ -36,11 +36,11 @@ filextype *.fb2,*.mobi,*.epub,*.chm fbreader %f &
 
 " web
 filetype *.html,*.htm vim %f
-"fileviewer *.html,*.htm google-chrome %f
+filextype *.html,*.htm google-chrome %f &
 
 " archives
-filetype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
-  \ file-roller %c
+filextype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
+  \ file-roller %c &
 fileviewer *.tgz,*.tar.gz tar -tzf %c
 fileviewer *.tbz2,*.tar.bz2 tar -tjf %c
 fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
