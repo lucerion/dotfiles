@@ -84,10 +84,10 @@ let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['git_branch']
 let g:ctrlp_funky_syntax_highlight = 1
 
+let g:ackprg = 'ag'
 let g:ack_default_options =
-  \ ' -s -H --nocolor --nogroup --nofollow --column --smart-case' .
-  \ ' --ignore-dir=tmp --ignore-dir=log' .
-  \ ' --ignore-file=match:/.gitignore/'
+  \ ' --vimgrep --silent' .
+  \ ' --ignore=tmp --ignore=log'
 
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextTextOmniPrecedence = []
