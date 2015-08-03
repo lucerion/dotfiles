@@ -89,6 +89,21 @@ let g:ack_default_options =
   \ ' --vimgrep --silent' .
   \ ' --ignore=tmp --ignore=log'
 
+let g:ags_agargs = {
+  \ '--break'             : [ '', '' ],
+  \ '--color'             : [ '', '' ],
+  \ '--color-line-number' : [ '"1;30"', '' ],
+  \ '--color-match'       : [ '"32;40"', '' ],
+  \ '--color-path'        : [ '"1;31"', '' ],
+  \ '--column'            : [ '', '' ],
+  \ '--context'           : [ 'g:ags_agcontext', '-C' ],
+  \ '--group'             : [ '', '' ],
+  \ '--heading'           : [ '', '-H' ],
+  \ '--max-count'         : [ 'g:ags_agmaxcount', '-m' ],
+  \ }
+highlight default link agsvFilePath Directory
+highlight default link agsvLineNumMatch Keyword
+
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabContextTextOmniPrecedence = []
 
@@ -133,9 +148,6 @@ noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
-
-noremap <Leader>gr :Ack!<Space>
-noremap <Leader>gf :FindAll<Space>
 
 noremap <Leader>j :SplitjoinJoin<CR>
 noremap <Leader>s :SplitjoinSplit<CR>
