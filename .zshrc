@@ -7,7 +7,6 @@ setopt autocd
 setopt extended_glob
 setopt interactive_comments
 setopt correct
-setopt correct_all
 setopt extended_history
 setopt share_history
 setopt inc_append_history
