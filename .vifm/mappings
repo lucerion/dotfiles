@@ -2,7 +2,7 @@ nmap rl :rlink<cr>
 nmap al :alink<cr>
 nmap S  :sort<cr>
 nmap w  :view<cr>
-nmap -  :sync
+nmap -  :sync<cr>
 nmap yr :rsync -r --progress %c %D<cr>
 nmap cd :cd<space>
 nmap cs ga
