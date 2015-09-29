@@ -1,4 +1,13 @@
+comm! Restart source $MYVIMRC
+comm! InstallVundle call s:vundle_install()
+
+let s:vundle_dir = expand('~/.vim/bundle/Vundle.vim')
+let s:vundle_repository = 'https://github.com/VundleVim/Vundle.vim'
+
 func! s:vundle_init()
+  if !isdirectory(s:vundle_dir)
+    return
+  endif
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
   source ~/.vim/plugins.vim
@@ -8,7 +17,11 @@ func! s:vundle_init()
   call vundle#end()
 endfunc
 
-comm! Restart source $MYVIMRC
+func! s:vundle_install()
+  if !isdirectory(s:vundle_dir)
+    exec '!git clone ' . s:vundle_repository . ' ' . s:vundle_dir
+  endif
+endfunc
 
 " vim options
 
@@ -33,7 +46,9 @@ set background=dark
 set colorcolumn=80,120
 
 set laststatus=2
-set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
+  set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+endif
 set showcmd
 set ruler
 set showmode
@@ -68,7 +83,9 @@ call s:vundle_init()
 syntax on
 filetype plugin indent on
 
-colorscheme molokai
+if isdirectory(expand('~/.vim/bundle/molokai'))
+  colorscheme molokai
+endif
 
 augroup set_makeprg
   autocmd!
@@ -121,7 +138,9 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = 'x'
-call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
+if isdirectory('~/.vim/bundle/vimfiler.vim')
+  call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
+endif
 
 let g:user_emmet_leader_key = '<C-e>'
 
