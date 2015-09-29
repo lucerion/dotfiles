@@ -74,6 +74,7 @@ augroup set_makeprg
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
   autocmd FileType html setl makeprg=google-chrome\ %
+  autocmd FileType sh   setl makeprg=./%
 augroup END
 
 
