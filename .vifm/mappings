@@ -2,9 +2,7 @@ nmap rl :rlink<cr>
 nmap al :alink<cr>
 nmap S  :sort<cr>
 nmap w  :view<cr>
-nmap .  za
-nmap =  :sync<cr>
-nmap yp :clone<cr>
+nmap -  :sync
 nmap yr :rsync -r --progress %c %D<cr>
 nmap cd :cd<space>
 nmap cs ga
@@ -13,9 +11,6 @@ nmap cf :touch<space>
 nmap dc :mkdir<space>
 nmap s  :find<space>
 nmap gr :grep<space>
-nmap -  :cd ..<cr>
-nmap zc :filter<space>
-nmap cc :change<cr>
 
 nmap ot :term &<cr>
 nmap ov :vim &<cr>

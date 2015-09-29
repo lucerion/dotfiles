@@ -29,10 +29,12 @@ command tree !!tree %f -aF
 command vim !vim %a
 command rsync !!rsync %a
 command git !!git %a
+
 command rails !!rails %a
 command rake !!rake %a
 command bundle !!bundle %a
 command rspec !!rspec %a
+
 command config :vim $MYVIFMRC
 
 command zip zip -r %f.zip %f
