@@ -2,7 +2,7 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
 alias ls='ls --color=auto'
-alias lla='ls -lA'
+alias lla='ls -lAh'
 
 alias jobs='jobs -l'
 
