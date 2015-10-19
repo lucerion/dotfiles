@@ -76,6 +76,8 @@ set autoindent
 
 set splitright
 
+set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
+
 filetype off
 
 call s:vundle_init()
@@ -186,6 +188,8 @@ noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
+
+noremap <Leader>ee :Extract<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()

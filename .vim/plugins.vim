@@ -45,6 +45,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kshenoy/vim-signature'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'chrisbra/NrrwRgn'
+Plugin 'lucerion/vim-extract'
 Plugin 'pelodelfuego/vim-swoop'
 Plugin 'osyo-manga/vim-over'
 Plugin 'mkitt/tabline.vim'
@@ -58,7 +59,8 @@ Plugin 'bootleq/vim-textobj-rubysymbol'
 " Dependencies
 Plugin 'Shougo/unite.vim'             " vimfiler, neossh
 Plugin 'Shougo/vimproc.vim'           " neossh
-Plugin 'edsono/vim-matchit'           " vim-ruby-refactoring
 Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate
 Plugin 'tomtom/tlib_vim'              " snipmate
+Plugin 'edsono/vim-matchit'           " vim-ruby-refactoring
+Plugin 'lucerion/vim-buffr'           " vim-extract
 Plugin 'kana/vim-textobj-user'
