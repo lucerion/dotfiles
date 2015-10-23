@@ -164,32 +164,45 @@ let mapleader = " "
 noremap <S-l> gt
 noremap <S-h> gT
 
-noremap <Leader>tl :tabmove +1<CR>
-noremap <Leader>th :tabmove -1<CR>
-noremap <Leader>tL :tabmove <CR>
-noremap <Leader>tH :tabmove 0<CR>
+noremap <L-tl> :tabmove +1<CR>
+noremap <L-th> :tabmove -1<CR>
+noremap <L-tL> :tabmove <CR>
+noremap <L-tH> :tabmove 0<CR>
 
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
-noremap <Leader>j :SplitjoinJoin<CR>
-noremap <Leader>s :SplitjoinSplit<CR>
+" next paragraph begin
+" previous paragraph begin
+" next paragraph end
+" previous paragraph end
+" current paragraph begin
+" current paragraph end
+noremap gjj })
+noremap gkk {(
+noremap gJ }}k
+noremap gK {k
+noremap gjk }k
+noremap gkj {j
 
-map <Leader>ra :RSpecRunAll<CR>
-map <Leader>rd :RSpecRunCurrentDir<CR>
-map <Leader>rf :RSpecRunCurrentFile<CR>
-map <Leader>rl :RSpecRunNearest<CR>
-map <Leader>rr :RSpecRunLast<CR>
+noremap <L-sj> :SplitjoinJoin<CR>
+noremap <L-ss> :SplitjoinSplit<CR>
 
-noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
-noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
+map <L-ra> :RSpecRunAll<CR>
+map <L-rd> :RSpecRunCurrentDir<CR>
+map <L-rf> :RSpecRunCurrentFile<CR>
+map <L-rl> :RSpecRunNearest<CR>
+map <L-rr> :RSpecRunLast<CR>
 
-noremap <Leader>of :CtrlPBufTag<CR>
-noremap <Leader>ot :CtrlPTag<CR>
+noremap <L-os> :VimFilerSplit -horizontal -find -force-quit<CR>
+noremap <L-ov> :VimFilerSplit -find -force-quit<CR>
 
-noremap <Leader>ee :VExtract<CR>
+noremap <L-of> :CtrlPBufTag<CR>
+noremap <L-ot> :CtrlPTag<CR>
+
+noremap <L-ee> :VExtract<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
