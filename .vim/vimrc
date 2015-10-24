@@ -46,13 +46,13 @@ set background=dark
 set colorcolumn=80,120
 
 set laststatus=2
-if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
-  set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
-endif
 set showcmd
 set ruler
 set showmode
 set wildmenu
+if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
+  set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+endif
 
 set number
 set nowrap
@@ -175,16 +175,16 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
 " next paragraph begin
-" previous paragraph begin
-" next paragraph end
-" previous paragraph end
-" current paragraph begin
-" current paragraph end
 noremap gjj })
+" previous paragraph begin
 noremap gkk {(
+" next paragraph end
 noremap gJ }}k
+" previous paragraph end
 noremap gK {k
+" current paragraph begin
 noremap gjk }k
+" current paragraph end
 noremap gkj {j
 
 noremap <Leader>sj :SplitjoinJoin<CR>
