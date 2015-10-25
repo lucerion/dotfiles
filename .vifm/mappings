@@ -11,7 +11,7 @@ nmap gf :find<space>
 nmap gr :grep<space>
 
 nmap ot :term &<cr>
-nmap ov :vim &<cr>
+nmap ov :term -e vim &<cr>
 nmap cv :term -e vim %f &<cr>
 
 " path
