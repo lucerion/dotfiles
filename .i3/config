@@ -16,8 +16,6 @@ bindsym $mod+z reload
 # fonts (ISO 10646 = unicode)
 set $font-terminus -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 set $font-fixed    -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
-set $font-sans      pango:Sans 12px
-set $font-play      pango:Play 14px
 
 font $font-terminus
 
@@ -49,11 +47,6 @@ bindsym $mod2+j         focus left
 bindsym $mod2+k         focus up
 bindsym $mod2+l         focus down
 bindsym $mod2+semicolon focus right
-
-bindsym $mod+Left       focus left
-bindsym $mod+Down       focus down
-bindsym $mod+Up         focus up
-bindsym $mod+Right      focus right
 
 bindsym $mod+p focus parent
 bindsym $mod+n focus child
@@ -222,6 +215,5 @@ bindsym $mod2+Print exec scrot -s
 exec xset b off
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 exec syndaemon -t -K -i 1 -d
-#exec xrdb -merge ~/.Xresources
 #exec timidity -iA -Os
 #exec xrandr --output LVDS1 --left-of VGA1
