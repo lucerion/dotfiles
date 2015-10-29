@@ -1,10 +1,10 @@
 colorscheme default
-set vifminfo=tui,dhistory,state,savedirs,chistory,shistory,phistory,dirstack
+set vifminfo=bookmarks,tui,dhistory,state,savedirs,chistory,shistory,phistory
 set trashdir="~/.trash"
 windo normal zo " show hidden files
 
-set history=128
-set undolevels=128
+set history=512
+set undolevels=512
 
 set wildmenu
 set fastrun
@@ -13,10 +13,11 @@ set scrolloff=4
 windo set number
 windo set numberwidth=1
 
-set ignorecase
 set smartcase
 set nohlsearch
 set incsearch
+
+set nowrap
 
 set timefmt="%d.%m.%y %H:%M"
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
