@@ -9,8 +9,8 @@ bindsym $mod+$mod2+Return exec $term; move left
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+r restart
 
-bindsym $mod+x exec $term -e vim ~/.i3/config
-bindsym $mod+z reload
+bindsym $mod+c exec $term -e vim ~/.i3/config
+bindsym $mod+x reload
 
 
 # fonts (ISO 10646 = unicode)
