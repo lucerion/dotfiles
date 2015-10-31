@@ -1,6 +1,3 @@
-" :filetype pattern1, pattern2 defaultprogram,program2
-" :fileviewer pattern1, pattern2 consoleviewer
-
 " dir
 fileviewer */ tree %f
 
