@@ -50,9 +50,12 @@ set showcmd
 set ruler
 set showmode
 set wildmenu
+
+set statusline=%w%h\ %F\ %m
 if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
-  set statusline=%w%h\ %F\ %m\ %{fugitive#statusline()}\ %r%=%l-%v/%L
+  set statusline+=\ %{fugitive#statusline()}
 endif
+set statusline+=\ %r%=%l-%v/%L
 
 set number
 set nowrap
