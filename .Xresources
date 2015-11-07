@@ -29,13 +29,16 @@ URxvt.boldFont: xft:Monospace:size=10
 URxvt.letterSpace: -1
 URxvt.scrollBar: true
 URxvt.scrollBar_right: true
-URxvt.scrollstyle: xterm
+URxvt.scrollstyle: plain
 URxvt.scrollTtyOutput: true
 URxvt.loginShell: true
 URxvt.saveLines: 4096
 URxvt.iso14755: false
-URxvt.perl-ext: clipboard
+URxvt.perl-ext: clipboard,matcher,searchable-scrollback
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.clipboard.copycmd: xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.url-launcher: google-chrome
+URxvt.matcher.button: 1
+URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
