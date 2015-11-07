@@ -33,3 +33,9 @@ URxvt.scrollstyle: xterm
 URxvt.scrollTtyOutput: true
 URxvt.loginShell: true
 URxvt.saveLines: 4096
+URxvt.iso14755: false
+URxvt.perl-ext: clipboard
+URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
