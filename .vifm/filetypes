@@ -6,7 +6,7 @@ filetype *.txt vim %f
 
 " img
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif gpicview %c
-filextype *.svg google-chrome %f &
+filextype *.svg sensible-browser %f &
 
 " audio
 filextype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f &
@@ -33,7 +33,7 @@ filextype *.fb2,*.mobi,*.epub,*.chm fbreader %f &
 
 " web
 filetype *.html,*.htm vim %f
-filextype *.html,*.htm google-chrome %f &
+filextype *.html,*.htm sensible-browser %f &
 
 " archives
 filextype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
