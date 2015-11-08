@@ -8,7 +8,7 @@ command umount sudo umount
 
 command diff vimdiff %f %F
 command run !! ./%f
-command term !xterm %a
+command term !i3-sensible-terminal %a
 command tree !!tree %f -aF
 command vim !vim %a
 command rsync !!rsync %a

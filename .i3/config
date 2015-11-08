@@ -1,7 +1,8 @@
 set $mod  Mod4
 set $mod2 Mod1
 
-set $term i3-sensible-terminal
+set $term    i3-sensible-terminal
+set $browser sensible-browser
 
 bindsym $mod+Return       exec $term
 bindsym $mod+$mod2+Return exec $term; move left
@@ -177,6 +178,7 @@ bar {
 
 # dmenu
 set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "7x14"
+
 bindsym $mod2+m exec dmenu_run $dmenu_options
 bindsym $mod2+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
 
@@ -195,9 +197,9 @@ bindcode 172 exec vlc
 bindcode 173 exec vlc
 bindcode 174 exec vlc
 
-bindcode 163 exec google-chrome gmail.com
+bindcode 163 exec $browser gmail.com
 bindcode 228 exec vlc
-bindcode 180 exec google-chrome
+bindcode 180 exec $browser
 bindcode 148 exec $term -e calc
 
 bindsym Ctrl+Shift+Escape exec $term -e htop
@@ -205,7 +207,7 @@ bindsym $mod+F12 exec $term -e wicd-curses
 bindsym $mod+F11 exec $term -e alsamixer
 
 bindsym Print exec scrot
-bindsym $mod2+Print exec scrot -s
+bindsym $mod+Print exec scrot -s
 
 #bindsym Ctrl+$mod2+l exec i3lock -u -d -c 000000
 

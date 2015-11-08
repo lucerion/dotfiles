@@ -39,6 +39,6 @@ URxvt.keysym.Control-Shift-C: perl:clipboard:copy
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.clipboard.copycmd: xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
-URxvt.url-launcher: google-chrome
+URxvt.url-launcher: sensible-browser
 URxvt.matcher.button: 1
 URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
