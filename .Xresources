@@ -22,7 +22,7 @@ xterm*VT100.Translations: #override \n\
     Ctrl Shift <Key>c: select-end(CLIPBOARD) \n\
     Ctrl Shift <Key>y: select-end(CLIPBOARD) insert-selection(CLIPBOARD)
 
-URxvt*termName: xterm
+URxvt.termName: xterm
 URxvt.background: #000000
 URxvt.foreground: #ffffff
 URxvt.font: xft:Monospace:size=10
