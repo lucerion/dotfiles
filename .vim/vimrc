@@ -153,6 +153,7 @@ let g:find_all_ignore = ['tmp']
 
 let g:vim_tags_auto_generate = 0
 let g:vim_tags_ctags_binary = 'ripper-tags'
+let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler']
 
