@@ -23,7 +23,8 @@ filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*
   \ libreoffice %f &
 
 " pdf
-filextype *.pdf apvlv %f &
+filextype *.pdf evince %f &
+filetype *.pdf apvlv %f &
 
 " djvu
 filextype *.djvu djview %f &
