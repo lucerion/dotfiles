@@ -4,10 +4,10 @@ alias vdir='vdir --color=auto'
 alias ls='ls --color=auto'
 alias lla='ls -lAh'
 
+alias pgrep='pgrep -ax'
 alias jobs='jobs -l'
 
-alias mkfile='touch'
-alias rmr='rm -rf'
+alias rmr='rm -r'
 
 if [ -n "$BASH" ]; then
   alias ..='cd ..'
@@ -18,16 +18,13 @@ fi
 
 alias grep='grep -ins --color'
 alias rgrep='rgrep -ins --color'
+
 alias cal='ncal -M -C'
 
 alias df='df -h'
 alias du='du -sh'
 
 alias free='free -h'
-
-alias mnt='sudo mount'
-alias unmnt='sudo umount'
-alias blkid='sudo blkid'
 
 alias rsc='rsync -r --progress'
 alias rsu='rsync -r -u --progress'
@@ -68,8 +65,6 @@ alias gs='git status'
 alias gst='git status'
 alias gsh='git stash'
 
-alias ts='tig status'
-
 alias rl='rails'
 alias rls='rails s'
 alias rlc='rails c'
@@ -98,5 +93,7 @@ alias rr='rake routes'
 
 alias rsp='rspec'
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
+
+alias ts='tig status'
 
 marks=~/.aliases.local; [ -f $marks ] && . $marks
