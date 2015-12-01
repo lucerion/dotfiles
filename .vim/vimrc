@@ -102,6 +102,7 @@ augroup END
 
 " plugins options
 
+autocmd FileType debsources setlocal commentstring=#\ %s
 autocmd FileType xdefaults setlocal commentstring=!\ %s
 autocmd FileType slim setlocal commentstring=/!\ %s
 
