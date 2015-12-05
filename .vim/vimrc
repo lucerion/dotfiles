@@ -23,6 +23,7 @@ func! s:vundle_install()
   endif
 endfunc
 
+
 " vim options
 
 set nocompatible
@@ -102,11 +103,10 @@ augroup END
 
 " plugins options
 
-autocmd FileType debsources setlocal commentstring=#\ %s
-autocmd FileType xdefaults setlocal commentstring=!\ %s
-autocmd FileType slim setlocal commentstring=/!\ %s
+autocmd FileType debsources setl commentstring=#\ %s
+autocmd FileType xdefaults  setl commentstring=!\ %s
+autocmd FileType slim       setl commentstring=/!\ %s
 
-let g:ctrlp_reuse_window = 'help\|quickfix'
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
@@ -133,9 +133,6 @@ let g:ags_agargs = {
 highlight default link agsvFilePath Directory
 highlight default link agsvLineNumMatch Keyword
 
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextTextOmniPrecedence = []
-
 let g:tagbar_compact = 1
 
 let g:vimfiler_as_default_explorer = 1
@@ -159,11 +156,13 @@ let g:vim_tags_auto_generate = 0
 let g:vim_tags_ctags_binary = 'ripper-tags'
 let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
 
-let g:extra_whitespace_ignored_filetypes = ['vimfiler']
+let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
 
 let delimitMate_expand_cr = 1
 
 let g:gitgutter_max_signs = 5000
+
+let g:pasta_disabled_filetypes = ['agsv']
 
 " mappings
 
@@ -245,6 +244,9 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>gr       <Plug>(vimfiler_grep)
   nmap <buffer>g?       <Plug>(vimfiler_help)
 endfunc
+
+autocmd FileType agsv nnoremap <buffer> ot
+  \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
 
 
 if filereadable(expand('~/.vim/vimrc.local'))
