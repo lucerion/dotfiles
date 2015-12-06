@@ -23,11 +23,16 @@ filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*
   \ libreoffice %f &
 
 " pdf
-filextype *.pdf evince %f &
+filextype *.pdf
+  \ qpdfview %f &,
+  \ evince %f &
 filetype *.pdf apvlv %f &
 
 " djvu
-filextype *.djvu djview %f &
+filextype *.djvu
+  \ qpdfview %f &,
+  \ djview %f &
+filetype *.djvu apvlv %f &
 
 " ebook
 filextype *.fb2,*.mobi,*.epub,*.chm fbreader %f &
@@ -37,14 +42,15 @@ filetype *.html,*.htm vim %f
 filextype *.html,*.htm sensible-browser %f &
 
 " archives
-filextype *.zip,*.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.zip,*.jar,*.war,*.ear,*.7z,*.rar,*.gz
+filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.7z,*.rar
   \ file-roller %c &
-fileviewer *.tgz,*.tar.gz tar -tzf %c
-fileviewer *.tbz2,*.tar.bz2 tar -tjf %c
+filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso
+  \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
+fileviewer *.tgz,*.tar.gz,*.tbz2,*.tar.bz2 tar -tjf %c
+fileviewer *.gz gzip -l %c
 fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
 fileviewer *.7z	7z l %c
 fileviewer *.rar rar l %c
-fileviewer *.gz gzip -l %c
 
 " wine
 filextype *.exe wine %f &
