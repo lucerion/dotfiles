@@ -164,6 +164,9 @@ let g:gitgutter_max_signs = 5000
 
 let g:pasta_disabled_filetypes = ['agsv']
 
+autocmd FileType gitcommit resize 20
+
+
 " mappings
 
 let mapleader = " "
