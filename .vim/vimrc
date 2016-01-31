@@ -1,30 +1,4 @@
-comm! Restart source $MYVIMRC
-comm! InstallVundle call s:vundle_install()
-
-let s:vundle_dir = expand('~/.vim/bundle/Vundle.vim')
-let s:vundle_repository = 'https://github.com/VundleVim/Vundle.vim'
-
-func! s:vundle_init()
-  if !isdirectory(s:vundle_dir)
-    return
-  endif
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-  source ~/.vim/plugins.vim
-  if filereadable(expand('~/.vim/plugins.local.vim'))
-    source ~/.vim/plugins.local.vim
-  endif
-  call vundle#end()
-endfunc
-
-func! s:vundle_install()
-  if !isdirectory(s:vundle_dir)
-    exec '!git clone ' . s:vundle_repository . ' ' . s:vundle_dir
-  endif
-endfunc
-
-
-" vim options
+source ~/.vim/helpers.vim
 
 set nocompatible
 set shortmess+=I
@@ -45,6 +19,13 @@ set clipboard=unnamedplus
 set t_Co=256
 set background=dark
 set colorcolumn=80,120
+
+if isdirectory(expand('~/.vim/bundle/molokai'))
+  colorscheme molokai
+endif
+
+syntax on
+filetype plugin indent on
 
 set laststatus=2
 set showcmd
@@ -82,94 +63,12 @@ set splitright
 
 set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
 
-filetype off
-
-call s:vundle_init()
-
-syntax on
-filetype plugin indent on
-
-if isdirectory(expand('~/.vim/bundle/molokai'))
-  colorscheme molokai
-endif
-
 augroup set_makeprg
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
   autocmd FileType html setl makeprg=sensible-browser\ %
   autocmd FileType sh   setl makeprg=./%
 augroup END
-
-
-" plugins options
-
-autocmd FileType debsources setl commentstring=#\ %s
-autocmd FileType xdefaults  setl commentstring=!\ %s
-autocmd FileType slim       setl commentstring=/!\ %s
-
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_use_caching = 0
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_extensions = ['git_branch']
-let g:ctrlp_funky_syntax_highlight = 1
-if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
-  let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
-  let g:ctrlp_max_files = 0
-  let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
-endif
-
-let g:ackprg = 'ag'
-let g:ack_default_options =
-  \ ' --vimgrep --silent' .
-  \ ' --ignore=tmp --ignore=log'
-
-let g:ags_agargs = {
-  \ '--break'             : [ '', '' ],
-  \ '--color'             : [ '', '' ],
-  \ '--color-line-number' : [ '"1;30"', '' ],
-  \ '--color-match'       : [ '"32;40"', '' ],
-  \ '--color-path'        : [ '"1;31"', '' ],
-  \ '--column'            : [ '', '' ],
-  \ '--context'           : [ 'g:ags_agcontext', '-C' ],
-  \ '--group'             : [ '', '' ],
-  \ '--heading'           : [ '', '-H' ],
-  \ '--max-count'         : [ 'g:ags_agmaxcount', '-m' ],
-  \ }
-highlight default link agsvFilePath Directory
-highlight default link agsvLineNumMatch Keyword
-
-" let g:tagbar_compact = 1
-
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_no_default_key_mappings = 1
-let g:vimfiler_expand_jump_to_first_child = 0
-let g:vimfiler_ignore_pattern = ' '
-let g:vimfiler_time_format = '%Y-%m-%d %H:%M'
-let g:vimfiler_tree_leaf_icon = ' '
-let g:vimfiler_tree_opened_icon = '▾'
-let g:vimfiler_tree_closed_icon = '▸'
-let g:vimfiler_readonly_file_icon = '×'
-if isdirectory(expand('~/.vim/bundle/vimfiler.vim'))
-  call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
-endif
-
-let g:user_emmet_leader_key = '<C-e>'
-
-let g:find_by_regex_ignore = ['tmp', 'log']
-
-" let g:vim_tags_auto_generate = 0
-" let g:vim_tags_ctags_binary = 'ripper-tags'
-" let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
-
-let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
-
-let delimitMate_expand_cr = 1
-
-let g:gitgutter_max_signs = 5000
-
-let g:pasta_disabled_filetypes = ['agsv']
-
-let g:instant_markdown_autostart = 0
 
 autocmd FileType gitcommit resize 20
 
@@ -178,92 +77,8 @@ hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
 hi link diffLine String
 hi link diffSubname Normal
 
-
-" mappings
-
-let mapleader = " "
-
-noremap <S-l> gt
-noremap <S-h> gT
-
-noremap <Leader>tl :tabmove +1<CR>
-noremap <Leader>th :tabmove -1<CR>
-noremap <Leader>tL :tabmove <CR>
-noremap <Leader>tH :tabmove 0<CR>
-
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-
-" next paragraph begin
-noremap gjj })
-" previous paragraph begin
-noremap gkk {(
-" next paragraph end
-noremap gJ }}k
-" previous paragraph end
-noremap gK {k
-" current paragraph begin
-noremap gjk }k
-" current paragraph end
-noremap gkj {j
-
-noremap <Leader>sj :SplitjoinJoin<CR>
-noremap <Leader>ss :SplitjoinSplit<CR>
-
-map <Leader>ra :RSpecRunAll<CR>
-map <Leader>rd :RSpecRunCurrentDir<CR>
-map <Leader>rf :RSpecRunCurrentFile<CR>
-map <Leader>rl :RSpecRunNearest<CR>
-map <Leader>rr :RSpecRunLast<CR>
-
-noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
-noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
-
-noremap <Leader>of :CtrlPBufTag<CR>
-noremap <Leader>ot :CtrlPTag<CR>
-
-noremap <Leader>ee :VExtract<CR>
-
-autocmd FileType vimfiler call s:set_vimfiler_mappings()
-func! s:set_vimfiler_mappings()
-  nmap <buffer><CR>     <Plug>(vimfiler_cd_or_edit)
-  nmap <buffer>q        <Plug>(vimfiler_hide)
-  nmap <buffer><tab>    <Plug>(vimfiler_switch_to_another_vimfiler)
-  nmap <buffer>j        <Plug>(vimfiler_loop_cursor_down)
-  nmap <buffer>k        <Plug>(vimfiler_loop_cursor_up)
-  nmap <buffer>l        <Plug>(vimfiler_smart_l)
-  nmap <buffer>h        <Plug>(vimfiler_smart_h)
-  nmap <buffer>gj       <Plug>(vimfiler_jump_last_child)
-  nmap <buffer>gk       <Plug>(vimfiler_jump_first_child)
-  nmap <buffer>o        <Plug>(vimfiler_expand_tree)
-  nmap <buffer>O        <Plug>(vimfiler_expand_tree_recursive)
-  nmap <buffer>s        <Plug>(vimfiler_split_edit_file)
-  nmap <buffer><expr>t  vimfiler#do_switch_action('tabopen')
-  nmap <buffer>v        <Plug>(vimfiler_toggle_mark_current_line)
-  nmap <buffer>gs       <Plug>(vimfiler_toggle_safe_mode)
-  nmap <buffer>r        <Plug>(vimfiler_rename_file)
-  nmap <buffer>m        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
-  nmap <buffer>y        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
-  nmap <buffer>d        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
-  nmap <buffer>nd       <Plug>(vimfiler_make_directory)
-  nmap <buffer>nf       <Plug>(vimfiler_new_file)
-  nmap <buffer>Y        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_clipboard_copy_file)
-  nmap <buffer>M        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_clipboard_move_file)
-  nmap <buffer>P        <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_clipboard_paste)
-  nmap <buffer>yp       <Plug>(vimfiler_yank_full_path)
-  nmap <buffer>cd       <Plug>(vimfiler_cd_input_directory)
-  nmap <buffer>!        <Plug>(vimfiler_execute_shell_command)
-  nmap <buffer>gf       <Plug>(vimfiler_find)
-  nmap <buffer>gr       <Plug>(vimfiler_grep)
-  nmap <buffer>g?       <Plug>(vimfiler_help)
-endfunc
-
-autocmd FileType agsv nnoremap <buffer> ot
-  \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
-
-
+source ~/.vim/plugins.settings.vim
+source ~/.vim/mappings.vim
 if filereadable(expand('~/.vim/vimrc.local'))
   source ~/.vim/vimrc.local
 endif
