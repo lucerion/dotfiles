@@ -112,6 +112,11 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['git_branch']
 let g:ctrlp_funky_syntax_highlight = 1
+if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
+  let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
+  let g:ctrlp_max_files = 0
+  let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
+endif
 
 let g:ackprg = 'ag'
 let g:ack_default_options =
@@ -133,7 +138,7 @@ let g:ags_agargs = {
 highlight default link agsvFilePath Directory
 highlight default link agsvLineNumMatch Keyword
 
-let g:tagbar_compact = 1
+" let g:tagbar_compact = 1
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_no_default_key_mappings = 1
@@ -152,9 +157,9 @@ let g:user_emmet_leader_key = '<C-e>'
 
 let g:find_by_regex_ignore = ['tmp', 'log']
 
-let g:vim_tags_auto_generate = 0
-let g:vim_tags_ctags_binary = 'ripper-tags'
-let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
+" let g:vim_tags_auto_generate = 0
+" let g:vim_tags_ctags_binary = 'ripper-tags'
+" let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
 
@@ -164,7 +169,14 @@ let g:gitgutter_max_signs = 5000
 
 let g:pasta_disabled_filetypes = ['agsv']
 
+let g:instant_markdown_autostart = 0
+
 autocmd FileType gitcommit resize 20
+
+hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
+hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
+hi link diffLine String
+hi link diffSubname Normal
 
 
 " mappings
