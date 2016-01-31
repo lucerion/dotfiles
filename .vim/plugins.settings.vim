@@ -1,7 +1,3 @@
-autocmd FileType debsources setl commentstring=#\ %s
-autocmd FileType xdefaults  setl commentstring=!\ %s
-autocmd FileType slim       setl commentstring=/!\ %s
-
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0

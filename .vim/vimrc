@@ -70,7 +70,9 @@ augroup set_makeprg
   autocmd FileType sh   setl makeprg=./%
 augroup END
 
-autocmd FileType gitcommit resize 20
+autocmd FileType debsources setl commentstring=#\ %s
+autocmd FileType xdefaults  setl commentstring=!\ %s
+autocmd FileType slim       setl commentstring=/!\ %s
 
 hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
 hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
