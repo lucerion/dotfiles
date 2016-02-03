@@ -1,8 +1,7 @@
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
-let g:ctrlp_extensions = ['git_branch']
-let g:ctrlp_funky_syntax_highlight = 1
+" let g:ctrlp_extensions = ['git_branch']
 if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
   let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
   let g:ctrlp_max_files = 0
@@ -10,9 +9,7 @@ if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
 endif
 
 let g:ackprg = 'ag'
-let g:ack_default_options =
-  \ ' --vimgrep --silent' .
-  \ ' --ignore=tmp --ignore=log'
+let g:ack_default_options = ' --vimgrep --silent --ignore=tmp --ignore=log'
 
 let g:ags_agargs = {
   \ '--break'             : [ '', '' ],
@@ -60,4 +57,4 @@ let g:gitgutter_max_signs = 5000
 
 let g:pasta_disabled_filetypes = ['agsv']
 
-let g:instant_markdown_autostart = 0
+" let g:instant_markdown_autostart = 0
