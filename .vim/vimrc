@@ -40,6 +40,7 @@ endif
 set statusline+=\ %r%=%l-%v/%L
 
 set number
+set numberwidth=2
 set nowrap
 set scrolloff=1
 set sidescrolloff=5
