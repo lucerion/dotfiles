@@ -40,6 +40,7 @@ noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
+noremap <Leader>oq :CtrlPQuickfix<CR>
 
 noremap <Leader>ee :VExtract<CR>
 
