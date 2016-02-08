@@ -26,6 +26,13 @@ noremap gjk }k
 " current paragraph end
 noremap gkj {j
 
+nmap <silent> <Leader>ta :TestSuite<CR>
+nmap <silent> <Leader>td :TestSuite %:p:h<CR>
+nmap <silent> <Leader>tf :TestFile<CR>
+nmap <silent> <Leader>tn :TestNearest<CR>
+nmap <silent> <Leader>tl :TestLast<CR>
+nmap <silent> <Leader>tv :TestVisit<CR>
+
 noremap <Leader>sj :SplitjoinJoin<CR>
 noremap <Leader>ss :SplitjoinSplit<CR>
 
