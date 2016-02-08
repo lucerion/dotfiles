@@ -29,12 +29,6 @@ noremap gkj {j
 noremap <Leader>sj :SplitjoinJoin<CR>
 noremap <Leader>ss :SplitjoinSplit<CR>
 
-map <Leader>ra :RSpecRunAll<CR>
-map <Leader>rd :RSpecRunCurrentDir<CR>
-map <Leader>rf :RSpecRunCurrentFile<CR>
-map <Leader>rl :RSpecRunNearest<CR>
-map <Leader>rr :RSpecRunLast<CR>
-
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 

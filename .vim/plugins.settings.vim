@@ -43,8 +43,6 @@ endif
 
 let g:user_emmet_leader_key = '<C-e>'
 
-let g:find_by_regex_ignore = ['tmp', 'log']
-
 " let g:vim_tags_auto_generate = 0
 " let g:vim_tags_ctags_binary = 'ripper-tags'
 " let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
