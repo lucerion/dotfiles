@@ -9,16 +9,15 @@ bindsym $mod+$mod2+Return exec $term; move left
 
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c exec $term -e vim ~/.i3/config
+bindsym $mod+Shift+u reload
 
-bindsym $mod+c exec $term -e vim ~/.i3/config
-bindsym $mod+x reload
 
+# fonts
+set $font_terminus -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+set $font_fixed    -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
 
-# fonts (ISO 10646 = unicode)
-set $font-terminus -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-set $font-fixed    -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
-
-font $font-terminus
+font $font_terminus
 
 # colors                border  background text
 client.unfocused        #111111 #000000 #888888
@@ -54,9 +53,9 @@ bindsym $mod+n focus child
 
 # move
 
-bindsym $mod+Shift+J     move left
-bindsym $mod+Shift+K     move up
-bindsym $mod+Shift+L     move down
+bindsym $mod+Shift+j     move left
+bindsym $mod+Shift+k     move up
+bindsym $mod+Shift+l     move down
 bindsym $mod+Shift+colon move right
 
 bindsym $mod+Shift+Left  move left
@@ -85,8 +84,8 @@ bindsym $mod+f fullscreen
 
 # floating
 
-bindsym $mod+e floating toggle
-bindsym $mod+a focus mode_toggle
+bindsym $mod+e floating toggle; resize set 1000px 600px; move position center
+bindsym $mod+q focus mode_toggle
 
 floating_modifier $mod
 
@@ -118,8 +117,8 @@ bindsym $mod+0 workspace 10
 
 # move container to workspace
 
-bindsym $mod+Shift+O move container to workspace next
-bindsym $mod+Shift+I move container to workspace prev
+bindsym $mod+Shift+o move container to workspace next
+bindsym $mod+Shift+i move container to workspace prev
 
 bindsym $mod+Shift+exclam      move workspace 1
 bindsym $mod+Shift+at          move workspace 2
@@ -136,48 +135,48 @@ workspace_auto_back_and_forth yes
 
 
 mode "resize" {
-    bindsym k          resize grow   up    10px
-    bindsym l          resize grow   down  10px
-    bindsym j          resize grow   right 10px
-    bindsym semicolon  resize grow   left  10px
+  bindsym k          resize grow   up    10px
+  bindsym l          resize grow   down  10px
+  bindsym j          resize grow   right 10px
+  bindsym semicolon  resize grow   left  10px
 
-    bindsym $mod+l     resize shrink up    10px
-    bindsym $mod+k     resize shrink down  10px
-    bindsym $mod+j     resize shrink left  10px
-    bindsym $mod+colon resize shrink right 10px
+  bindsym $mod+l     resize shrink up    10px
+  bindsym $mod+k     resize shrink down  10px
+  bindsym $mod+j     resize shrink left  10px
+  bindsym $mod+colon resize shrink right 10px
 
-    bindsym Up         resize grow   up    10px
-    bindsym Down       resize grow   down  10px
-    bindsym Left       resize grow   left  10px
-    bindsym Right      resize grow   right 10px
+  bindsym Up         resize grow   up    10px
+  bindsym Down       resize grow   down  10px
+  bindsym Left       resize grow   left  10px
+  bindsym Right      resize grow   right 10px
 
-    bindsym $mod+Down  resize shrink up    10px
-    bindsym $mod+Up    resize shrink down  10px
-    bindsym $mod+Right resize shrink left  10px
-    bindsym $mod+Left  resize shrink right 10px
+  bindsym $mod+Down  resize shrink up    10px
+  bindsym $mod+Up    resize shrink down  10px
+  bindsym $mod+Right resize shrink left  10px
+  bindsym $mod+Left  resize shrink right 10px
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
 
 bar {
-    status_command conky -c ~/.conky.conf
-    workspace_buttons yes
-    font $font-terminus
+  status_command conky -c ~/.conky.conf
+  font $font_terminus
 
-    colors {
-        focused_workspace  #222222 #111111 #ffffff
-        inactive_workspace #222222 #000000 #888888
-    }
+  colors {
+    background         #0d0d0d
+    focused_workspace  #222222 #111111 #ffffff
+    inactive_workspace #222222 #000000 #888888
+  }
 }
 
 
 ## key bindings
 
 # dmenu
-set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "7x14"
+set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
 
 bindsym $mod2+m exec dmenu_run $dmenu_options
 bindsym $mod2+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
@@ -202,20 +201,20 @@ bindcode 228 exec vlc
 bindcode 180 exec $browser
 bindcode 148 exec $term -e calc
 
-bindsym Ctrl+Shift+Escape exec $term -e htop
+bindsym $mod+F2  exec $term -e htop
 bindsym $mod+F12 exec $term -e wicd-curses
 bindsym $mod+F11 exec $term -e alsamixer
 
 bindsym Print exec scrot
 bindsym $mod+Print exec scrot -s
 
-#bindsym Ctrl+$mod2+l exec i3lock -u -d -c 000000
+# bindsym Ctrl+$mod2+l exec i3lock -u -d -c 000000
 
 
 ## startup
 
-exec xset b off
+exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 exec syndaemon -t -K -i 1 -d
-#exec timidity -iA -Os
-#exec xrandr --output LVDS1 --left-of VGA1
+# exec timidity -iA -Os
+# exec xrandr --output LVDS1 --left-of VGA1
