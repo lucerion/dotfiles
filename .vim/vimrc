@@ -64,16 +64,27 @@ set splitright
 
 set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
 
-augroup set_makeprg
+augroup restore_cursor_position
+  autocmd!
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exec "normal g`\"" |
+    \ endif
+augroup END
+
+augroup make_program
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
   autocmd FileType html setl makeprg=sensible-browser\ %
   autocmd FileType sh   setl makeprg=./%
 augroup END
 
-autocmd FileType debsources setl commentstring=#\ %s
-autocmd FileType xdefaults  setl commentstring=!\ %s
-autocmd FileType slim       setl commentstring=/!\ %s
+augroup comment_string
+  autocmd!
+  autocmd FileType debsources setl commentstring=#\ %s
+  autocmd FileType xdefaults  setl commentstring=!\ %s
+  autocmd FileType slim       setl commentstring=/!\ %s
+augroup END
 
 hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
 hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
