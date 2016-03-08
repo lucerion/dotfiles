@@ -57,3 +57,6 @@ filextype *.exe wine %f &
 
 " tux guitar
 filextype *.tg,*.gp,*.gp3,*.gp4,*.gp5 tuxguitar %f &
+
+" torrent
+filetype *.torrent deluge %f &
