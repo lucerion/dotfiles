@@ -19,18 +19,16 @@ fi
 alias grep='grep -ins --color'
 alias rgrep='rgrep -ins --color'
 
-alias cal='ncal -M -C'
+alias cal='ncal -M -b'
 
 alias df='df -h'
-alias du='du -sh'
+alias du='du -h'
 
 alias free='free -h'
 
-alias rsc='rsync -r --progress'
-alias rsu='rsync -r -u --progress'
+alias rsync='rsync --progress'
 
 alias off='sudo shutdown -h now'
-alias reboot='sudo reboot'
 alias hibernate='sudo systemctl hibernate'
 alias suspend='sudo systemctl suspend'
 
