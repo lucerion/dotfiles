@@ -57,11 +57,12 @@ Plugin 'Julian/vim-textobj-variable-segment'
 " Plugin 'bootleq/vim-textobj-rubysymbol'
 " Plugin 'suan/vim-instant-markdown'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'lucerion/vim-executor'
 " Dependencies
 Plugin 'Shougo/unite.vim'             " vimfiler, neossh
 Plugin 'Shougo/vimproc.vim'           " vimfiler, neossh
 Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate
 Plugin 'tomtom/tlib_vim'              " snipmate
 " Plugin 'edsono/vim-matchit'         " vim-ruby-refactoring
-Plugin 'lucerion/vim-buffr'           " vim-extract
+Plugin 'lucerion/vim-buffr'           " vim-extract, vim-executor
 Plugin 'kana/vim-textobj-user'
