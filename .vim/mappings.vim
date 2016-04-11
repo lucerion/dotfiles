@@ -38,12 +38,13 @@ noremap <Leader>ss :SplitjoinSplit<CR>
 
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
+noremap <Leader>oe :VimFilerExplorer -find<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
 noremap <Leader>oq :CtrlPQuickfix<CR>
 
-noremap <Leader>ee :VExtract<CR>
+noremap <Leader>ee :Extr<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
