@@ -2,15 +2,13 @@ source ~/.vim/helpers.vim
 
 set nocompatible
 set shortmess+=I
-set ttyfast
 
 set nobackup
-set nowritebackup
 set noswapfile
 set autoread
 
-set history=1024
-set undolevels=1024
+set history=2048
+set undolevels=2048
 
 set mouse=a
 set backspace=indent,eol,start
@@ -27,11 +25,18 @@ endif
 syntax on
 filetype plugin indent on
 
+set title
 set laststatus=2
 set showcmd
 set ruler
 set showmode
 set wildmenu
+set number
+" set cursorline
+
+set nowrap
+set scrolloff=1
+set sidescrolloff=5
 
 set statusline=%w%h\ %F\ %m
 if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
@@ -39,30 +44,30 @@ if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
 endif
 set statusline+=\ %r%=%l-%v/%L
 
-set number
-set numberwidth=2
-set nowrap
-set scrolloff=1
-set sidescrolloff=5
-set cursorline
-
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-
 set showmatch
 
 set smarttab
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set autoindent
+set smartindent
+set shiftround
 
 set splitright
 
 set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
+
+augroup indentation
+  autocmd!
+  autocmd FileType vim,ruby,html,css,eruby,haml,slim,coffee,scss,less
+    \ set tabstop=2 shiftwidth=2 softtabstop=2
+augroup END
 
 augroup restore_cursor_position
   autocmd!
