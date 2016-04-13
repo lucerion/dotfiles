@@ -25,5 +25,17 @@ func! s:install_vundle()
   endif
 endfunc
 
+func! s:gem_open(name)
+  exec 'silent !gem open ' . a:name
+  exec 'redraw!'
+endfunc
+
+func! s:gem_autocomplete(A, L, C)
+  let l:all = split(system('gem list'), '\n')
+  let l:filtered = filter(copy(l:all), 'v:val =~ a:A')
+  return map(copy(l:filtered), 'substitute(v:val, " (.*)", "", "g")')
+endfunc
+
 comm! Restart source $MYVIMRC
 comm! InstallVundle call s:install_vundle()
+comm! -nargs=+ -complete=customlist,s:gem_autocomplete GemOpen call s:gem_open(<q-args>)
