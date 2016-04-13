@@ -13,6 +13,12 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
+vnoremap < <gv
+vnoremap > >gv
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
 " next paragraph begin
 noremap gjj })
 " previous paragraph begin
