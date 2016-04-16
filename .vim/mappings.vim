@@ -16,21 +16,18 @@ noremap <C-k> <C-w>k
 vnoremap < <gv
 vnoremap > >gv
 
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-
-" next paragraph begin
-noremap gjj })
-" previous paragraph begin
-noremap gkk {(
+" next paragraph beginning
+noremap <Leader>jj })
+" previous paragraph beginning
+noremap <Leader>kk {(
 " next paragraph end
-noremap gJ }}k
+noremap <Leader>J }}k
 " previous paragraph end
-noremap gK {k
-" current paragraph begin
-noremap gjk }k
+noremap <Leader>K {k
+" current paragraph beginning
+noremap <Leader>jk }k
 " current paragraph end
-noremap gkj {j
+noremap <Leader>kj {j
 
 nmap <silent> <Leader>ra :TestSuite<CR>
 nmap <silent> <Leader>rd :TestSuite %:p:h<CR>
