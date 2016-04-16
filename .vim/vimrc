@@ -65,7 +65,7 @@ set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
 
 augroup indentation
   autocmd!
-  autocmd FileType vim,ruby,html,css,eruby,haml,slim,coffee,scss,less
+  autocmd FileType vim,ruby,html,css,eruby,haml,slim,coffee,scss,less,yaml
     \ set tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
 
