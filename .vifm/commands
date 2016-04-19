@@ -1,10 +1,8 @@
 command df df -h %m 2> /dev/null
 command dirsize du -sh %S
 command size du -shc %f %m
-
-command blkid sudo blkid %m
-command mount sudo mount
-command umount sudo umount
+command blkid blkid %m
+command free free -hot %m
 
 command diff vimdiff %f %F
 command run !! ./%f
