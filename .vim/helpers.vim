@@ -1,8 +1,5 @@
-let s:vundle_dir = expand('~/.vim/bundle/Vundle.vim')
-let s:vundle_repository = 'https://github.com/VundleVim/Vundle.vim'
-
 func! s:init_vundle()
-  if !isdirectory(s:vundle_dir)
+  if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
     return
   endif
   set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,14 +14,6 @@ endfunc
 filetype off
 call s:init_vundle()
 
-func! s:install_vundle()
-  if isdirectory(s:vundle_dir)
-    echom 'Vundle already installed'
-  else
-    exec '!git clone ' . s:vundle_repository . ' ' . s:vundle_dir
-  endif
-endfunc
-
 func! s:gem_open(name)
   exec 'silent !gem open ' . a:name
   exec 'redraw!'
@@ -37,5 +26,4 @@ func! s:gem_autocomplete(A, L, C)
 endfunc
 
 comm! Restart source $MYVIMRC
-comm! InstallVundle call s:install_vundle()
 comm! -nargs=+ -complete=customlist,s:gem_autocomplete GemOpen call s:gem_open(<q-args>)
