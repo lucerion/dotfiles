@@ -20,6 +20,7 @@ set colorcolumn=80,120
 
 if isdirectory(expand('~/.vim/bundle/molokai'))
   colorscheme molokai
+  let g:molokai_original = 1
 endif
 
 syntax on
