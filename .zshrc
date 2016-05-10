@@ -29,6 +29,7 @@ SAVEHIST=4096
 bindkey -e
 bindkey "^X^E" edit-command-line
 
+export TERM='rxvt-256color'
 export EDITOR='vim'
 export VISUAL='vim'
 
