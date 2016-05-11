@@ -1,19 +1,21 @@
-highlight Win cterm=none ctermfg=white ctermbg=black
-highlight Border cterm=none ctermfg=white ctermbg=black
-highlight TopLine cterm=underline ctermfg=white ctermbg=black
-highlight TopLineSel cterm=underline ctermfg=white ctermbg=black
-highlight StatusLine cterm=none ctermfg=black ctermbg=white
-highlight WildMenu cterm=underline,inverse ctermfg=white ctermbg=black
-highlight CmdLine cterm=none ctermfg=white ctermbg=black
+highlight clear
 
-highlight Selected cterm=none ctermfg=magenta ctermbg=black
-highlight CurrLine cterm=none ctermfg=black ctermbg=white
-highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
+highlight Win         cterm=none               ctermfg=white         ctermbg=black
+highlight Border      cterm=none               ctermfg=white         ctermbg=black
+highlight TopLine     cterm=underline          ctermfg=white         ctermbg=black
+highlight TopLineSel  cterm=underline          ctermfg=white         ctermbg=black
+highlight StatusLine  cterm=none               ctermfg=black         ctermbg=white
+highlight WildMenu    cterm=underline,inverse  ctermfg=white         ctermbg=black
+highlight CmdLine     cterm=none               ctermfg=white         ctermbg=black
 
-highlight Directory cterm=none ctermfg=yellow ctermbg=black
-highlight Executable cterm=none ctermfg=green ctermbg=black
-highlight Link cterm=none ctermfg=cyan ctermbg=black
-highlight BrokenLink cterm=none ctermfg=red ctermbg=black
-highlight Socket cterm=none ctermfg=LightMagenta ctermbg=black
-highlight Device cterm=none ctermfg=LightBlue ctermbg=black
-highlight Fifo cterm=none ctermfg=LightGreen ctermbg=black
+highlight Selected    cterm=none               ctermfg=magenta       ctermbg=black
+highlight CurrLine    cterm=none               ctermfg=black         ctermbg=white
+highlight ErrorMsg    cterm=none               ctermfg=red           ctermbg=black
+
+highlight Directory   cterm=none               ctermfg=yellow        ctermbg=black
+highlight Executable  cterm=none               ctermfg=green         ctermbg=black
+highlight Link        cterm=none               ctermfg=cyan          ctermbg=black
+highlight BrokenLink  cterm=none               ctermfg=red           ctermbg=black
+highlight Socket      cterm=none               ctermfg=LightMagenta  ctermbg=black
+highlight Device      cterm=none               ctermfg=LightBlue     ctermbg=black
+highlight Fifo        cterm=none               ctermfg=LightGreen    ctermbg=black
