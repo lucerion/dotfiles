@@ -4,4 +4,4 @@ VUNDLE_REPOSITORY = https://github.com/VundleVim/Vundle.vim
 
 setup:
 	mkdir -p $(PLUGINS_DIR)
-	if [ ! -d $(VUNDLE_DIR) ]; then git clone $(VUNDLE_REPOSITORY) $(PLUGINS_DIR); fi
+	if [ ! -d $(VUNDLE_DIR) ]; then git clone $(VUNDLE_REPOSITORY) $(VUNDLE_DIR); fi
