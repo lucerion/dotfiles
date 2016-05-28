@@ -208,13 +208,9 @@ bindsym $mod+F11 exec $term -e alsamixer
 bindsym Print exec scrot
 bindsym $mod+Print exec scrot -s
 
-# bindsym Ctrl+$mod2+l exec i3lock -u -d -c 000000
-
 
 ## startup
 
 exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 exec syndaemon -t -K -i 1 -d
-# exec timidity -iA -Os
-# exec xrandr --output LVDS1 --left-of VGA1
