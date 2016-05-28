@@ -2,6 +2,7 @@ colorscheme shadow
 set vifminfo=bookmarks,tui,dhistory,state,savedirs,chistory,shistory,phistory
 set trashdir="~/.trash"
 windo normal zo " show hidden files
+set syscalls
 
 set history=512
 set undolevels=512
