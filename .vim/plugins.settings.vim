@@ -58,3 +58,5 @@ let g:pasta_disabled_filetypes = ['agsv']
 let g:splitjoin_ruby_hanging_args = 1
 
 " let g:instant_markdown_autostart = 0
+
+let g:extradite_showhash = 1
