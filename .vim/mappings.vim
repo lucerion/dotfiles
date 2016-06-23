@@ -1,5 +1,8 @@
 let mapleader = " "
 
+noremap Q <Nop>
+noremap <F1> <Nop>
+
 noremap <S-l> gt
 noremap <S-h> gT
 
