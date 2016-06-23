@@ -4,7 +4,7 @@ alias vdir='vdir --color=auto'
 alias ls='ls --color=auto'
 alias lla='ls -lAh'
 
-alias pgrep='pgrep -ax'
+alias pgrep='pgrep -af'
 alias jobs='jobs -l'
 
 alias rmr='rm -r'
