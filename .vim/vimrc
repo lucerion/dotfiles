@@ -62,7 +62,7 @@ set shiftround
 
 set splitright
 
-set grepprg=ag\ --vimgrep\ --silent\ --ignore=tmp\ --ignore=log
+set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
 
 augroup indentation
   autocmd!
