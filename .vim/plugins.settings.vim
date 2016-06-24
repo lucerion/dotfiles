@@ -8,20 +8,21 @@ if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
 
-let g:ackprg = 'ag'
-let g:ack_default_options = ' --vimgrep --silent --ignore=tmp --ignore=log'
+let g:ackprg = 'ag --silent --ignore tmp --ignore log'
 
+" --filename, --numbers args were removed
 let g:ags_agargs = {
-  \ '--break'             : [ '', '' ],
-  \ '--color'             : [ '', '' ],
-  \ '--color-line-number' : [ '"1;30"', '' ],
-  \ '--color-match'       : [ '"32;40"', '' ],
-  \ '--color-path'        : [ '"1;31"', '' ],
-  \ '--column'            : [ '', '' ],
-  \ '--context'           : [ 'g:ags_agcontext', '-C' ],
-  \ '--group'             : [ '', '' ],
-  \ '--heading'           : [ '', '-H' ],
-  \ '--max-count'         : [ 'g:ags_agmaxcount', '-m' ],
+  \ '--color-match': ['"32;40"', ''],
+  \ '--column': ['', ''],
+  \ '--color': ['', ''],
+  \ '--context': ['g:ags_agcontext', '-C'],
+  \ '--group': ['', ''],
+  \ '--heading': ['', '-H'],
+  \ '--color-path': ['"1;31"', ''],
+  \ '--color-line-number': ['"1;30"', ''],
+  \ '--max-count': ['g:ags_agmaxcount', '-m'],
+  \ '--break': ['', ''],
+  \ '--ignore': ['tmp', ''],
   \ }
 highlight default link agsvFilePath Directory
 highlight default link agsvLineNumMatch Keyword
