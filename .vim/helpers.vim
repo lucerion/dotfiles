@@ -25,5 +25,13 @@ func! s:gem_autocomplete(A, L, C)
   return map(copy(l:filtered), 'substitute(v:val, " (.*)", "", "g")')
 endfunc
 
+func! s:ctrlp_grep(pattern, ...)
+  let l:dirs = empty(a:000) ? '.' : join(a:000)
+  exec 'silent grep! ' . a:pattern . ' ' . l:dirs
+  exec 'redraw!'
+  exec 'CtrlPQuickfix'
+endfunc
+
 comm! Restart source $MYVIMRC
 comm! -nargs=+ -complete=customlist,s:gem_autocomplete GemOpen call s:gem_open(<q-args>)
+comm! -nargs=+ -complete=dir Grep call s:ctrlp_grep(<f-args>)
