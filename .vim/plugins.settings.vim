@@ -1,7 +1,7 @@
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
-" let g:ctrlp_extensions = ['git_branch']
+let g:ctrlp_extensions = ['grep']
 if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
   let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
   let g:ctrlp_max_files = 0
