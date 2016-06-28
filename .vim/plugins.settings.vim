@@ -8,7 +8,7 @@ if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
 
-let g:ackprg = 'ag --silent --ignore tmp --ignore log'
+let g:ctrlp_grep_command = 'ag --silent --ignore tmp --ignore log'
 
 " --filename, --numbers args were removed
 let g:ags_agargs = {
