@@ -12,27 +12,19 @@ filextype *.svg sensible-browser %f &
 filextype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f &
 
 " video
-filextype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.mov
-  \ vlc %f &
+filextype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.mov vlc %f &
 
 " playlist
 filextype *.m3u vlc %f &
 
 " office
-filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd
-  \ libreoffice %f &
+filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd libreoffice %f &
 
 " pdf
-filextype *.pdf
-  \ qpdfview %f &,
-  \ evince %f &
-filetype *.pdf apvlv %f &
+filextype *.pdf qpdfview %f &,evince %f &
 
 " djvu
-filextype *.djvu
-  \ qpdfview %f &,
-  \ djview %f &
-filetype *.djvu apvlv %f &
+filextype *.djvu qpdfview %f &,djview %f &
 
 " ebook
 filextype *.fb2,*.mobi,*.epub,*.chm fbreader %f &
@@ -42,10 +34,8 @@ filetype *.html,*.htm vim %f
 filextype *.html,*.htm sensible-browser %f &
 
 " archives
-filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.7z,*.rar
-  \ file-roller %c &
-filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso
-  \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
+filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.7z,*.rar file-roller %c &
+filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.tgz,*.tar.gz,*.tbz2,*.tar.bz2 tar -tjf %c
 fileviewer *.gz gzip -l %c
 fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
@@ -59,4 +49,4 @@ filextype *.exe wine %f &
 filextype *.tg,*.gp,*.gp3,*.gp4,*.gp5 tuxguitar %f &
 
 " torrent
-filetype *.torrent deluge %f &
+filextype *.torrent deluge %f &
