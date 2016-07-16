@@ -48,7 +48,7 @@ noremap <Leader>oe :VimFilerExplorer -find<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
-noremap <Leader>og :CtrlPGrep<Space>
+noremap <Leader>og :CtrlPGrep
 
 noremap <Leader>ee :Extr<CR>
 
