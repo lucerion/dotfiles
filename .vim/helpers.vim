@@ -27,3 +27,4 @@ endfunc
 
 comm! Restart source $MYVIMRC
 comm! -nargs=+ -complete=customlist,s:gem_autocomplete GemOpen call s:gem_open(<q-args>)
+comm! GS exec 'Gstatus | resize 20'
