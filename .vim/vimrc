@@ -53,9 +53,9 @@ set showmatch
 
 set smarttab
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 set smartindent
 set shiftround
@@ -63,12 +63,6 @@ set shiftround
 set splitright
 
 set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
-
-augroup indentation
-  autocmd!
-  autocmd FileType vim,ruby,crystal,html,css,eruby,haml,slim,coffee,scss,less,yaml
-    \ set tabstop=2 shiftwidth=2 softtabstop=2
-augroup END
 
 augroup restore_cursor_position
   autocmd!
