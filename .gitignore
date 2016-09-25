@@ -1,6 +1,7 @@
 .vim/bundle
 .vim/vimrc.local
 .vim/plugins.local.vim
+.vim/init.vim
 .vifm/marks.local
 .vifm/vifminfo
 .vifm/vifm-help.txt
