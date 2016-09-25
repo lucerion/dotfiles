@@ -79,13 +79,6 @@ augroup make_program
   autocmd FileType sh   setl makeprg=./%
 augroup END
 
-augroup comment_string
-  autocmd!
-  autocmd FileType debsources setl commentstring=#\ %s
-  autocmd FileType xdefaults  setl commentstring=!\ %s
-  autocmd FileType slim       setl commentstring=/!\ %s
-augroup END
-
 hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
 hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
 hi link diffLine String

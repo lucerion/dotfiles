@@ -50,7 +50,13 @@ let g:user_emmet_leader_key = '<C-e>'
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
 
-let delimitMate_expand_cr = 1
+let delimitMate_expand_cr = 2
+let delimitMate_expand_space = 1
+let delimitMate_expand_inside_quotes = 1
+augroup delimitMate_quotes
+  autocmd!
+  autocmd FileType ruby,eruby,haml,slim let delimitMate_quotes = "\" ' ` |"
+augroup END
 
 let g:gitgutter_max_signs = 5000
 
