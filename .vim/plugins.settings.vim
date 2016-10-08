@@ -1,3 +1,14 @@
+let b:colorscheme = 'srcery'
+
+if (b:colorscheme == 'molokai') && isdirectory(expand('~/.vim/bundle/molokai'))
+  colorscheme molokai
+  let g:molokai_original = 1
+endif
+
+if (b:colorscheme == 'srcery') && isdirectory(expand('~/.vim/bundle/vim-srcery'))
+  colorscheme srcery
+endif
+
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
