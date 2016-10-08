@@ -1,21 +1,21 @@
 highlight clear
 
-highlight Win         cterm=none  ctermfg=white         ctermbg=234
-highlight Border      cterm=none  ctermfg=white         ctermbg=234
-highlight TopLine     cterm=none  ctermfg=white         ctermbg=234
-highlight TopLineSel  cterm=none  ctermfg=white         ctermbg=234
-highlight StatusLine  cterm=none  ctermfg=white         ctermbg=237
-highlight WildMenu    cterm=none  ctermfg=black         ctermbg=white
-highlight CmdLine     cterm=none  ctermfg=white         ctermbg=234
+highlight Win           cterm=none    ctermfg=white           ctermbg=234
+highlight Border        cterm=none    ctermfg=white           ctermbg=234
+highlight TopLine       cterm=none    ctermfg=white           ctermbg=234
+highlight TopLineSel    cterm=none    ctermfg=white           ctermbg=234
+highlight StatusLine    cterm=none    ctermfg=white           ctermbg=237
+highlight WildMenu      cterm=none    ctermfg=black           ctermbg=white
+highlight CmdLine       cterm=none    ctermfg=white           ctermbg=234
 
-highlight Selected    cterm=none  ctermfg=magenta       ctermbg=234
-highlight CurrLine    cterm=none  ctermfg=none          ctermbg=236
-highlight ErrorMsg    cterm=none  ctermfg=red           ctermbg=234
+highlight Selected      cterm=none    ctermfg=magenta         ctermbg=234
+highlight CurrLine      cterm=none    ctermfg=none            ctermbg=236
+highlight ErrorMsg      cterm=none    ctermfg=red             ctermbg=234
 
-highlight Directory   cterm=none  ctermfg=yellow        ctermbg=234
-highlight Executable  cterm=none  ctermfg=green         ctermbg=234
-highlight Link        cterm=none  ctermfg=cyan          ctermbg=234
-highlight BrokenLink  cterm=none  ctermfg=red           ctermbg=234
-highlight Socket      cterm=none  ctermfg=LightMagenta  ctermbg=234
-highlight Device      cterm=none  ctermfg=LightBlue     ctermbg=234
-highlight Fifo        cterm=none  ctermfg=LightGreen    ctermbg=234
+highlight Directory     cterm=none    ctermfg=yellow          ctermbg=234
+highlight Executable    cterm=none    ctermfg=green           ctermbg=234
+highlight Link          cterm=none    ctermfg=cyan            ctermbg=234
+highlight BrokenLink    cterm=none    ctermfg=red             ctermbg=234
+highlight Socket        cterm=none    ctermfg=LightMagenta    ctermbg=234
+highlight Device        cterm=none    ctermfg=LightBlue       ctermbg=234
+highlight Fifo          cterm=none    ctermfg=LightGreen      ctermbg=234
