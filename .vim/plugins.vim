@@ -1,5 +1,6 @@
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tomasr/molokai'
+Plugin 'roosta/vim-srcery'
 Plugin 'airblade/vim-rooter'
 Plugin 'Shougo/vimfiler.vim'
 " Plugin 'Shougo/neossh.vim'
