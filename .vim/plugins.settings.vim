@@ -7,6 +7,7 @@ endif
 
 if (b:colorscheme == 'srcery') && isdirectory(expand('~/.vim/bundle/vim-srcery'))
   colorscheme srcery
+  highlight ColorColumn ctermbg=8
 endif
 
 let g:ctrlp_working_path_mode = 'r'
