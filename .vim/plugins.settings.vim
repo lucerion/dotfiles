@@ -83,3 +83,5 @@ let g:splitjoin_ruby_hanging_args = 1
 let g:extradite_showhash = 1
 
 let g:extract_hidden = 1
+
+let g:executor_reuse_buffer = 1
