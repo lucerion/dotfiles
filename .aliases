@@ -3,6 +3,8 @@ alias vdir='vdir --color=auto'
 
 alias ls='ls --color=auto'
 alias lla='ls -lAh'
+alias lsf='find -type f'
+alias lsd='find -type d'
 
 alias pgrep='pgrep -af'
 alias jobs='jobs -l'
