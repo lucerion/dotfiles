@@ -50,8 +50,6 @@ noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
 noremap <Leader>og :CtrlPGrep
 
-noremap <Leader>ee :Extr<CR>
-
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
   nmap <buffer><CR>     <Plug>(vimfiler_cd_or_edit)
