@@ -2,6 +2,7 @@ let mapleader = " "
 
 noremap Q <Nop>
 noremap <F1> <Nop>
+imap jk <Esc>
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -48,7 +49,6 @@ noremap <Leader>oe :VimFilerExplorer -find<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
-noremap <Leader>og :CtrlPGrep
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
@@ -82,6 +82,15 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>gf       <Plug>(vimfiler_find)
   nmap <buffer>gr       <Plug>(vimfiler_grep)
   nmap <buffer>g?       <Plug>(vimfiler_help)
+endfunc
+
+autocmd FileType unite call s:set_unite_mappings()
+func! s:set_unite_mappings()
+  iunmap <buffer><Tab>
+  iunmap <buffer><C-p>
+  iunmap <buffer><C-n>
+  iunmap <buffer><CR>
+  imap   <buffer><C-e> <Plug>(unite_move_head)
 endfunc
 
 autocmd FileType agsv nnoremap <buffer> ot

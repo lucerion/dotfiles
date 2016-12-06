@@ -85,3 +85,10 @@ let g:extradite_showhash = 1
 let g:extract_hidden = 1
 
 let g:executor_reuse_buffer = 1
+
+let g:unite_enable_auto_select = 0
+call unite#custom#profile('default', 'context', {
+\   'direction': 'below',
+\   'prompt': '> ',
+\   'prompt_focus': 1
+\ })

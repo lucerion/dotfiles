@@ -25,6 +25,12 @@ func! s:gem_autocomplete(A, L, C)
   return map(copy(l:filtered), 'substitute(v:val, " (.*)", "", "g")')
 endfunc
 
+func! s:grep_command(pattern)
+  let l:pattern = len(a:pattern) ? a:pattern : expand('<cword>')
+  exec 'Unite grep -input=' . l:pattern
+endfunc
+
 comm! Restart source $MYVIMRC
 comm! -nargs=+ -complete=customlist,s:gem_autocomplete GemOpen call s:gem_open(<q-args>)
 comm! GS exec 'Gstatus | resize 20'
+comm! -nargs=? Grep call s:grep_command(<q-args>)
