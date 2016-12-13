@@ -1,6 +1,7 @@
 let mapleader = " "
 
 noremap Q <Nop>
+noremap q <Nop>
 noremap <F1> <Nop>
 imap jk <Esc>
 
