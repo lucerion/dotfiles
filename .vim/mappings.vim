@@ -46,7 +46,7 @@ noremap <Leader>ss :SplitjoinSplit<CR>
 
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
-noremap <Leader>oe :VimFilerExplorer -find<CR>
+noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
