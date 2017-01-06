@@ -63,6 +63,7 @@ Plugin 'Julian/vim-textobj-variable-segment'
 " Plugin 'suan/vim-instant-markdown'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'lucerion/vim-executor'
+Plugin 'lucerion/vim-reload'
 " Dependencies
 Plugin 'Shougo/unite.vim'             " vimfiler, neossh
 Plugin 'Shougo/vimproc.vim'           " vimfiler, neossh
