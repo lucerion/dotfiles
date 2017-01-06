@@ -7,9 +7,7 @@ endif
 
 if (b:colorscheme == 'srcery') && isdirectory(expand('~/.vim/bundle/vim-srcery'))
   colorscheme srcery
-  let g:srcery_bold = 0
-  let g:srcery_italic = 0
-  let g:srcery_underline = 0
+  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
 endif
 
 let g:ctrlp_working_path_mode = 'r'
@@ -86,9 +84,11 @@ let g:extract_hidden = 1
 
 let g:executor_reuse_buffer = 1
 
-let g:unite_enable_auto_select = 0
-call unite#custom#profile('default', 'context', {
-\   'direction': 'below',
-\   'prompt': '> ',
-\   'prompt_focus': 1
-\ })
+if isdirectory(expand('~/.vim/bundle/unite.vim'))
+  let g:unite_enable_auto_select = 0
+  call unite#custom#profile('default', 'context', {
+  \   'direction': 'below',
+  \   'prompt': '> ',
+  \   'prompt_focus': 1
+  \ })
+endif
