@@ -14,8 +14,8 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['grep']
-if isdirectory(expand('~/.vim/bundle/ctrlp-cmatcher'))
-  let g:ctrlp_match_func = { 'match' : 'matcher#cmatch' }
+if isdirectory(expand('~/.vim/bundle/ctrlp-py-matcher'))
+  let g:ctrlp_match_func = { 'match' : 'pymatcher#PyMatch' }
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
@@ -58,7 +58,7 @@ let g:user_emmet_leader_key = '<C-e>'
 
 " let g:vim_tags_auto_generate = 0
 " let g:vim_tags_ctags_binary = 'ripper-tags'
-" let g:vim_tags_project_tags_command = "{CTAGS} -R {DIRECTORY} -f .git/tags 2>/dev/null"
+" let g:vim_tags_use_language_field = 0
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
 
