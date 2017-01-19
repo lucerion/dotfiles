@@ -83,7 +83,7 @@ hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
 hi link diffLine String
 hi link diffSubname Normal
 
-source ~/.vim/plugins.settings.vim
+source ~/.vim/vimrc.plugins
 source ~/.vim/mappings.vim
 if filereadable(expand('~/.vim/vimrc.local'))
   source ~/.vim/vimrc.local
