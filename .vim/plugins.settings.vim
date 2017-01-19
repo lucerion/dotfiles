@@ -20,7 +20,9 @@ if isdirectory(expand('~/.vim/bundle/ctrlp-py-matcher'))
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
 
-let g:ctrlp_grep_command = 'ag --silent --ignore tmp --ignore log --ignore vendor'
+if executable('ag')
+  let g:ctrlp_grep_command = 'ag --silent --ignore tmp --ignore log --ignore vendor'
+endif
 
 " --filename, --numbers args were removed
 let g:ags_agargs = {

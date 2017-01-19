@@ -59,7 +59,9 @@ set shiftround
 
 set splitright
 
-set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
+if executable('ag')
+  set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
+endif
 
 augroup restore_cursor_position
   autocmd!
