@@ -1,3 +1,5 @@
+.i3/config
+.i3/config.local
 .vim/bundle
 .vim/vimrc.local
 .vim/plugins.local.vim
