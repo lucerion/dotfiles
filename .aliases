@@ -5,6 +5,7 @@ alias vdir='vdir --color=auto'
 
 alias ls='ls --color=auto'
 alias lla='ls -lAh'
+alias ll='ls -lAh'
 alias lsf='find -type f'
 alias lsd='find -type d'
 
