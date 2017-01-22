@@ -3,6 +3,9 @@ source ~/.vim/helpers.vim
 set nocompatible
 set shortmess+=I
 
+set timeoutlen=1000
+set ttimeoutlen=0
+
 set nobackup
 set noswapfile
 set autoread
