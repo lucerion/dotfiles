@@ -58,6 +58,7 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set shiftround
+set paste
 
 set splitright
 
