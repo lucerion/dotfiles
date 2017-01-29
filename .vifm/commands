@@ -30,3 +30,6 @@ command unbz tar -jxvf %f
 
 " aliases
 command man :apropos %a
+
+
+source ~/.vifm/commands.local

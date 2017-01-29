@@ -1,3 +1,5 @@
 mark h ~/
+mark t ~/.trash
+
 
 source ~/.vifm/marks.local
