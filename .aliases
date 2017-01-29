@@ -1,5 +1,3 @@
-alias vs='vim --servername VIMSERVER --remote-tab-silent'
-
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
