@@ -24,6 +24,7 @@ set timefmt="%d.%m.%y %H:%M"
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
 
+source ~/.vifm/vifmrc.local
 source ~/.vifm/marks
 source ~/.vifm/filetypes
 source ~/.vifm/commands

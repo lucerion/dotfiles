@@ -34,3 +34,6 @@ nmap <f7>  :mkdir<space>
 nmap <f8>  :delete<cr>
 nmap <f9>  :term<cr>
 nmap <f10> :exit<cr>
+
+
+source ~/.vifm/mappings.local
