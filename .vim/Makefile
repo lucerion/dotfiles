@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := setup
+
 PLUGINS_DIR = ~/.vim/bundle
 VUNDLE_DIR = ~/.vim/bundle/Vundle.vim
 VUNDLE_REPOSITORY = https://github.com/VundleVim/Vundle.vim
