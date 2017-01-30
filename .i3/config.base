@@ -181,30 +181,6 @@ set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
 bindsym $mod2+m exec dmenu_run $dmenu_options
 bindsym $mod2+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
 
-# backlight
-bindcode 232 exec xbacklight -dec 10
-bindcode 233 exec xbacklight -inc 10
-
-# volume
-bindcode 123 exec amixer -c 0 -q set Master 5dB+ unmute
-bindcode 122 exec amixer -c 0 -q set Master 5dB- unmute
-bindcode 121 exec amixer -c 0 -q set Master toggle
-
-# player (next, play, prev, stop)
-bindcode 171 exec vlc
-bindcode 172 exec vlc
-bindcode 173 exec vlc
-bindcode 174 exec vlc
-
-bindcode 163 exec $browser gmail.com
-bindcode 228 exec vlc
-bindcode 180 exec $browser
-bindcode 148 exec $term -e calc
-
-bindsym $mod+F2  exec $term -e htop
-bindsym $mod+F12 exec $term -e wicd-curses
-bindsym $mod+F11 exec $term -e alsamixer
-
 bindsym Print exec scrot
 bindsym $mod+Print exec scrot -s
 
@@ -213,4 +189,3 @@ bindsym $mod+Print exec scrot -s
 
 exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
-exec syndaemon -t -K -i 1 -d
