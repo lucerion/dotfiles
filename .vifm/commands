@@ -15,8 +15,9 @@ command git !!git %a
 
 command config :vim $MYVIFMRC
 
-command zip zip -r %f.zip %f
-command unzip unzip %f
+command unp 7z x %f
+command zip 7z a -mx=9 -tzip %f.zip %f
+command unzip 7z x %f
 command rar rar a %f.rar %f
 command unrar unrar x %f
 command szip 7z a -mx=9 %f.7z %f

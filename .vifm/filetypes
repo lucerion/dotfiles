@@ -41,8 +41,7 @@ filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.
 filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.tgz,*.tar.gz,*.tbz2,*.tar.bz2 tar -tjf %c
 fileviewer *.gz gzip -l %c
-fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
-fileviewer *.7z	7z l %c
+fileviewer *.zip,*.7z	7z l %c
 fileviewer *.rar rar l %c
 
 " wine
