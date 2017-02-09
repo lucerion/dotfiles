@@ -2,7 +2,7 @@ command df df -h %m 2> /dev/null
 command dirsize du -sh %S
 command size du -shc %f %m
 command blkid sudo blkid %m
-command free free -hot %m
+command free free -ht %m
 
 command diff vimdiff %f %F
 command dirdiff ls %c > dir_1 && ls %C > dir_2 && vimdiff dir_1 dir_2 && rm dir_1 dir_2
@@ -11,7 +11,6 @@ command term !i3-sensible-terminal %a
 command tree !!tree %f -aF
 command vim !vim %a
 command rsync !!rsync %a
-command git !!git %a
 
 command config :vim $MYVIFMRC
 
