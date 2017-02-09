@@ -19,12 +19,6 @@ nmap yp :!echo %c:p | xclip<cr>
 " name
 nmap yn :!echo %c | xclip<cr>
 
-nmap ,c :config<cr>
-nmap ,t :cd ~/.trash<cr>
-nmap ,v :cd ~/.vifm<cr>
-nmap ,e :empty<cr>
-nmap ,r :restore<cr>
-
 nmap <f2>  :rename<cr>
 nmap <f3>  :view<cr>
 nmap <f4>  :edit<cr>
