@@ -39,6 +39,8 @@ alias suspend='sudo systemctl suspend'
 
 alias passgen='pwgen -1B'
 
+alias calc='calc -d'
+
 alias ssh='TERM=xterm ssh'
 
 alias ga='git add'
