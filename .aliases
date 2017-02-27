@@ -104,7 +104,7 @@ alias rls='rails s'
 alias rlc='rails c'
 alias rlg='rails g'
 alias rld='rails d'
-alias rcd='rails dbconsole'
+alias rdbc='rails dbconsole'
 
 alias bdl='bundle'
 alias bdle='bundle exec'
