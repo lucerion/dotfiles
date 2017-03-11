@@ -1,5 +1,5 @@
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tomasr/molokai'
+" Plugin 'tomasr/molokai'
 Plugin 'roosta/vim-srcery'
 Plugin 'airblade/vim-rooter'
 Plugin 'Shougo/vimfiler.vim'
@@ -40,7 +40,7 @@ Plugin 'int3/vim-extradite'
 Plugin 'lucerion/vim-trailing-whitespace'
 Plugin 'kshenoy/vim-signature'
 " Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'chrisbra/NrrwRgn'
+" Plugin 'chrisbra/NrrwRgn'
 Plugin 'lucerion/vim-extract'
 Plugin 'brooth/far.vim'
 Plugin 'pelodelfuego/vim-swoop'
@@ -48,11 +48,9 @@ Plugin 'osyo-manga/vim-over'
 Plugin 'mkitt/tabline.vim'
 Plugin 'bogado/file-line'
 Plugin 'michaeljsmith/vim-indent-object'
-" Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'beloglazov/vim-textobj-quotes'
-Plugin 'Julian/vim-textobj-brace'
+Plugin 'gorkunov/smartpairs.vim'
 Plugin 'vim-scripts/argtextobj.vim'
-Plugin 'Julian/vim-textobj-variable-segment'
+Plugin 'lucerion/vim-textobj-variable-segment'
 " Plugin 'bootleq/vim-textobj-rubysymbol'
 " Plugin 'suan/vim-instant-markdown'
 Plugin 'PotatoesMaster/i3-vim-syntax'
@@ -64,6 +62,6 @@ Plugin 'Shougo/vimproc.vim'           " vimfiler, neossh
 Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate
 Plugin 'tomtom/tlib_vim'              " snipmate
 Plugin 'l9'                           " vim-autocomplpop
-" Plugin 'edsono/vim-matchit'         " vim-ruby-refactoring
 Plugin 'lucerion/vim-buffr'           " vim-extract, vim-executor
 Plugin 'kana/vim-textobj-user'
+" Plugin 'edsono/vim-matchit'         " vim-ruby-refactoring
