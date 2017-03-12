@@ -10,7 +10,7 @@ Plugin 'gabesoft/vim-ags'
 " Plugin 'majutsushi/tagbar'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'othree/vim-autocomplpop'
-Plugin 'cmdline-completion'
+Plugin 'vim-scripts/cmdline-completion'
 Plugin 'google/vim-searchindex'
 " Plugin 'szw/vim-tags'
 Plugin 'garbas/vim-snipmate'
@@ -63,7 +63,7 @@ Plugin 'Shougo/unite.vim'             " vimfiler, neossh
 Plugin 'Shougo/vimproc.vim'           " vimfiler, neossh
 Plugin 'MarcWeber/vim-addon-mw-utils' " snipmate
 Plugin 'tomtom/tlib_vim'              " snipmate
-Plugin 'l9'                           " vim-autocomplpop
+Plugin 'vim-scripts/l9'               " vim-autocomplpop
 Plugin 'lucerion/vim-buffr'           " vim-extract, vim-executor
 Plugin 'kana/vim-textobj-user'
 " Plugin 'edsono/vim-matchit'         " vim-ruby-refactoring
