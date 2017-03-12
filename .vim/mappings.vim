@@ -1,9 +1,8 @@
-let mapleader = " "
+let mapleader = ';'
 
 noremap Q <Nop>
 noremap q <Nop>
 noremap <F1> <Nop>
-imap jk <Esc>
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -22,24 +21,24 @@ vnoremap < <gv
 vnoremap > >gv
 
 " next paragraph beginning
-noremap ;jj })
+noremap <Leader>jj })
 " previous paragraph beginning
-noremap ;kk {(
+noremap <Leader>kk {(
 " next paragraph end
-noremap ;J }}k
+noremap <Leader>J }}k
 " previous paragraph end
-noremap ;K {k
+noremap <Leader>K {k
 " current paragraph beginning
-noremap ;jk }k
+noremap <Leader>jk }k
 " current paragraph end
-noremap ;kj {j
+noremap <Leader>kj {j
 
-nmap <silent> <Leader>ra :TestSuite<CR>
-nmap <silent> <Leader>rd :TestSuite %:p:h<CR>
-nmap <silent> <Leader>rf :TestFile<CR>
-nmap <silent> <Leader>rn :TestNearest<CR>
-nmap <silent> <Leader>rl :TestLast<CR>
-nmap <silent> <Leader>rv :TestVisit<CR>
+nmap <Leader>ra :TestSuite<CR>
+nmap <Leader>rd :TestSuite %:p:h<CR>
+nmap <Leader>rf :TestFile<CR>
+nmap <Leader>rn :TestNearest<CR>
+nmap <Leader>rl :TestLast<CR>
+nmap <Leader>rv :TestVisit<CR>
 
 noremap <Leader>sj :SplitjoinJoin<CR>
 noremap <Leader>ss :SplitjoinSplit<CR>
