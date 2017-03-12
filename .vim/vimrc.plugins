@@ -1,11 +1,4 @@
-let b:colorscheme = 'srcery'
-
-if (b:colorscheme == 'molokai') && isdirectory(expand('~/.vim/bundle/molokai'))
-  colorscheme molokai
-  let g:molokai_original = 1
-endif
-
-if (b:colorscheme == 'srcery') && isdirectory(expand('~/.vim/bundle/vim-srcery'))
+if isdirectory(expand('~/.vim/bundle/vim-srcery'))
   colorscheme srcery
   let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
 endif
