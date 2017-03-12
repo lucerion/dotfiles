@@ -48,13 +48,16 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'bogado/file-line'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'gorkunov/smartpairs.vim'
-Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'lucerion/vim-textobj-variable-segment'
-" Plugin 'bootleq/vim-textobj-rubysymbol'
+Plugin 'AndrewRadev/dsf.vim'
+Plugin 'AndrewRadev/sideways.vim'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'kana/vim-smartword'
 " Plugin 'suan/vim-instant-markdown'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'lucerion/vim-executor'
 Plugin 'lucerion/vim-reload'
+Plugin 'vim-utils/vim-husk'
 " Dependencies
 Plugin 'Shougo/unite.vim'             " vimfiler, neossh
 Plugin 'Shougo/vimproc.vim'           " vimfiler, neossh
