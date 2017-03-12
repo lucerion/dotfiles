@@ -22,17 +22,17 @@ vnoremap < <gv
 vnoremap > >gv
 
 " next paragraph beginning
-noremap <Leader>jj })
+noremap ;jj })
 " previous paragraph beginning
-noremap <Leader>kk {(
+noremap ;kk {(
 " next paragraph end
-noremap <Leader>J }}k
+noremap ;J }}k
 " previous paragraph end
-noremap <Leader>K {k
+noremap ;K {k
 " current paragraph beginning
-noremap <Leader>jk }k
+noremap ;jk }k
 " current paragraph end
-noremap <Leader>kj {j
+noremap ;kj {j
 
 nmap <silent> <Leader>ra :TestSuite<CR>
 nmap <silent> <Leader>rd :TestSuite %:p:h<CR>
