@@ -1,9 +1,8 @@
-let mapleader = " "
+let mapleader = ';'
 
 noremap Q <Nop>
 noremap q <Nop>
 noremap <F1> <Nop>
-imap jk <Esc>
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -34,12 +33,12 @@ noremap <Leader>jk }k
 " current paragraph end
 noremap <Leader>kj {j
 
-nmap <silent> <Leader>ra :TestSuite<CR>
-nmap <silent> <Leader>rd :TestSuite %:p:h<CR>
-nmap <silent> <Leader>rf :TestFile<CR>
-nmap <silent> <Leader>rn :TestNearest<CR>
-nmap <silent> <Leader>rl :TestLast<CR>
-nmap <silent> <Leader>rv :TestVisit<CR>
+nmap <Leader>ra :TestSuite<CR>
+nmap <Leader>rd :TestSuite %:p:h<CR>
+nmap <Leader>rf :TestFile<CR>
+nmap <Leader>rn :TestNearest<CR>
+nmap <Leader>rl :TestLast<CR>
+nmap <Leader>rv :TestVisit<CR>
 
 noremap <Leader>sj :SplitjoinJoin<CR>
 noremap <Leader>ss :SplitjoinSplit<CR>
@@ -50,6 +49,26 @@ noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
+
+nmap <Leader>w <Plug>CamelCaseMotion_w
+nmap <Leader>b <Plug>CamelCaseMotion_b
+nmap <Leader>e <Plug>CamelCaseMotion_e
+nmap <Leader>ge <Plug>CamelCaseMotion_ge
+
+nmap <Leader>W <Plug>(smartword-w)
+nmap <Leader>B <Plug>(smartword-b)
+nmap <Leader>E <Plug>(smartword-e)
+nmap <Leader>gE <Plug>(smartword-ge)
+
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
+nmap <Leader>aj :SidewaysJumpLeft<CR>
+nmap <Leader>ak :SidewaysJumpRight<CR>
+nmap <Leader>aJ :SidewaysLeft<CR>
+nmap <Leader>aK :SidewaysRight<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
