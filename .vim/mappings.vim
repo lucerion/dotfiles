@@ -50,25 +50,22 @@ noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
 
-nmap <Leader>w <Plug>CamelCaseMotion_w
-nmap <Leader>b <Plug>CamelCaseMotion_b
-nmap <Leader>e <Plug>CamelCaseMotion_e
-nmap <Leader>ge <Plug>CamelCaseMotion_ge
+call camelcasemotion#CreateMotionMappings('')
 
-nmap <Leader>W <Plug>(smartword-w)
-nmap <Leader>B <Plug>(smartword-b)
-nmap <Leader>E <Plug>(smartword-e)
-nmap <Leader>gE <Plug>(smartword-ge)
-
-omap aa <Plug>SidewaysArgumentTextobjA
-xmap aa <Plug>SidewaysArgumentTextobjA
-omap ia <Plug>SidewaysArgumentTextobjI
-xmap ia <Plug>SidewaysArgumentTextobjI
+nmap <Leader>w <Plug>(smartword-w)
+nmap <Leader>b <Plug>(smartword-b)
+nmap <Leader>e <Plug>(smartword-e)
+nmap <Leader>ge <Plug>(smartword-ge)
 
 nmap <Leader>aj :SidewaysJumpLeft<CR>
 nmap <Leader>ak :SidewaysJumpRight<CR>
 nmap <Leader>aJ :SidewaysLeft<CR>
 nmap <Leader>aK :SidewaysRight<CR>
+
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
