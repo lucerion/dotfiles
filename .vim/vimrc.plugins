@@ -12,10 +12,13 @@ if isdirectory(expand('~/.vim/bundle/ctrlp-py-matcher'))
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
-
 if executable('ag')
   let g:ctrlp_grep_command = 'ag --silent --ignore tmp --ignore log --ignore vendor'
 endif
+
+let g:syntastic_check_on_wq = 0
+let g:syntastic_style_error_symbol = '>'
+let g:syntastic_style_warning_symbol = '>'
 
 " --filename, --numbers args were removed
 let g:ags_agargs = {
@@ -34,7 +37,7 @@ let g:ags_agargs = {
 highlight default link agsvFilePath Directory
 highlight default link agsvLineNumMatch Keyword
 
-" let g:tagbar_compact = 1
+let g:tagbar_compact = 1
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_no_default_key_mappings = 1
@@ -51,9 +54,9 @@ endif
 
 let g:user_emmet_leader_key = '<C-e>'
 
-" let g:vim_tags_auto_generate = 0
-" let g:vim_tags_ctags_binary = 'ripper-tags'
-" let g:vim_tags_use_language_field = 0
+let g:vim_tags_auto_generate = 0
+let g:vim_tags_ctags_binary = 'ripper-tags'
+let g:vim_tags_use_language_field = 0
 
 let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
 
