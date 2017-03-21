@@ -1,4 +1,4 @@
-let mapleader = ';'
+let mapleader = ' '
 
 noremap Q <Nop>
 noremap q <Nop>
@@ -20,15 +20,15 @@ noremap <C-k> <C-w>k
 vnoremap < <gv
 vnoremap > >gv
 
-" next paragraph beginning
+" next paragraph begin
 noremap <Leader>jj })
-" previous paragraph beginning
-noremap <Leader>kk {(
 " next paragraph end
 noremap <Leader>J }}k
+" previous paragraph begin
+noremap <Leader>kk {(
 " previous paragraph end
 noremap <Leader>K {k
-" current paragraph beginning
+" current paragraph begin
 noremap <Leader>jk }k
 " current paragraph end
 noremap <Leader>kj {j
@@ -50,18 +50,26 @@ noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
 
-call camelcasemotion#CreateMotionMappings('')
+map <Leader>w <Plug>CamelCaseMotion_w
+map <Leader>b <Plug>CamelCaseMotion_b
+map <Leader>e <Plug>CamelCaseMotion_e
+map <Leader>ge <Plug>CamelCaseMotion_ge
+omap <silent> iw <Plug>CamelCaseMotion_iw
+xmap <silent> iw <Plug>CamelCaseMotion_iw
+omap <silent> ib <Plug>CamelCaseMotion_ib
+xmap <silent> ib <Plug>CamelCaseMotion_ib
+omap <silent> ie <Plug>CamelCaseMotion_ie
+xmap <silent> ie <Plug>CamelCaseMotion_ie
 
-nmap <Leader>w <Plug>(smartword-w)
-nmap <Leader>b <Plug>(smartword-b)
-nmap <Leader>e <Plug>(smartword-e)
-nmap <Leader>ge <Plug>(smartword-ge)
+nmap qw <Plug>(smartword-w)
+nmap qb <Plug>(smartword-b)
+nmap qe <Plug>(smartword-e)
+nmap qge <Plug>(smartword-ge)
 
 nmap <Leader>aj :SidewaysJumpLeft<CR>
 nmap <Leader>ak :SidewaysJumpRight<CR>
 nmap <Leader>aJ :SidewaysLeft<CR>
 nmap <Leader>aK :SidewaysRight<CR>
-
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
