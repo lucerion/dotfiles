@@ -9,6 +9,6 @@
 .vifm/filetypes.local
 .vifm/mappings.local
 .vifm/marks.local
-.vifm/vifminfo
+.vifm/vifminfo*
 .vifm/vifm-help.txt
 .vifm/scripts
