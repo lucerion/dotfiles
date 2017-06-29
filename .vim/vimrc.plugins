@@ -90,3 +90,6 @@ if isdirectory(expand('~/.vim/bundle/unite.vim'))
   \   'prompt_focus': 1
   \ })
 endif
+
+let g:ale_sign_warning = '>'
+let g:ale_echo_msg_format = '[%linter%] %severity%: %s'
