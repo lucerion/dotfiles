@@ -40,7 +40,7 @@ set scrolloff=1
 set sidescrolloff=5
 
 set statusline=%w%h\ %F\ %m
-if isdirectory(expand('~/.vim/bundle/vim-fugitive'))
+if isdirectory(expand('~/.vim/plugins/vim-fugitive'))
   set statusline+=\ %{fugitive#statusline()}
 endif
 set statusline+=\ %r%=%l-%v/%L

@@ -1,18 +1,16 @@
-func! s:init_vundle()
-  if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+func! s:init_plugin_manager()
+  if !filereadable(expand('~/.vim/autoload/plug.vim'))
     return
   endif
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+  call plug#begin('~/.vim/plugins')
   source ~/.vim/plugins.vim
   if filereadable(expand('~/.vim/plugins.local.vim'))
     source ~/.vim/plugins.local.vim
   endif
-  call vundle#end()
+  call plug#end()
 endfunc
 
-filetype off
-call s:init_vundle()
+call s:init_plugin_manager()
 
 
 func! s:gem_open(name)
