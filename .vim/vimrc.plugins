@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/vim-srcery'))
+if isdirectory(expand('~/.vim/plugins/vim-srcery'))
   colorscheme srcery
   let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
 endif
@@ -7,7 +7,7 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_extensions = ['grep']
-if isdirectory(expand('~/.vim/bundle/ctrlp-py-matcher'))
+if isdirectory(expand('~/.vim/plugins/ctrlp-py-matcher'))
   let g:ctrlp_match_func = { 'match' : 'pymatcher#PyMatch' }
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
@@ -48,7 +48,7 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '×'
-if isdirectory(expand('~/.vim/bundle/vimfiler.vim'))
+if isdirectory(expand('~/.vim/plugins/vimfiler.vim'))
   call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
 endif
 
@@ -82,7 +82,7 @@ let g:extract_hidden = 1
 
 let g:executor_reuse_buffer = 1
 
-if isdirectory(expand('~/.vim/bundle/unite.vim'))
+if isdirectory(expand('~/.vim/plugins/unite.vim'))
   let g:unite_enable_auto_select = 0
   call unite#custom#profile('default', 'context', {
   \   'direction': 'below',
