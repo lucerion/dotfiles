@@ -23,23 +23,23 @@ Plug 'tpope/vim-surround'
 Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-endwise'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ck3g/vim-change-hash-syntax'
-Plug 'tpope/vim-rails'
-Plug 'lucerion/vim-i18n-rails'
+Plug 'ck3g/vim-change-hash-syntax', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
+Plug 'lucerion/vim-i18n-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim', 'javascript', 'coffee'] }
 Plug 'tpope/vim-rvm'
-" Plug 'tpope/vim-rake'
-Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-rake', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim'
-Plug 'gregsexton/MatchTag'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/committia.vim'
 Plug 'int3/vim-extradite'
 Plug 'lucerion/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
-" Plug 'ecomba/vim-ruby-refactoring'
+" Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 Plug 'lucerion/vim-extract'
 Plug 'brooth/far.vim'
 Plug 'pelodelfuego/vim-swoop'
@@ -52,17 +52,17 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'kana/vim-smartword'
-" Plug 'suan/vim-instant-markdown'
-Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
 Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
 " Dependencies
-Plug 'Shougo/unite.vim'             " vimfiler, neossh
-Plug 'Shougo/vimproc.vim'           " vimfiler, neossh
-Plug 'MarcWeber/vim-addon-mw-utils' " snipmate
-Plug 'tomtom/tlib_vim'              " snipmate
-Plug 'vim-scripts/l9'               " vim-autocomplpop
-Plug 'lucerion/vim-buffr'           " vim-extract, vim-executor
+Plug 'Shougo/unite.vim'                     " vimfiler, neossh
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler, neossh
+Plug 'MarcWeber/vim-addon-mw-utils'         " snipmate
+Plug 'tomtom/tlib_vim'                      " snipmate
+Plug 'vim-scripts/l9'                       " vim-autocomplpop
+Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
-" Plug 'edsono/vim-matchit'         " vim-ruby-refactoring
+" Plug 'edsono/vim-matchit'                   " vim-ruby-refactoring
