@@ -4,7 +4,6 @@
 .vim/autoload/plug.vim
 .vim/vimrc.local
 .vim/plugins.local.vim
-.vim/init.vim
 .vifm/vifmrc.local
 .vifm/commands.local
 .vifm/filetypes.local
