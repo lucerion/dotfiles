@@ -53,7 +53,6 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'kana/vim-smartword'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
-Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
 Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
