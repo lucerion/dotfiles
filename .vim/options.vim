@@ -93,3 +93,25 @@ endif
 
 let g:ale_sign_warning = '>'
 let g:ale_echo_msg_format = '[%linter%] %severity%: %s'
+
+let g:far#preview_window_height = 15
+let g:far#file_mask_favorites = [
+  \ '%',
+  \ '**/*.*',
+  \ '**/*.rb',
+  \ '**/*.js',
+  \ '**/*.coffee',
+  \ '**/*.html',
+  \ '**/*.erb',
+  \ '**/*.haml',
+  \ '**/*.slim',
+  \ '**/*.css',
+  \ '**/*.scss',
+  \ '**/*.less',
+  \ '**/*.vim'
+  \ ]
+augroup FarMappings
+  autocmd!
+  autocmd FileType far_vim map <buffer><silent>q :q<CR>
+  autocmd FileType far_vim map <buffer><silent>r Xi:Fardo<CR>I
+augroup END
