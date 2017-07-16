@@ -40,4 +40,3 @@ case $TERM in
 esac
 
 [ -f ~/.aliases ] && . ~/.aliases
-[ -f ~/.zshrc.local ] && . ~/.zshrc.local

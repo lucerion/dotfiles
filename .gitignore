@@ -13,3 +13,4 @@
 .vifm/vifminfo*
 .vifm/vifm-help.txt
 .vifm/scripts
+.Xresources.local
