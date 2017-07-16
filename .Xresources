@@ -84,3 +84,5 @@ URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
 ! white
 *.color7:       #918175
 *.color15:      #fce8c3
+
+#include "./.Xresources.local"
