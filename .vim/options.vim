@@ -110,8 +110,3 @@ let g:far#file_mask_favorites = [
   \ '**/*.less',
   \ '**/*.vim'
   \ ]
-augroup FarMappings
-  autocmd!
-  autocmd FileType far_vim map <buffer><silent>q :q<CR>
-  autocmd FileType far_vim map <buffer><silent>r Xi:Fardo<CR>I
-augroup END
