@@ -50,7 +50,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'gorkunov/smartpairs.vim'
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/sideways.vim'
-Plug 'bkad/CamelCaseMotion'
+Plug 'chaoren/vim-wordmotion'
 Plug 'kana/vim-smartword'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'lucerion/vim-executor'

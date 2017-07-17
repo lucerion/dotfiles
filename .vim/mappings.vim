@@ -50,16 +50,15 @@ noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
 
-map <Leader>w <Plug>CamelCaseMotion_w
-map <Leader>b <Plug>CamelCaseMotion_b
-map <Leader>e <Plug>CamelCaseMotion_e
-map <Leader>ge <Plug>CamelCaseMotion_ge
-omap <silent> iw <Plug>CamelCaseMotion_iw
-xmap <silent> iw <Plug>CamelCaseMotion_iw
-omap <silent> ib <Plug>CamelCaseMotion_ib
-xmap <silent> ib <Plug>CamelCaseMotion_ib
-omap <silent> ie <Plug>CamelCaseMotion_ie
-xmap <silent> ie <Plug>CamelCaseMotion_ie
+let g:wordmotion_mappings = {
+\ 'w' : '<Leader>w',
+\ 'b' : '<Leader>b',
+\ 'e' : '<Leader>e',
+\ 'ge' : '<Leader>ge',
+\ 'aw' : 'aw',
+\ 'iw' : 'iw',
+\ '<C-R><C-W>' : ''
+\ }
 
 nmap qw <Plug>(smartword-w)
 nmap qb <Plug>(smartword-b)
@@ -118,5 +117,10 @@ func! s:set_unite_mappings()
   imap   <buffer><C-e> <Plug>(unite_move_head)
 endfunc
 
-autocmd FileType agsv nnoremap <buffer> ot
-  \ :exec 'tab split ' . ags#filePath(line('.'))<CR>
+autocmd FileType agsv nnoremap <buffer> ot :exec 'tab split ' . ags#filePath(line('.'))<CR>
+
+augroup FarMappings
+  autocmd!
+  autocmd FileType far_vim map <buffer><silent>q :q<CR>
+  autocmd FileType far_vim map <buffer><silent>r Xi:Fardo<CR>I
+augroup END
