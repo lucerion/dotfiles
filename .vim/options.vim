@@ -82,13 +82,17 @@ let g:extract_hidden = 1
 
 let g:executor_reuse_buffer = 1
 
+let g:unite_enable_auto_select = 0
 if isdirectory(expand('~/.vim/plugins/unite.vim'))
-  let g:unite_enable_auto_select = 0
   call unite#custom#profile('default', 'context', {
   \   'direction': 'below',
   \   'prompt': '> ',
   \   'prompt_focus': 1
   \ })
+endif
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--vimgrep --silent --ignore tmp --ignore log --ignore vendor'
 endif
 
 let g:ale_sign_warning = '>'
