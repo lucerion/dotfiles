@@ -33,6 +33,7 @@ noremap <Leader>jk }k
 " current paragraph end
 noremap <Leader>kj {j
 
+" vim-test
 nmap <Leader>ra :TestSuite<CR>
 nmap <Leader>rd :TestSuite %:p:h<CR>
 nmap <Leader>rf :TestFile<CR>
@@ -40,39 +41,14 @@ nmap <Leader>rn :TestNearest<CR>
 nmap <Leader>rl :TestLast<CR>
 nmap <Leader>rv :TestVisit<CR>
 
+" splitjoin.vim
 noremap <Leader>sj :SplitjoinJoin<CR>
 noremap <Leader>ss :SplitjoinSplit<CR>
 
+" vimfiler.vim
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
-
-noremap <Leader>of :CtrlPBufTag<CR>
-noremap <Leader>ot :CtrlPTag<CR>
-
-let g:wordmotion_mappings = {
-\ 'w' : '<Leader>w',
-\ 'b' : '<Leader>b',
-\ 'e' : '<Leader>e',
-\ 'ge' : '<Leader>ge',
-\ 'aw' : 'aw',
-\ 'iw' : 'iw',
-\ '<C-R><C-W>' : ''
-\ }
-
-nmap qw <Plug>(smartword-w)
-nmap qb <Plug>(smartword-b)
-nmap qe <Plug>(smartword-e)
-nmap qge <Plug>(smartword-ge)
-
-nmap <Leader>aj :SidewaysJumpLeft<CR>
-nmap <Leader>ak :SidewaysJumpRight<CR>
-nmap <Leader>aJ :SidewaysLeft<CR>
-nmap <Leader>aK :SidewaysRight<CR>
-omap aa <Plug>SidewaysArgumentTextobjA
-xmap aa <Plug>SidewaysArgumentTextobjA
-omap ia <Plug>SidewaysArgumentTextobjI
-xmap ia <Plug>SidewaysArgumentTextobjI
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
 func! s:set_vimfiler_mappings()
@@ -108,6 +84,38 @@ func! s:set_vimfiler_mappings()
   nmap <buffer>g?       <Plug>(vimfiler_help)
 endfunc
 
+" ctrlp.vim
+noremap <Leader>of :CtrlPBufTag<CR>
+noremap <Leader>ot :CtrlPTag<CR>
+
+" vim-wordmotion
+let g:wordmotion_mappings = {
+  \ 'w': '<Leader>w',
+  \ 'b': '<Leader>b',
+  \ 'e': '<Leader>e',
+  \ 'ge': '<Leader>ge',
+  \ 'aw': 'aw',
+  \ 'iw': 'iw',
+  \ '<C-R><C-W>': ''
+  \ }
+
+" vim-smartword
+nmap qw <Plug>(smartword-w)
+nmap qb <Plug>(smartword-b)
+nmap qe <Plug>(smartword-e)
+nmap qge <Plug>(smartword-ge)
+
+" sideways.vim
+nmap <Leader>aj :SidewaysJumpLeft<CR>
+nmap <Leader>ak :SidewaysJumpRight<CR>
+nmap <Leader>aJ :SidewaysLeft<CR>
+nmap <Leader>aK :SidewaysRight<CR>
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
+" unite.vim
 autocmd FileType unite call s:set_unite_mappings()
 func! s:set_unite_mappings()
   iunmap <buffer><Tab>
@@ -117,8 +125,10 @@ func! s:set_unite_mappings()
   imap   <buffer><C-e> <Plug>(unite_move_head)
 endfunc
 
+" vim-ags
 autocmd FileType agsv nnoremap <buffer> ot :exec 'tab split ' . ags#filePath(line('.'))<CR>
 
+" far.vim
 augroup FarMappings
   autocmd!
   autocmd FileType far_vim map <buffer><silent>q :q<CR>
