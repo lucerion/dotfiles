@@ -2,6 +2,7 @@ Plug 'roosta/vim-srcery'
 Plug 'airblade/vim-rooter'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'Shougo/neossh.vim'
+Plug 'Shougo/unite.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabesoft/vim-ags'
@@ -57,7 +58,6 @@ Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
 " Dependencies
-Plug 'Shougo/unite.vim'                     " vimfiler, neossh
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler, neossh
 Plug 'MarcWeber/vim-addon-mw-utils'         " snipmate
 Plug 'tomtom/tlib_vim'                      " snipmate
