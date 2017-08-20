@@ -14,12 +14,12 @@ call s:init_plugin_manager()
 
 
 func! s:gem_open(name)
-  exec 'silent !gem open ' . a:name
+  silent exec '!gem open ' . a:name
   exec 'redraw!'
 endfunc
 
 func! s:gem_autocomplete(A, L, C)
-  let l:all = split(system('gem list'), '\n')
+  let l:all = systemlist('gem list')
   let l:filtered = filter(copy(l:all), 'v:val =~ a:A')
   return map(copy(l:filtered), 'substitute(v:val, " (.*)", "", "g")')
 endfunc
