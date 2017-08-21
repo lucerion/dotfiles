@@ -57,7 +57,7 @@ let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '×'
 if isdirectory(expand('~/.vim/plugins/vimfiler.vim'))
-  call vimfiler#custom#profile('default', 'context', { 'columns': 'size' })
+  call vimfiler#custom#profile('default', 'context', { 'columns': 'size', 'safe': 0 })
 endif
 
 " emmet-vim
