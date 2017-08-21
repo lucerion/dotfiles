@@ -30,6 +30,7 @@ Plug 'lucerion/vim-i18n-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim', 'java
 Plug 'tpope/vim-rvm'
 " Plug 'tpope/vim-rake', { 'for': 'ruby' }
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
+Plug 'lucerion/vim-rubygems'
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
