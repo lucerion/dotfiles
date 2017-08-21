@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := update
 
-CONFIGS = .i3 .vifm .vim .Xresources .aliases .conky.conf .zshrc
+CONFIGS = .i3 .vifm .vim .Xresources .aliases .conky.conf .zshrc .tigrc
 
 
 setup:
