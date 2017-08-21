@@ -1,0 +1,4 @@
+bind status A !git commit --amend
+bind status P !git push %(remote) %(branch)
+bind status S !git stash
+bind main   R !git rebase -i %(commit)
