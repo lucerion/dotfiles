@@ -65,15 +65,18 @@ if executable('ag')
   set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
 endif
 
-augroup restore_cursor_position
+func! s:restore_cursor_position()
+  if line("'\"") > 0 && line("'\"") <= line("$")
+    exec "normal g`\""
+  endif
+endfunc
+
+augroup RestoreCursorPosition
   autocmd!
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exec "normal g`\"" |
-    \ endif
+  autocmd BufReadPost * call s:restore_cursor_position()
 augroup END
 
-augroup make_program
+augroup MakeProgram
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
   autocmd FileType html setl makeprg=sensible-browser\ %

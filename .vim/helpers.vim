@@ -12,12 +12,10 @@ endfunc
 
 call s:init_plugin_manager()
 
-
 func! s:grep_command(pattern)
   let l:pattern = len(a:pattern) ? a:pattern : expand('<cword>')
   exec 'Unite grep -input=' . l:pattern
 endfunc
-
 
 comm! GS exec 'Gstatus | resize 20'
 comm! -nargs=? Grep call s:grep_command(<q-args>)
