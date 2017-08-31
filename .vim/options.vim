@@ -84,7 +84,7 @@ augroup END
 let g:gitgutter_max_signs = 5000
 
 " vim-pasta
-let g:pasta_disabled_filetypes = ['agsv']
+let g:pasta_disabled_filetypes = ['vimfiler', 'agsv']
 
 " splitjoin.vim
 let g:splitjoin_ruby_hanging_args = 0
