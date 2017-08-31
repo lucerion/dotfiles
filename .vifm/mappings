@@ -4,9 +4,9 @@ nmap S  :sort<cr>
 nmap w  :view<cr>
 nmap s  :sync<cr>
 nmap cr :rsync -r --progress %c %D<cr>
-nmap cd :cd<space>
-nmap nf :touch<space>
-nmap nd :mkdir<space>
+nmap i  :cd<space>
+nmap cf :touch<space>
+nmap cd :mkdir<space>
 nmap gf :find<space>
 nmap gr :grep<space>
 
