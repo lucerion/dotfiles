@@ -19,7 +19,7 @@ set clipboard=unnamedplus
 
 set t_Co=256
 set background=dark
-set colorcolumn=80,120
+set colorcolumn=120
 
 colorscheme desert
 
