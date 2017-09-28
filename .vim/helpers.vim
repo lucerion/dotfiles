@@ -1,4 +1,4 @@
-func! s:init_plugin_manager()
+func! s:init_plugin_manager() abort
   if !filereadable(expand('~/.vim/autoload/plug.vim'))
     return
   endif
@@ -9,13 +9,7 @@ func! s:init_plugin_manager()
   endif
   call plug#end()
 endfunc
-
 call s:init_plugin_manager()
 
-func! s:grep_command(pattern)
-  let l:pattern = len(a:pattern) ? a:pattern : expand('<cword>')
-  exec 'Unite grep -input=' . l:pattern
-endfunc
-
-comm! GS exec 'Gstatus | resize 20'
-comm! -nargs=? Grep call s:grep_command(<q-args>)
+comm! GS exec 'Gstatus | resize ' . (&lines / (tabpagewinnr(tabpagenr(), '$') + 1))
+comm! -nargs=? Grep exec 'Unite grep -input=' . (len(<q-args>) ? <q-args> : expand('<cword>'))
