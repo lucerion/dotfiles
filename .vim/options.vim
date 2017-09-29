@@ -139,3 +139,6 @@ let g:far#file_mask_favorites = [
   \ '**/*.less',
   \ '**/*.vim'
   \ ]
+
+" vim-plug
+highlight def link plugDeleted Title
