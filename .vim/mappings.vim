@@ -94,9 +94,9 @@ noremap <Leader>ot :CtrlPTag<CR>
 
 " vim-wordmotion
 let g:wordmotion_mappings = {
-  \ 'w': '<Leader>w',
-  \ 'b': '<Leader>b',
-  \ 'e': '<Leader>e',
+  \ 'w':  '<Leader>w',
+  \ 'b':  '<Leader>b',
+  \ 'e':  '<Leader>e',
   \ 'ge': '<Leader>ge',
   \ 'aw': 'aw',
   \ 'iw': 'iw',
@@ -106,9 +106,9 @@ let g:wordmotion_mappings = {
 " vim-smartword
 nmap q :SmartWordToggle<CR>
 let g:smartword_mappings = {
-  \ 'w': '<Leader>w',
-  \ 'b': '<Leader>b',
-  \ 'e': '<Leader>e',
+  \ 'w':  '<Leader>w',
+  \ 'b':  '<Leader>b',
+  \ 'e':  '<Leader>e',
   \ 'ge': '<Leader>ge'
   \ }
 

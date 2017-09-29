@@ -26,19 +26,19 @@ let g:syntastic_style_error_symbol = '>'
 let g:syntastic_style_warning_symbol = '>'
 
 " vim-ags
-" removed args: --filename, --numbers
+" removed: --filename, --numbers
 let g:ags_agargs = {
-  \ '--color-match': ['"32;40"', ''],
-  \ '--column': ['', ''],
-  \ '--color': ['', ''],
-  \ '--context': ['g:ags_agcontext', '-C'],
-  \ '--group': ['', ''],
-  \ '--heading': ['', '-H'],
-  \ '--color-path': ['"1;31"', ''],
-  \ '--color-line-number': ['"1;30"', ''],
-  \ '--max-count': ['g:ags_agmaxcount', '-m'],
-  \ '--break': ['', ''],
-  \ '--ignore': ['tmp', ''],
+  \ '--color-match':        ['"32;40"', ''],
+  \ '--column':             ['', ''],
+  \ '--color':              ['', ''],
+  \ '--context':            ['g:ags_agcontext', '-C'],
+  \ '--group':              ['', ''],
+  \ '--heading':            ['', '-H'],
+  \ '--color-path':         ['"1;31"', ''],
+  \ '--color-line-number':  ['"1;30"', ''],
+  \ '--max-count':          ['g:ags_agmaxcount', '-m'],
+  \ '--break':              ['', ''],
+  \ '--ignore':             ['tmp', ''],
   \ }
 highlight default link agsvFilePath Directory
 highlight default link agsvLineNumMatch Keyword
@@ -105,8 +105,8 @@ let g:executor_reuse_buffer = 1
 let g:unite_enable_auto_select = 0
 if isdirectory(expand('~/.vim/plugins/unite.vim'))
   call unite#custom#profile('default', 'context', {
-    \   'direction': 'below',
-    \   'prompt': '> ',
+    \   'direction':    'below',
+    \   'prompt':       '> ',
     \   'prompt_focus': 1
     \ })
 endif
