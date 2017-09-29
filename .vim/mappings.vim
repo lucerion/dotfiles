@@ -91,6 +91,7 @@ endfunc
 " ctrlp.vim
 noremap <Leader>of :CtrlPBufTag<CR>
 noremap <Leader>ot :CtrlPTag<CR>
+noremap <Leader>ol :CtrlPLine<CR>
 
 " vim-wordmotion
 let g:wordmotion_mappings = {
@@ -104,7 +105,7 @@ let g:wordmotion_mappings = {
   \ }
 
 " vim-smartword
-nmap q :SmartWordToggle<CR>
+nmap Q :SmartWordToggle<CR>
 let g:smartword_mappings = {
   \ 'w':  '<Leader>w',
   \ 'b':  '<Leader>b',
