@@ -104,10 +104,13 @@ let g:wordmotion_mappings = {
   \ }
 
 " vim-smartword
-nmap qw <Plug>(smartword-w)
-nmap qb <Plug>(smartword-b)
-nmap qe <Plug>(smartword-e)
-nmap qge <Plug>(smartword-ge)
+nmap q :SmartWordToggle<CR>
+let g:smartword_mappings = {
+  \ 'w': '<Leader>w',
+  \ 'b': '<Leader>b',
+  \ 'e': '<Leader>e',
+  \ 'ge': '<Leader>ge'
+  \ }
 
 " sideways.vim
 nmap <Leader>aj :SidewaysJumpLeft<CR>
