@@ -43,6 +43,9 @@ set statusline=%w%h\ %F\ %m
 if isdirectory(expand('~/.vim/plugins/vim-fugitive'))
   set statusline+=\ %{fugitive#statusline()}
 endif
+if isdirectory(expand('~/.vim/plugins/vim-smartword'))
+  set statusline+=\ %{SmartWordStatus()}
+endif
 set statusline+=\ %r%=%l-%v/%L
 
 set incsearch
