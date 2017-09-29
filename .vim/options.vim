@@ -119,7 +119,7 @@ endif
 let g:ale_sign_warning = '>'
 let g:ale_echo_msg_format = '[%linter%] %severity%: %s'
 let g:ale_linters = {
-  \ 'ruby': ['ruby', 'rubocop']
+  \ 'ruby': ['ruby', 'rubocop', 'reek']
   \ }
 
 " far.vim
