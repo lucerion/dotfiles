@@ -140,8 +140,27 @@ let g:far#file_mask_favorites = [
   \ '**/*.css',
   \ '**/*.scss',
   \ '**/*.less',
-  \ '**/*.vim'
+  \ '**/*.vim',
+  \ '**/*.exs',
   \ ]
+if executable('ag')
+  let g:far#source = 'ag'
+  let g:far#file_mask_favorites = [
+    \ '%',
+    \ '\.rb$',
+    \ '\.js$',
+    \ '\.coffee$',
+    \ '\.html$',
+    \ '\.erb$',
+    \ '\.haml$',
+    \ '\.slim$',
+    \ '\.css$',
+    \ '\.scss$',
+    \ '\.less$',
+    \ '\.vim$',
+    \ '\.exs$'
+    \ ]
+endif
 
 " vim-plug
 highlight def link plugDeleted Title
