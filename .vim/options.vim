@@ -123,6 +123,9 @@ let g:ale_linters = {
   \ }
 
 " far.vim
+if executable('ag')
+  let g:far#source = 'ag'
+endif
 let g:far#preview_window_height = 15
 let g:far#file_mask_favorites = [
   \ '%',
