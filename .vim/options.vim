@@ -69,7 +69,7 @@ let g:vim_tags_ctags_binary = 'ripper-tags'
 let g:vim_tags_use_language_field = 0
 
 " vim-trailing-whitespace
-let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
+let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv', 'far_vim']
 
 " delimitMate
 let delimitMate_expand_cr = 2
