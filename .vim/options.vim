@@ -69,7 +69,7 @@ let g:vim_tags_ctags_binary = 'ripper-tags'
 let g:vim_tags_use_language_field = 0
 
 " vim-trailing-whitespace
-let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv']
+let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv', 'far_vim']
 
 " delimitMate
 let delimitMate_expand_cr = 2
@@ -123,6 +123,9 @@ let g:ale_linters = {
   \ }
 
 " far.vim
+if executable('ag')
+  let g:far#source = 'ag'
+endif
 let g:far#preview_window_height = 15
 let g:far#file_mask_favorites = [
   \ '%',
@@ -161,3 +164,8 @@ endif
 
 " vim-plug
 highlight def link plugDeleted Title
+
+
+if filereadable(expand('~/.vim/options.local.vim'))
+  source ~/.vim/options.local.vim
+endif
