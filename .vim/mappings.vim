@@ -51,7 +51,7 @@ noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 noremap <Leader>oe :VimFilerExplorer -find -force-quit<CR>
 
 autocmd FileType vimfiler call s:set_vimfiler_mappings()
-func! s:set_vimfiler_mappings()
+func! s:set_vimfiler_mappings() abort
   nmap <buffer><CR>     <Plug>(vimfiler_cd_or_edit)
   nmap <buffer>q        <Plug>(vimfiler_hide)
   nmap <buffer><tab>    <Plug>(vimfiler_switch_to_another_vimfiler)
@@ -125,7 +125,7 @@ xmap ia <Plug>SidewaysArgumentTextobjI
 
 " unite.vim
 autocmd FileType unite call s:set_unite_mappings()
-func! s:set_unite_mappings()
+func! s:set_unite_mappings() abort
   iunmap <buffer><Tab>
   iunmap <buffer><C-p>
   iunmap <buffer><C-n>
