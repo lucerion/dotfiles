@@ -93,6 +93,3 @@ hi link diffSubname Normal
 
 source ~/.vim/options.vim
 source ~/.vim/mappings.vim
-if filereadable(expand('~/.vim/vimrc.local'))
-  source ~/.vim/vimrc.local
-endif
