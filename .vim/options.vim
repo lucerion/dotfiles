@@ -164,3 +164,8 @@ endif
 
 " vim-plug
 highlight def link plugDeleted Title
+
+
+if filereadable(expand('~/.vim/options.local.vim'))
+  source ~/.vim/options.local.vim
+endif
