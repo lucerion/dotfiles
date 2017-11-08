@@ -3,7 +3,7 @@
 .vim/plugins
 .vim/view
 .vim/autoload/plug.vim
-.vim/vimrc.local
+.vim/options.local.vim
 .vim/plugins.local.vim
 .vifm/vifmrc.local
 .vifm/commands.local
