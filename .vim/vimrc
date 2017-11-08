@@ -68,7 +68,7 @@ if executable('ag')
   set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
 endif
 
-func! s:restore_cursor_position()
+func! s:restore_cursor_position() abort
   if line("'\"") > 0 && line("'\"") <= line("$")
     exec "normal g`\""
   endif
