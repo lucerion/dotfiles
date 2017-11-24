@@ -29,13 +29,16 @@ Plug 'ck3g/vim-change-hash-syntax', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 Plug 'lucerion/vim-i18n-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim', 'javascript', 'coffee'] }
 Plug 'tpope/vim-rvm'
-" Plug 'tpope/vim-rake', { 'for': 'ruby' }
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }
+" Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
 Plug 'lucerion/vim-rubygems'
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'gregsexton/MatchTag', { 'for': 'html' }
+Plug 'slashmili/alchemist.vim', { 'for': ['elixir', 'eelixir'] }
+Plug 'c-brenn/phoenix.vim', { 'for': ['elixir', 'eelixir'] }
+Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'xml', 'eruby', 'eelixir'] }
+Plug 'gregsexton/MatchTag', { 'for': ['html', 'xml', 'eruby', 'eelixir'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/committia.vim'
@@ -67,4 +70,5 @@ Plug 'tomtom/tlib_vim'                      " snipmate
 Plug 'vim-scripts/l9'                       " vim-autocomplpop
 Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-projectionist'              " phoenix.vim
 " Plug 'edsono/vim-matchit'                   " vim-ruby-refactoring
