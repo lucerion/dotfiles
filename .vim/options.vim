@@ -8,7 +8,6 @@ endif
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
-let g:ctrlp_extensions = ['grep']
 if executable('ag')
   let g:ctrlp_grep_command = 'ag --silent --ignore tmp --ignore log --ignore vendor'
 endif
@@ -19,11 +18,6 @@ if isdirectory(expand('~/.vim/plugins/ctrlp-py-matcher'))
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
 endif
-
-" syntastic
-let g:syntastic_check_on_wq = 0
-let g:syntastic_style_error_symbol = '>'
-let g:syntastic_style_warning_symbol = '>'
 
 " vim-ags
 " removed: --filename, --numbers

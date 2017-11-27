@@ -7,11 +7,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabesoft/vim-ags'
 " Plug 'majutsushi/tagbar'
-if v:version >= 800 || has('nvim')
-  Plug 'w0rp/ale'
-else
-  Plug 'vim-syntastic/syntastic'
-endif
+Plug 'w0rp/ale'
 Plug 'othree/vim-autocomplpop'
 Plug 'vim-scripts/cmdline-completion'
 Plug 'google/vim-searchindex'
