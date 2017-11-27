@@ -63,6 +63,7 @@ Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
+Plug 'lucerion/vim-file-bookmark'
 " Dependencies
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler, neossh
 Plug 'MarcWeber/vim-addon-mw-utils'         " snipmate
