@@ -1,3 +1,5 @@
+# vi: filetype=i3
+
 set $mod  Mod4
 set $mod2 Mod1
 
