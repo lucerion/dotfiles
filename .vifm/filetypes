@@ -1,3 +1,5 @@
+" vi: filetype=vifm
+
 " dir
 fileviewer */ tree %f
 
