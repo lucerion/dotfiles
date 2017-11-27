@@ -1,3 +1,5 @@
+" vi: filetype=vifm
+
 nmap rl :rlink<cr>
 nmap al :alink<cr>
 nmap S  :sort<cr>
