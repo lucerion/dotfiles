@@ -1,3 +1,5 @@
+" vi: filetype=vifm
+
 mark r /
 mark h ~/
 mark t ~/.trash

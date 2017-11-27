@@ -1,3 +1,5 @@
+" vi: filetype=vifm
+
 command df df -h %m 2> /dev/null
 command dirsize du -sh %S
 command size du -shc %f %m
