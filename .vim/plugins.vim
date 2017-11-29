@@ -68,4 +68,4 @@ Plug 'vim-scripts/l9'                       " vim-autocomplpop
 Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-projectionist'              " phoenix.vim
-" Plug 'edsono/vim-matchit'                   " vim-ruby-refactoring
+" Plug 'vim-scripts/matchit.zip'              " vim-ruby-refactoring
