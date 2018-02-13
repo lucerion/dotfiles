@@ -21,7 +21,7 @@ Plug 'sickill/vim-pasta'
 Plug 'AndrewRadev/whitespaste.vim'
 Plug 'tpope/vim-endwise'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ck3g/vim-change-hash-syntax', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
+Plug 'AndrewRadev/switch.vim'
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 Plug 'lucerion/vim-i18n-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim', 'javascript', 'coffee'] }
 Plug 'tpope/vim-rvm'
