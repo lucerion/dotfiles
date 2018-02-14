@@ -62,6 +62,18 @@ func! s:unite_grep(selected_symbols_count, input) abort
 endfunc
 
 
+func! s:restore_cursor_position() abort
+  if line("'\"") > 0 && line("'\"") <= line("$")
+    exec "normal g`\""
+  endif
+endfunc
+
+augroup RestoreCursorPosition
+  autocmd!
+  autocmd BufReadPost * call s:restore_cursor_position()
+augroup END
+
+
 comm! GS exec 'Gstatus | resize ' . (&lines / (tabpagewinnr(tabpagenr(), '$') + 1))
 comm! -nargs=* -range Grep call s:unite_grep(<count>, <q-args>)
 comm! SmartWordToggle call s:smartword_toggle()

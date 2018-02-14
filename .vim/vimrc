@@ -68,17 +68,6 @@ if executable('ag')
   set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
 endif
 
-func! s:restore_cursor_position() abort
-  if line("'\"") > 0 && line("'\"") <= line("$")
-    exec "normal g`\""
-  endif
-endfunc
-
-augroup RestoreCursorPosition
-  autocmd!
-  autocmd BufReadPost * call s:restore_cursor_position()
-augroup END
-
 augroup MakeProgram
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
