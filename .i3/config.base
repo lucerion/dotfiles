@@ -1,18 +1,20 @@
 # vi: filetype=i3
 
-set $mod  Mod4
-set $mod2 Mod1
+set $super Mod4
+set $alt   Mod1
 
-set $term    i3-sensible-terminal
-set $browser sensible-browser
+set $term         i3-sensible-terminal
+set $browser      sensible-browser
+set $editor       i3-sensible-terminal -e vim
+set $file_manager i3-sensible-terminal -e vifm
 
-bindsym $mod+Return       exec $term
-bindsym $mod+$mod2+Return exec $term; move left
+bindsym $super+$alt+e exit
+bindsym $super+$alt+r restart
+bindsym $super+$alt+c exec $editor ~/.i3/config
+bindsym $super+$alt+u reload
 
-bindsym $mod+Shift+e exit
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+c exec $term -e vim ~/.i3/config
-bindsym $mod+Shift+u reload
+bindsym $super+Return       exec $term
+bindsym $super+Shift+Return exec $term; move left
 
 
 # fonts
@@ -28,139 +30,137 @@ client.focused_inactive #222222 #111111 #dddddd
 client.urgent           #000000 #900000 #ffffff
 
 # border style [none, normal, 1pixel, toggle]
-bindsym $mod+b border toggle
+bindsym $super+b border toggle
 
 
 ## containers
 
 # close
 
-bindsym $mod+w kill
-bindsym $mod+button1 kill
+bindsym $super+w       kill
+bindsym $super+button1 kill
 
 # focus
 
-bindsym $mod+j          focus left
-bindsym $mod+k          focus up
-bindsym $mod+l          focus down
-bindsym $mod+semicolon  focus right
+bindsym $super+j          focus left
+bindsym $super+k          focus up
+bindsym $super+l          focus down
+bindsym $super+semicolon  focus right
 
-bindsym $mod2+j         focus left
-bindsym $mod2+k         focus up
-bindsym $mod2+l         focus down
-bindsym $mod2+semicolon focus right
+bindsym $alt+j            focus left
+bindsym $alt+k            focus up
+bindsym $alt+l            focus down
+bindsym $alt+semicolon    focus right
 
-bindsym $mod+p focus parent
-bindsym $mod+n focus child
+bindsym $super+p focus parent
+bindsym $super+n focus child
 
 # move
 
-bindsym $mod+Shift+j     move left
-bindsym $mod+Shift+k     move up
-bindsym $mod+Shift+l     move down
-bindsym $mod+Shift+colon move right
-
-bindsym $mod+Shift+Left  move left
-bindsym $mod+Shift+Down  move down
-bindsym $mod+Shift+Up    move up
-bindsym $mod+Shift+Right move right
+bindsym $super+Shift+j     move left
+bindsym $super+Shift+k     move up
+bindsym $super+Shift+l     move down
+bindsym $super+Shift+colon move right
 
 # split
 
-bindsym $mod+h split horizontal
-bindsym $mod+v split vertical
+bindsym $super+h split horizontal
+bindsym $super+v split vertical
 
 # layouts
 
-bindsym $mod+y       layout toggle all
-bindsym $mod+t       layout tabbed
-bindsym $mod+s       layout stacking
-bindsym $mod+Shift+h layout splith
-bindsym $mod+Shift+v layout splitv
+bindsym $super+y       layout toggle all
+bindsym $super+t       layout tabbed
+bindsym $super+s       layout stacking
+bindsym $super+Shift+h layout splith
+bindsym $super+Shift+v layout splitv
 
 workspace_layout tabbed
 
 # fullscreen
 
-bindsym $mod+f fullscreen
+bindsym $super+f fullscreen
 
 # floating
 
-bindsym $mod+e floating toggle; resize set 1000px 600px; move position center
-bindsym $mod+q focus mode_toggle
+bindsym $super+e floating toggle; resize set 1000px 600px; move position center
+bindsym $super+q focus mode_toggle
 
-floating_modifier $mod
-
-# scratchpad
-
-bindsym $mod+period        move scratchpad
-bindsym $mod+Shift+greater scratchpad show; floating disable
+floating_modifier $super
 
 
 ## workspaces
 
 # switch to workspace
 
-bindsym $mod+o workspace next
-bindsym $mod+i workspace prev
+bindsym $super+o workspace next
+bindsym $super+i workspace prev
 
-bindsym $mod+apostrophe workspace back_and_forth
+bindsym $super+apostrophe workspace back_and_forth
 
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $super+1 workspace 1
+bindsym $super+2 workspace 2
+bindsym $super+3 workspace 3
+bindsym $super+4 workspace 4
+bindsym $super+5 workspace 5
+bindsym $super+6 workspace 6
+bindsym $super+7 workspace 7
+bindsym $super+8 workspace 8
+bindsym $super+9 workspace 9
+bindsym $super+0 workspace 10
 
 # move container to workspace
 
-bindsym $mod+Shift+o move container to workspace next
-bindsym $mod+Shift+i move container to workspace prev
+bindsym $super+Shift+o move container to workspace next
+bindsym $super+Shift+i move container to workspace prev
 
-bindsym $mod+Shift+exclam      move workspace 1
-bindsym $mod+Shift+at          move workspace 2
-bindsym $mod+Shift+numbersign  move workspace 3
-bindsym $mod+Shift+dollar      move workspace 4
-bindsym $mod+Shift+percent     move workspace 5
-bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand   move workspace 7
-bindsym $mod+Shift+asterisk    move workspace 8
-bindsym $mod+Shift+parenleft   move workspace 9
-bindsym $mod+Shift+parenright  move workspace 10
+bindsym $super+Shift+exclam      move workspace 1
+bindsym $super+Shift+at          move workspace 2
+bindsym $super+Shift+numbersign  move workspace 3
+bindsym $super+Shift+dollar      move workspace 4
+bindsym $super+Shift+percent     move workspace 5
+bindsym $super+Shift+asciicircum move workspace 6
+bindsym $super+Shift+ampersand   move workspace 7
+bindsym $super+Shift+asterisk    move workspace 8
+bindsym $super+Shift+parenleft   move workspace 9
+bindsym $super+Shift+parenright  move workspace 10
 
 workspace_auto_back_and_forth yes
 
 
 mode "resize" {
-  bindsym k          resize grow   up    10px
-  bindsym l          resize grow   down  10px
-  bindsym j          resize grow   right 10px
-  bindsym semicolon  resize grow   left  10px
+  bindsym k             resize grow   up    10px
+  bindsym l             resize grow   down  10px
+  bindsym j             resize grow   left  10px
+  bindsym semicolon     resize grow   right 10px
 
-  bindsym $mod+l     resize shrink up    10px
-  bindsym $mod+k     resize shrink down  10px
-  bindsym $mod+j     resize shrink left  10px
-  bindsym $mod+colon resize shrink right 10px
+  bindsym Up            resize grow   up    10px
+  bindsym Down          resize grow   down  10px
+  bindsym Left          resize grow   left  10px
+  bindsym Right         resize grow   right 10px
 
-  bindsym Up         resize grow   up    10px
-  bindsym Down       resize grow   down  10px
-  bindsym Left       resize grow   left  10px
-  bindsym Right      resize grow   right 10px
+  bindsym $super+l      resize shrink up    10px
+  bindsym $super+k      resize shrink down  10px
+  bindsym $super+j      resize shrink right 10px
+  bindsym $super+colon  resize shrink left  10px
 
-  bindsym $mod+Down  resize shrink up    10px
-  bindsym $mod+Up    resize shrink down  10px
-  bindsym $mod+Right resize shrink left  10px
-  bindsym $mod+Left  resize shrink right 10px
+  bindsym $super+Up     resize shrink down  10px
+  bindsym $super+Down   resize shrink up    10px
+  bindsym $super+Left   resize shrink right 10px
+  bindsym $super+Right  resize shrink left  10px
 
-  bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $super+r mode "resize"
+
+mode "launch" {
+  bindsym g exec $browser;      mode "default"
+  bindsym v exec $editor;       mode "default"
+  bindsym f exec $file_manager; mode "default"
+
+  bindsym Escape mode "default"
+}
+bindsym $super+a mode "launch"
 
 
 bar {
@@ -180,11 +180,11 @@ bar {
 # dmenu
 set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
 
-bindsym $mod2+m exec dmenu_run $dmenu_options
-bindsym $mod2+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
+bindsym $alt+m exec dmenu_run $dmenu_options
+bindsym $alt+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
 
-bindsym Print exec scrot
-bindsym $mod+Print exec scrot -s
+bindsym Print        exec scrot
+bindsym $super+Print exec scrot -s
 
 
 ## startup
