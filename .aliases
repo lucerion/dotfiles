@@ -129,6 +129,11 @@ alias rr='rake routes'
 alias rsp='rspec'
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
 
+alias phs='mix phoenix.server'
+alias phr='mix phoenix.routes'
+alias iex='iex -S mix'
+alias iexs='iex phoenix.server'
+
 alias ts='tig status'
 
 marks=~/.aliases.local; [ -f $marks ] && . $marks
