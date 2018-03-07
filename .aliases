@@ -1,3 +1,5 @@
+# vi: filetype=sh
+
 alias open='xdg-open'
 
 alias dir='dir --color=auto'
@@ -42,6 +44,9 @@ alias passgen='pwgen -1B'
 alias calc='calc -d'
 
 alias ssh='TERM=xterm ssh'
+
+alias ts='tig status'
+
 
 alias ga='git add'
 alias gb='git branch'
@@ -99,6 +104,7 @@ if [ -n "$ZSH_NAME" ]; then
   compdef _git gsh=git-stash
 fi
 
+
 alias rl='rails'
 alias rls='rails s'
 alias rlc='rails c'
@@ -129,11 +135,11 @@ alias rr='rake routes'
 alias rsp='rspec'
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
 
+
 alias phs='mix phoenix.server'
 alias phr='mix phoenix.routes'
 alias iex='iex -S mix'
 alias iexs='iex phoenix.server'
 
-alias ts='tig status'
 
-marks=~/.aliases.local; [ -f $marks ] && . $marks
+local=~/.aliases.local; [ -f $local ] && . $local
