@@ -65,7 +65,7 @@ set shiftround
 set splitright
 
 if executable('ag')
-  set grepprg=ag\ --silent\ --ignore=tmp\ --ignore=log
+  set grepprg=ag\ --vimgrep\ --silent\ --ignore\ tmp\ --ignore\ log\ --ignore\ vendor\ --ignore\ node_modules
 endif
 
 augroup MakeProgram
