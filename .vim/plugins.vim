@@ -68,5 +68,6 @@ Plug 'tomtom/tlib_vim'                      " snipmate
 Plug 'vim-scripts/l9'                       " vim-autocomplpop
 Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
+Plug 'oplatek/Conque-Shell'                 " alchemist.vim
 Plug 'tpope/vim-projectionist'              " phoenix.vim
 " Plug 'vim-scripts/matchit.zip'              " vim-ruby-refactoring
