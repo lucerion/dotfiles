@@ -3,11 +3,12 @@
 CONFIGS = .i3 .vifm .vim .Xresources .aliases .conky.conf .iex .tigrc .zshrc
 
 
-link:
+setup:
 	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/; done
+	cp .conky.conf ~/.conky.conf
 	touch ~/.Xresources.local
 
-unlink:
+clean:
 	for config in $(CONFIGS); do rm ~/$$config; done
 
 update:
