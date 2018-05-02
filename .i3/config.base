@@ -18,10 +18,11 @@ bindsym $super+Shift+Return exec $term; move left
 
 
 # fonts
-set $font_terminus -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-set $font_fixed    -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
+set $font_monospace pango:Monospace 10
+set $font_terminus  -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+set $font_fixed     -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
 
-font $font_terminus
+font $font_monospace
 
 # colors                border  background text
 client.unfocused        #111111 #000000 #888888
@@ -165,7 +166,7 @@ bindsym $super+a mode "launch"
 
 bar {
   status_command conky -c ~/.conky.conf
-  font $font_terminus
+  font $font_monospace
 
   colors {
     background         #0d0d0d
@@ -191,3 +192,6 @@ bindsym $super+Print exec scrot -s
 
 exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
+
+
+## local config starts here
