@@ -5,6 +5,7 @@ CONFIGS = .i3 .vifm .vim .Xresources .aliases .conky.conf .iex .tigrc .zshrc
 
 setup:
 	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/; done
+	ln -si `pwd`/libinput-gestures.conf ~/.config
 	cp .conky.conf ~/.conky.conf
 	touch ~/.Xresources.local
 
