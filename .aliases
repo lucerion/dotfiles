@@ -60,7 +60,6 @@ alias gcl='git clone'
 alias gc='git commit'
 alias gci='git commit'
 alias gca='git commit --amend'
-alias gcf='git config'
 alias gd='git diff'
 alias gf='git fetch'
 alias gg='git grep'
@@ -68,10 +67,8 @@ alias gi='git init'
 alias gl='git log'
 alias glp='git log --pretty'
 alias gm='git merge'
-alias gmv='git move'
 alias gpl='git pull'
 alias gps='git push'
-alias grm='git rm'
 alias gs='git status'
 alias gst='git status'
 alias gsh='git stash'
@@ -87,7 +84,6 @@ if [ -n "$ZSH_NAME" ]; then
   compdef _git gcl=git-clone
   compdef _git gc=git-commit
   compdef _git gci=git-commit
-  compdef _git gcf=git-config
   compdef _git gd=git-diff
   compdef _git gf=git-fetch
   compdef _git gg=git-grep
@@ -95,10 +91,8 @@ if [ -n "$ZSH_NAME" ]; then
   compdef _git gl=git-log
   compdef _git glp=git-log
   compdef _git gm=git-merge
-  compdef _git gmv=git-move
   compdef _git gpl=git-pull
   compdef _git gps=git-push
-  compdef _git grm=git-rm
   compdef _git gs=git-status
   compdef _git gst=git-status
   compdef _git gsh=git-stash
@@ -112,15 +106,13 @@ alias rlg='rails g'
 alias rld='rails d'
 alias rdbc='rails dbconsole'
 
-alias bdl='bundle'
-alias bdle='bundle exec'
-alias bdll='bundle list'
-alias bdli='bundle install'
-alias bdlu='bundle update'
-alias bdlot='bundle outdated'
-alias bdlc='bundle check'
-alias bdls='bundle show'
-alias bdlo='bundle open'
+alias bd='bundle'
+alias bde='bundle exec'
+alias bdl='bundle list'
+alias bdi='bundle install'
+alias bdu='bundle update'
+alias bdot='bundle outdated'
+alias bdo='bundle open'
 
 alias rk='rake'
 alias rap='rake assets:precompile'
@@ -132,14 +124,26 @@ alias rdm='rake db:migrate'
 alias rds='rake db:seed'
 alias rr='rake routes'
 
+alias gel='gem list'
+alias gei='gem install'
+
+alias rvl='rvm list'
+alias rvg='rvm gemset list'
+alias rvu='rvm use'
+alias rvgu='rvm gemset use'
+
 alias rsp='rspec'
 alias jasmine='RAILS_ENV=test bundle exec rake spec:javascript'
 
 
 alias phs='mix phoenix.server'
 alias phr='mix phoenix.routes'
+alias peg='mix ecto.gen.migration'
+alias pem='mix ecto.migrate'
+alias per='mix ecto.rollback'
+alias pes='mix ecto.migrations'
 alias iex='iex -S mix'
-alias iexs='iex phoenix.server'
+alias ies='iex phoenix.server'
 
 
 local=~/.aliases.local; [ -f $local ] && . $local
