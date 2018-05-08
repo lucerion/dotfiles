@@ -71,17 +71,6 @@ if executable('ag3')
   exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
 endif
 
-augroup Indentation
-  autocmd! FileType go set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
-augroup END
-
-augroup MakeProgram
-  autocmd!
-  autocmd FileType ruby setl makeprg=ruby\ %
-  autocmd FileType html setl makeprg=sensible-browser\ %
-  autocmd FileType sh   setl makeprg=./%
-augroup END
-
 hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
 hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
 hi link diffLine String
