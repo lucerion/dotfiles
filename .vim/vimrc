@@ -64,8 +64,11 @@ set shiftround
 
 set splitright
 
-if executable('ag')
-  set grepprg=ag\ --vimgrep\ --silent\ --ignore\ tmp\ --ignore\ log\ --ignore\ vendor\ --ignore\ node_modules
+if executable('ag3')
+  let g:grep_program = 'ag'
+  let g:grep_options = ' --vimgrep --silent --ignore tmp --ignore log --ignore vendor --ignore node_modules'
+
+  exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
 endif
 
 augroup Indentation

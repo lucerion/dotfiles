@@ -1,6 +1,3 @@
-let s:grep_program = 'ag'
-let s:grep_options = ' --vimgrep --silent --ignore tmp --ignore log --ignore vendor --ignore node_modules'
-
 " vim-srcery
 if isdirectory(expand('~/.vim/plugins/vim-srcery'))
   colorscheme srcery
@@ -11,8 +8,8 @@ endif
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 0
-if executable(s:grep_program)
-  let g:ctrlp_grep_command = s:grep_program . s:grep_options
+if exists('g:grep_program')
+  let g:ctrlp_grep_command = g:grep_program . g:grep_options
 endif
 
 " ctrlp-py-matcher
@@ -107,9 +104,9 @@ if isdirectory(expand('~/.vim/plugins/unite.vim'))
     \   'prompt_focus': 1
     \ })
 endif
-if executable(s:grep_program)
-  let g:unite_source_grep_command = s:grep_program
-  let g:unite_source_grep_default_opts = s:grep_options
+if exists('g:grep_program')
+  let g:unite_source_grep_command = g:grep_program
+  let g:unite_source_grep_default_opts = g:grep_options
 endif
 
 " ale
@@ -137,8 +134,8 @@ let g:far#file_mask_favorites = [
   \ '**/*.vim',
   \ '**/*.exs',
   \ ]
-if executable(s:grep_program)
-  let g:far#source = s:grep_program
+if exists('g:grep_program')
+  let g:far#source = g:grep_program
   let g:far#file_mask_favorites = [
     \ '%',
     \ '\.rb$',
