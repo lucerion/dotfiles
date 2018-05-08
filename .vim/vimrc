@@ -68,6 +68,10 @@ if executable('ag')
   set grepprg=ag\ --vimgrep\ --silent\ --ignore\ tmp\ --ignore\ log\ --ignore\ vendor\ --ignore\ node_modules
 endif
 
+augroup Indentation
+  autocmd! FileType go set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
+
 augroup MakeProgram
   autocmd!
   autocmd FileType ruby setl makeprg=ruby\ %
