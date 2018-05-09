@@ -32,4 +32,4 @@ command unbz tar -jxvf %f
 command man :apropos %a
 
 
-source ~/.vifm/commands.local
+source ~/.config/vifm/commands.local

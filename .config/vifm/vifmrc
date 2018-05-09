@@ -1,6 +1,6 @@
 colorscheme default
 set vifminfo=bookmarks,tui,dhistory,state,savedirs,chistory,shistory,phistory
-set trashdir="~/.trash"
+set trashdir="~/.config/vifm/trash"
 windo normal zo " show hidden files
 set syscalls
 
@@ -24,8 +24,8 @@ set timefmt="%d.%m.%y %H:%M"
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
 
-source ~/.vifm/vifmrc.local
-source ~/.vifm/marks
-source ~/.vifm/filetypes
-source ~/.vifm/commands
-source ~/.vifm/mappings
+source ~/.config/vifm/vifmrc.local
+source ~/.config/vifm/marks
+source ~/.config/vifm/filetypes
+source ~/.config/vifm/commands
+source ~/.config/vifm/mappings

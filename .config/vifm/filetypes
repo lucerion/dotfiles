@@ -56,4 +56,4 @@ filextype *.tg,*.gp,*.gp3,*.gp4,*.gp5 tuxguitar %f &
 filextype *.torrent deluge %f &
 
 
-source ~/.vifm/filetypes.local
+source ~/.config/vifm/filetypes.local

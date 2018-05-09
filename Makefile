@@ -1,18 +1,18 @@
 .DEFAULT_GOAL := update
 
-CONFIGS = .i3 .vifm .vim .Xresources .aliases .iex.exs .tigrc .zshrc
-ROOT_CONFIGS = .vifm .vim .Xresources .aliases .zshrc
+CONFIGS = .config/i3 .config/vifm .vim .Xresources .aliases .iex.exs .tigrc .zshrc
+ROOT_CONFIGS = .config/vifm .vim .Xresources .aliases .zshrc
 
 ifeq (${USER}, root)
 setup:
-	for config in $(ROOT_CONFIGS); do ln -si `pwd`/$$config ~/; done
+	for config in $(ROOT_CONFIGS); do ln -si `pwd`/$$config ~/$$config; done
 	$(MAKE) xresources
 
 clean:
 	for config in $(ROOT_CONFIGS); do rm ~/$$config; done
 else
 setup:
-	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/; done
+	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/$$config; done
 	cp -i `pwd`/.conky.conf ~/.conky.conf
 	$(MAKE) xresources
 
@@ -25,10 +25,10 @@ update:
 
 
 i3.merge:
-	cd .i3; [ -f ./config.local ] && cat config.base config.local > config || cat config.base > config
+	cd .config/i3; [ -f ./config.local ] && cat config.base config.local > config || cat config.base > config
 
 i3.clean:
-	cd .i3; rm config
+	cd .config/i3; rm config
 
 
 vim.setup:
