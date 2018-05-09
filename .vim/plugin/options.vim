@@ -1,5 +1,5 @@
 " vim-srcery
-if isdirectory(expand('~/.vim/plugins/vim-srcery'))
+if helpers#is_plugin_loaded('vim-srcery')
   colorscheme srcery
   let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
 endif
@@ -13,7 +13,7 @@ if exists('g:grep_program')
 endif
 
 " ctrlp-py-matcher
-if isdirectory(expand('~/.vim/plugins/ctrlp-py-matcher'))
+if helpers#is_plugin_loaded('ctrlp-py-matcher')
   let g:ctrlp_match_func = { 'match' : 'pymatcher#PyMatch' }
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
@@ -34,8 +34,6 @@ let g:ags_agargs = {
   \ '--break':              ['', ''],
   \ '--ignore':             ['tmp', ''],
   \ }
-highlight default link agsvFilePath Directory
-highlight default link agsvLineNumMatch Keyword
 
 " tagbar
 let g:tagbar_compact = 1
@@ -50,7 +48,7 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '×'
-if isdirectory(expand('~/.vim/plugins/vimfiler.vim'))
+if helpers#is_plugin_loaded('vimfiler.vim')
   call vimfiler#custom#profile('default', 'context', { 'columns': 'size', 'safe': 0 })
 endif
 
@@ -97,7 +95,7 @@ let g:executor_reuse_buffer = 1
 
 " unite.vim
 let g:unite_enable_auto_select = 0
-if isdirectory(expand('~/.vim/plugins/unite.vim'))
+if helpers#is_plugin_loaded('unite.vim')
   call unite#custom#profile('default', 'context', {
     \   'direction':    'below',
     \   'prompt':       '> ',
@@ -151,12 +149,4 @@ if exists('g:grep_program')
     \ '\.vim$',
     \ '\.exs$'
     \ ]
-endif
-
-" vim-plug
-highlight def link plugDeleted Title
-
-
-if filereadable(expand('~/.vim/options.local.vim'))
-  source ~/.vim/options.local.vim
 endif

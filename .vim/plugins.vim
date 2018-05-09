@@ -1,5 +1,6 @@
 Plug 'roosta/vim-srcery'
 Plug 'airblade/vim-rooter'
+Plug 'pbrisbin/vim-restore-cursor'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'Shougo/neossh.vim'
 Plug 'Shougo/unite.vim'

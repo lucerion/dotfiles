@@ -1,4 +1,4 @@
-func! s:init_plugin_manager() abort
+func! helpers#init_plugin_manager() abort
   if !filereadable(expand('~/.vim/autoload/plug.vim'))
     return
   endif
@@ -9,10 +9,28 @@ func! s:init_plugin_manager() abort
   endif
   call plug#end()
 endfunc
-call s:init_plugin_manager()
 
+func! helpers#is_plugin_loaded(plugin_name) abort
+  return exists('g:loaded_plug') && isdirectory(expand('~/.vim/plugins/' . a:plugin_name))
+endfunc
 
-func! s:smartword_toggle() abort
+func! helpers#unite_grep(selected_symbols_count, input) abort
+  if a:selected_symbols_count >= 1
+    try
+      let l:register_previous_value = @z
+      normal! gv"zy
+      let l:input = @z
+    finally
+      let @z = l:register_previous_value
+    endtry
+  else
+    let l:input = empty(a:input) ? expand('<cword>') : a:input
+  endif
+
+  silent exec 'Unite grep -input=' . escape(l:input, ' \\.')
+endfunc
+
+func! helpers#smartword_toggle() abort
   if !exists('g:smartword_mode')
     let g:smartword_mode = 1
   else
@@ -40,40 +58,6 @@ func! s:smartword_toggle() abort
   endfor
 endfunc
 
-func! SmartWordStatus() abort
+func! helpers#smartword_status() abort
   return '[SmartWord: ' . (get(g:, 'smartword_mode', 0) ? 'on' : 'off') . ']'
 endfunc
-
-
-func! s:unite_grep(selected_symbols_count, input) abort
-  if a:selected_symbols_count >= 1
-    try
-      let l:register_previous_value = @z
-      normal! gv"zy
-      let l:input = @z
-    finally
-      let @z = l:register_previous_value
-    endtry
-  else
-    let l:input = empty(a:input) ? expand('<cword>') : a:input
-  endif
-
-  silent exec 'Unite grep -input=' . escape(l:input, ' \\.')
-endfunc
-
-
-func! s:restore_cursor_position() abort
-  if line("'\"") > 0 && line("'\"") <= line("$")
-    exec "normal g`\""
-  endif
-endfunc
-
-augroup RestoreCursorPosition
-  autocmd!
-  autocmd BufReadPost * call s:restore_cursor_position()
-augroup END
-
-
-comm! GS exec 'Gstatus | resize ' . (&lines / (tabpagewinnr(tabpagenr(), '$') + 1))
-comm! -nargs=* -range Grep call s:unite_grep(<count>, <q-args>)
-comm! SmartWordToggle call s:smartword_toggle()
