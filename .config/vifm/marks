@@ -5,4 +5,4 @@ mark h ~/
 mark t ~/.trash
 
 
-source ~/.vifm/marks.local
+source ~/.config/vifm/marks.local

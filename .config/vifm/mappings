@@ -32,4 +32,4 @@ nmap <f9>  :term<cr>
 nmap <f10> :exit<cr>
 
 
-source ~/.vifm/mappings.local
+source ~/.config/vifm/mappings.local
