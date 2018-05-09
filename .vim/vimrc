@@ -1,5 +1,3 @@
-source ~/.vim/helpers.vim
-
 set nocompatible
 set shortmess+=I
 
@@ -39,15 +37,6 @@ set nowrap
 set scrolloff=1
 set sidescrolloff=5
 
-set statusline=%w%h\ %F\ %m
-if isdirectory(expand('~/.vim/plugins/vim-fugitive'))
-  set statusline+=\ %{fugitive#statusline()}
-endif
-if isdirectory(expand('~/.vim/plugins/vim-smartword'))
-  set statusline+=\ %{SmartWordStatus()}
-endif
-set statusline+=\ %r%=%l-%v/%L
-
 set incsearch
 set hlsearch
 set ignorecase
@@ -64,17 +53,20 @@ set shiftround
 
 set splitright
 
-if executable('ag3')
+call helpers#init_plugin_manager()
+
+set statusline=%w%h\ %F\ %m
+if helpers#is_plugin_loaded('vim-fugitive')
+  set statusline+=\ %{fugitive#statusline()}
+endif
+if helpers#is_plugin_loaded('vim-smartword')
+  set statusline+=\ %{helpers#smartword_status()}
+endif
+set statusline+=\ %r%=%l-%v/%L
+
+if executable('ag')
   let g:grep_program = 'ag'
   let g:grep_options = ' --vimgrep --silent --ignore tmp --ignore log --ignore vendor --ignore node_modules'
 
   exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
 endif
-
-hi diffAdded   ctermbg=NONE ctermfg=118 cterm=NONE
-hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE
-hi link diffLine String
-hi link diffSubname Normal
-
-source ~/.vim/options.vim
-source ~/.vim/mappings.vim
