@@ -10,8 +10,11 @@ func! helpers#init_plugin_manager() abort
   call plug#end()
 endfunc
 
-func! helpers#is_plugin_loaded(plugin_name) abort
-  return exists('g:loaded_plug') && isdirectory(expand('~/.vim/plugins/' . a:plugin_name))
+func! helpers#is_plugin_loaded(plugin_name, ...) abort
+  let l:loaded_flag = get(a:000, 0, '')
+  let l:is_plugin_loaded = len(l:loaded_flag) ? exists(l:loaded_flag) : 1
+
+  return exists('g:loaded_plug') && isdirectory(expand('~/.vim/plugins/' . a:plugin_name)) && l:is_plugin_loaded
 endfunc
 
 func! helpers#unite_grep(selected_symbols_count, input) abort
