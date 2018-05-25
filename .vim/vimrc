@@ -56,7 +56,7 @@ set splitright
 call helpers#init_plugin_manager()
 
 set statusline=%w%h\ %F\ %m
-if helpers#is_plugin_loaded('vim-fugitive')
+if helpers#is_plugin_loaded('vim-fugitive', 'g:loaded_fugitive')
   set statusline+=\ %{fugitive#statusline()}
 endif
 if helpers#is_plugin_loaded('vim-smartword')
