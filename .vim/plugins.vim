@@ -62,6 +62,7 @@ Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
 Plug 'lucerion/vim-file-bookmark'
+Plug 'lucerion/vim-split-window'
 " Dependencies
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler, neossh
 Plug 'MarcWeber/vim-addon-mw-utils'         " snipmate
