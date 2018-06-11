@@ -7,6 +7,8 @@ Plug 'Shougo/unite.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabesoft/vim-ags'
+Plug 'brooth/far.vim'
+Plug 'osyo-manga/vim-over'
 " Plug 'majutsushi/tagbar'
 Plug 'w0rp/ale'
 Plug 'othree/vim-autocomplpop'
@@ -43,11 +45,7 @@ Plug 'int3/vim-extradite'
 Plug 'hotwatermorning/auto-git-diff'
 Plug 'lucerion/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
-" Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 Plug 'lucerion/vim-extract'
-Plug 'brooth/far.vim'
-Plug 'pelodelfuego/vim-swoop'
-Plug 'osyo-manga/vim-over'
 Plug 'mkitt/tabline.vim'
 Plug 'bogado/file-line'
 Plug 'michaeljsmith/vim-indent-object'
@@ -62,6 +60,7 @@ Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
 Plug 'lucerion/vim-file-bookmark'
+Plug 'lucerion/vim-split-window-mods'
 " Dependencies
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler, neossh
 Plug 'MarcWeber/vim-addon-mw-utils'         " snipmate
@@ -71,4 +70,3 @@ Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
 Plug 'oplatek/Conque-Shell'                 " alchemist.vim
 Plug 'tpope/vim-projectionist'              " phoenix.vim
-" Plug 'vim-scripts/matchit.zip'              " vim-ruby-refactoring
