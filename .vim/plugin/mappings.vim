@@ -114,10 +114,10 @@ let g:smartword_mappings = {
   \ }
 
 " sideways.vim
-nmap <Leader>aj :SidewaysJumpLeft<CR>
-nmap <Leader>ak :SidewaysJumpRight<CR>
-nmap <Leader>aJ :SidewaysLeft<CR>
-nmap <Leader>aK :SidewaysRight<CR>
+nmap <Leader>ab :SidewaysJumpLeft<CR>
+nmap <Leader>aw :SidewaysJumpRight<CR>
+nmap <Leader>aj :SidewaysLeft<CR>
+nmap <Leader>ak :SidewaysRight<CR>
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
