@@ -74,6 +74,7 @@ augroup END
 
 " vim-gitgutter
 let g:gitgutter_max_signs = 5000
+autocmd BufWritePost * GitGutter
 
 " vim-pasta
 let g:pasta_disabled_filetypes = ['vimfiler', 'agsv']
