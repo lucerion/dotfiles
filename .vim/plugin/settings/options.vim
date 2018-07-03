@@ -7,7 +7,7 @@ if exists('g:grep_program')
 endif
 
 " ctrlp-py-matcher
-if helpers#is_plugin_loaded('ctrlp-py-matcher')
+if settings#plugin_manager#is_plugin_loaded('ctrlp-py-matcher')
   let g:ctrlp_match_func = { 'match' : 'pymatcher#PyMatch' }
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
@@ -42,7 +42,7 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '×'
-if helpers#is_plugin_loaded('vimfiler.vim')
+if settings#plugin_manager#is_plugin_loaded('vimfiler.vim')
   call vimfiler#custom#profile('default', 'context', { 'columns': 'size', 'safe': 0 })
 endif
 
@@ -90,7 +90,7 @@ let g:executor_reuse_buffer = 1
 
 " unite.vim
 let g:unite_enable_auto_select = 0
-if helpers#is_plugin_loaded('unite.vim')
+if settings#plugin_manager#is_plugin_loaded('unite.vim')
   call unite#custom#profile('default', 'context', {
     \   'direction':    'below',
     \   'prompt':       '> ',
