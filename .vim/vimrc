@@ -55,6 +55,11 @@ set splitright
 
 call helpers#init_plugin_manager()
 
+if helpers#is_plugin_loaded('vim-srcery')
+  colorscheme srcery
+  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
+endif
+
 set statusline=%w%h\ %F\ %m
 if helpers#is_plugin_loaded('vim-fugitive', 'g:loaded_fugitive')
   set statusline+=\ %{fugitive#statusline()}

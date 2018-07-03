@@ -1,9 +1,3 @@
-" vim-srcery
-if helpers#is_plugin_loaded('vim-srcery')
-  colorscheme srcery
-  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
-endif
-
 " ctrlp.vim
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
