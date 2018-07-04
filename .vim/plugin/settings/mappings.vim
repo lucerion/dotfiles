@@ -34,12 +34,12 @@ noremap <Leader>jk }k
 noremap <Leader>kj {j
 
 " vim-test
-nmap <Leader>ra :TestSuite<CR>
-nmap <Leader>rd :TestSuite %:p:h<CR>
-nmap <Leader>rf :TestFile<CR>
-nmap <Leader>rn :TestNearest<CR>
-nmap <Leader>rl :TestLast<CR>
-nmap <Leader>rv :TestVisit<CR>
+noremap <Leader>ra :TestSuite<CR>
+noremap <Leader>rd :TestSuite %:p:h<CR>
+noremap <Leader>rf :TestFile<CR>
+noremap <Leader>rn :TestNearest<CR>
+noremap <Leader>rl :TestLast<CR>
+noremap <Leader>rv :TestVisit<CR>
 
 " splitjoin.vim
 noremap <Leader>sj :SplitjoinJoin<CR>
@@ -50,7 +50,10 @@ noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
 noremap <Leader>oe :VimFilerExplorer -find -force-quit -winwidth=45<CR>
 
-autocmd FileType vimfiler call s:set_vimfiler_mappings()
+augroup VimFilerMappings
+  autocmd!
+  autocmd FileType vimfiler call s:set_vimfiler_mappings()
+augroup END
 func! s:set_vimfiler_mappings() abort
   nmap <buffer><CR>     <Plug>(vimfiler_cd_or_edit)
   nmap <buffer>q        <Plug>(vimfiler_hide)
@@ -105,40 +108,39 @@ let g:wordmotion_mappings = {
   \ }
 
 " vim-smartword
-nmap Q :SmartWordToggle<CR>
+nmap q :SmartWordToggle<CR>
 let g:smartword_mappings = {
-  \ 'w':  '<Leader>w',
-  \ 'b':  '<Leader>b',
-  \ 'e':  '<Leader>e',
-  \ 'ge': '<Leader>ge'
+  \ 'w':  'w',
+  \ 'b':  'b',
+  \ 'e':  'e',
+  \ 'ge': 'ge'
   \ }
 
 " sideways.vim
-nmap <Leader>ab :SidewaysJumpLeft<CR>
-nmap <Leader>aw :SidewaysJumpRight<CR>
-nmap <Leader>aj :SidewaysLeft<CR>
-nmap <Leader>ak :SidewaysRight<CR>
+noremap <Leader>aw :SidewaysJumpRight<CR>
+noremap <Leader>ab :SidewaysJumpLeft<CR>
+noremap <Leader>al :SidewaysRight<CR>
+noremap <Leader>ah :SidewaysLeft<CR>
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
 xmap ia <Plug>SidewaysArgumentTextobjI
 
 " unite.vim
-autocmd FileType unite call s:set_unite_mappings()
-func! s:set_unite_mappings() abort
-  iunmap <buffer><Tab>
-  iunmap <buffer><C-p>
-  iunmap <buffer><C-n>
-  iunmap <buffer><CR>
-  imap   <buffer><C-e> <Plug>(unite_move_head)
-endfunc
+augroup UniteMappings
+  autocmd!
+  autocmd FileType unite imap <buffer><C-e> <Plug>(unite_move_head)
+augroup END
 
 " vim-ags
-autocmd FileType agsv nnoremap <buffer> ot :exec 'tab split ' . ags#filePath(line('.'))<CR>
+augroup AgsMappings
+  autocmd!
+  autocmd FileType agsv nnoremap <buffer>ot :exec 'tab split ' . ags#filePath(line('.'))<CR>
+augroup END
 
 " far.vim
 augroup FarMappings
   autocmd!
-  autocmd FileType far_vim map <buffer><silent>q :q<CR>
-  autocmd FileType far_vim map <buffer><silent>r Xi:Fardo<CR>I
+  autocmd FileType far_vim nnoremap <buffer><silent>q :q<CR>
+  autocmd FileType far_vim nnoremap <buffer><silent>r Xi:Fardo<CR>I
 augroup END
