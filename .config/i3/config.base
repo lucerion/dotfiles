@@ -165,7 +165,7 @@ bindsym $super+a mode "launch"
 
 
 bar {
-  status_command conky -c ~/.conky.conf
+  status_command conky -c ~/.config/conky/conkyrc
   font $font_monospace
 
   colors {
