@@ -13,7 +13,7 @@ clean:
 else
 setup:
 	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/$$config; done
-	cp -i `pwd`/.conky.conf ~/.conky.conf
+	cp -ir `pwd`/.config/conky ~/.config
 	$(MAKE) xresources
 
 clean:
