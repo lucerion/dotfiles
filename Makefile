@@ -1,40 +1,41 @@
 .DEFAULT_GOAL := update
-
-CONFIGS = .config/i3 .config/vifm .vim .Xresources .aliases .iex.exs .tigrc .zshrc
-ROOT_CONFIGS = .config/vifm .vim .Xresources .aliases .zshrc
+.PHONY: setup clean update vim i3
 
 ifeq (${USER}, root)
-setup:
-	for config in $(ROOT_CONFIGS); do ln -si `pwd`/$$config ~/$$config; done
-	$(MAKE) xresources
-
-clean:
-	for config in $(ROOT_CONFIGS); do rm ~/$$config; done
+CONFIGS = ~/.config/vifm ~/.vim ~/.aliases ~/.Xresources ~/.zshrc
 else
-setup:
-	for config in $(CONFIGS); do ln -si `pwd`/$$config ~/$$config; done
-	cp -ir `pwd`/.config/conky ~/.config
-	$(MAKE) xresources
+CONFIGS = ~/.config/conky ~/.config/i3 ~/.config/vifm ~/.vim ~/.aliases ~/.iex.exs ~/.tigrc ~/.Xresources ~/.zshrc
+endif
+
+
+~/.config/conky: .config/conky
+	mkdir -p $(dir $@)
+	cp -r $< $@
+
+~/.config/%: .config/%
+	mkdir -p $(dir $@)
+	ln -si `pwd`/$< $@
+
+~/.vim: .vim
+	ln -si `pwd`/$< $@
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+~/.Xresources: .Xresources
+	ln -si `pwd`/$< $@
+	touch ~/.Xresources.local
+	xrdb -merge $@
+
+~/%: %
+	ln -si `pwd`/$< $@
+
+
+setup: $(CONFIGS)
 
 clean:
-	for config in $(CONFIGS); do rm ~/$$config; done
-endif
+	for config in $(CONFIGS); do rm $$config; done
 
 update:
 	git pull origin master
 
-
-i3.merge:
-	cd .config/i3; [ -f ./config.local ] && cat config.base config.local > config || cat config.base > config
-
-i3.clean:
-	cd .config/i3; rm config
-
-
-vim.setup:
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-
-xresources:
-	touch ~/.Xresources.local
-	cd ~/; xrdb -merge .Xresources
+i3:
+	cd ~/.config/i3; [ -f config.local ] && cat config.base config.local > config || cat config.base > config
