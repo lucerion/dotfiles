@@ -6,7 +6,6 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
 alias ls='ls --color=auto'
-alias lla='ls -lAh'
 alias ll='ls -lAh'
 alias lsf='find -type f'
 alias lsd='find -type d'
@@ -14,14 +13,16 @@ alias lsd='find -type d'
 alias pgrep='pgrep -af'
 alias jobs='jobs -l'
 
-alias rmr='rm -r'
-
 if [ -n "$BASH" ]; then
   alias ..='cd ..'
   alias ...='cd ../..'
   alias ~='cd ~'
   function -() { cd -; }
 fi
+
+function cdl() { cd $1 && ls -lAh }
+function mkcd() { mkdir -p $1 && cd $1 }
+function rmr() { if [ -d $1 ]; then rm -r $1; else rm $1; fi }
 
 alias grep='grep -ins --color'
 alias rgrep='rgrep -ins --color'
