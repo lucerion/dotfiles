@@ -20,8 +20,8 @@ if [ -n "$BASH" ]; then
   function -() { cd -; }
 fi
 
-function cdl() { cd $1 && ls -lAh }
-function mkcd() { mkdir -p $1 && cd $1 }
+function cdl() { cd $1 && ls -lAh; }
+function mkcd() { mkdir -p $1 && cd $1; }
 function rmr() { if [ -d $1 ]; then rm -r $1; else rm $1; fi }
 
 alias grep='grep -ins --color'
