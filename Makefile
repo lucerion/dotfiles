@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := update
-.PHONY: setup clean update vim i3
+.PHONY: setup clean update vim i3config
 
 ifeq (${USER}, root)
 CONFIGS = ~/.config/vifm ~/.vim ~/.aliases ~/.Xresources ~/.zshrc
@@ -37,5 +37,5 @@ clean:
 update:
 	git pull origin master
 
-i3:
+i3config:
 	cd ~/.config/i3; [ -f config.local ] && cat config.base config.local > config || cat config.base > config
