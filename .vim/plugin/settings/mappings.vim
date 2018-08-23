@@ -48,7 +48,7 @@ noremap <Leader>ss :SplitjoinSplit<CR>
 " vimfiler.vim
 noremap <Leader>os :VimFilerSplit -horizontal -find -force-quit<CR>
 noremap <Leader>ov :VimFilerSplit -find -force-quit<CR>
-noremap <Leader>oe :VimFilerExplorer -find -force-quit -winwidth=45<CR>
+noremap <Leader>oe :VimFilerExplorer -find -force-quit -winwidth=50<CR>
 
 augroup VimFilerMappings
   autocmd!
