@@ -7,6 +7,7 @@ set $term         i3-sensible-terminal
 set $browser      sensible-browser
 set $editor       i3-sensible-terminal -e vim
 set $file_manager i3-sensible-terminal -e vifm
+set $calc         i3-sensible-terminal -e calc -d
 
 bindsym $super+$alt+e exit
 bindsym $super+$alt+r restart
@@ -158,10 +159,11 @@ mode "launch" {
   bindsym g exec $browser;      mode "default"
   bindsym v exec $editor;       mode "default"
   bindsym f exec $file_manager; mode "default"
+  bindsym c exec $calc;         mode "default"
 
   bindsym Escape mode "default"
 }
-bindsym $super+a mode "launch"
+bindsym $alt+e mode "launch"
 
 
 bar {
