@@ -1,3 +1,26 @@
+call helpers#plugin_manager#init()
+
+if helpers#plugin_manager#is_plugin_loaded('vim-srcery')
+  colorscheme srcery
+  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
+endif
+
+if executable('ag')
+  let g:grep_program = 'ag'
+  let g:grep_options = ' --vimgrep --silent --ignore tmp --ignore log --ignore vendor --ignore node_modules'
+
+  exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
+endif
+
+set statusline=%w%h\ %F\ %m
+if helpers#plugin_manager#is_plugin_loaded('vim-fugitive', 'g:loaded_fugitive')
+  set statusline+=\ %{fugitive#statusline()}
+endif
+if helpers#plugin_manager#is_plugin_loaded('vim-smartword')
+  set statusline+=\ %{helpers#smartword#status()}
+endif
+set statusline+=\ %r%=%l-%v/%L
+
 " ctrlp.vim
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
@@ -7,7 +30,7 @@ if exists('g:grep_program')
 endif
 
 " ctrlp-py-matcher
-if settings#plugin_manager#is_plugin_loaded('ctrlp-py-matcher')
+if helpers#plugin_manager#is_plugin_loaded('ctrlp-py-matcher')
   let g:ctrlp_match_func = { 'match' : 'pymatcher#PyMatch' }
   let g:ctrlp_max_files = 0
   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:1000'
@@ -42,7 +65,7 @@ let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
 let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_readonly_file_icon = '×'
-if settings#plugin_manager#is_plugin_loaded('vimfiler.vim')
+if helpers#plugin_manager#is_plugin_loaded('vimfiler.vim')
   call vimfiler#custom#profile('default', 'context', { 'columns': 'size', 'safe': 0 })
 endif
 
@@ -90,7 +113,7 @@ let g:executor_reuse_buffer = 1
 
 " unite.vim
 let g:unite_enable_auto_select = 0
-if settings#plugin_manager#is_plugin_loaded('unite.vim')
+if helpers#plugin_manager#is_plugin_loaded('unite.vim')
   call unite#custom#profile('default', 'context', {
     \   'direction':    'below',
     \   'prompt':       '> ',
