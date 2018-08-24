@@ -1,4 +1,4 @@
-func! settings#smartword#toggle() abort
+func! helpers#smartword#toggle() abort
   if !exists('g:smartword_mode')
     let g:smartword_mode = 1
   else
@@ -26,6 +26,6 @@ func! settings#smartword#toggle() abort
   endfor
 endfunc
 
-func! settings#smartword#status() abort
+func! helpers#smartword#status() abort
   return '[SmartWord: ' . (get(g:, 'smartword_mode', 0) ? 'on' : 'off') . ']'
 endfunc
