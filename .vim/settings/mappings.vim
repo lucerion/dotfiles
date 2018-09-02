@@ -70,7 +70,7 @@ func! s:set_vimfiler_mappings() abort
   nmap <buffer><C-s>    <Plug>(vimfiler_split_edit_file)
   nmap <buffer><C-p>    <Plug>(vimfiler_preview_file)
   nmap <buffer><expr>t  vimfiler#do_switch_action('tabopen')
-  nmap <buffer>i        <Plug>(vimfiler_cd_input_directory)
+  nmap <buffer>i        :VimFilerPrompt<CR>
   nmap <buffer>cd       <Plug>(vimfiler_make_directory)
   nmap <buffer>cf       <Plug>(vimfiler_new_file)
   nmap <buffer>s        <Plug>(vimfiler_toggle_mark_current_line)
