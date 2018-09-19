@@ -14,19 +14,16 @@ command rsync !!rsync %a
 
 command config :vim $MYVIFMRC
 
-command unp 7z x %f
-command zip 7z a -mx=9 -tzip %f.zip %f
-command unzip 7z x %f
-command rar rar a %f.rar %f
-command unrar unrar x %f
+command extract 7z x %f
 command szip 7z a -mx=9 %f.7z %f
-command unszip 7z x %f
-command tar tar cf %f.tar %f
-command untar tar xvf %f
-command gz tar -zcvf %f.tar.gz %f
-command ungz tar -zxvf %f
-command bz tar -jcvf %f.tar.gz %f
-command unbz tar -jxvf %f
+command zip 7z a -mx=9 -tzip %f.zip %f
+command rar rar a %f.rar %f
+command tar tar -cf %f.tar %f
+command gz tar -zcf %f.tar.gz %f
+command bz tar -jcf %f.tar.bz %f
+command unbz tar -jxf %f
+command ungz tar -zxf %f
+command unrar unrar x %f
 
 " aliases
 command man :apropos %a
