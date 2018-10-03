@@ -1,35 +1,45 @@
 .DEFAULT_GOAL := update
-.PHONY: setup clean update vim i3config
+.PHONY: setup clean update i3config
+
+SETUP_DIR ?= ~/
 
 ifeq (${USER}, root)
-CONFIGS = ~/.config/vifm ~/.vim ~/.aliases ~/.Xresources ~/.zshrc
+CONFIGS = $(SETUP_DIR)/.config/vifm \
+          $(SETUP_DIR)/.vim \
+          $(SETUP_DIR)/.aliases \
+          $(SETUP_DIR)/.Xresources \
+          $(SETUP_DIR)/.zshrc
 else
-CONFIGS = ~/.config/conky ~/.config/i3 ~/.config/vifm ~/.vim ~/.aliases ~/.iex.exs ~/.tigrc ~/.Xresources ~/.zshrc
+CONFIGS = $(SETUP_DIR)/.config/conky \
+          $(SETUP_DIR)/.config/i3 \
+          $(SETUP_DIR)/.config/vifm \
+          $(SETUP_DIR)/.vim \
+          $(SETUP_DIR)/.aliases \
+          $(SETUP_DIR)/.tigrc \
+          $(SETUP_DIR)/.Xresources \
+          $(SETUP_DIR)/.zshrc
 endif
 
+$(SETUP_DIR)/.config:
+	mkdir -p $@
 
-~/.config/conky: .config/conky
-	mkdir -p $(dir $@)
+$(SETUP_DIR)/.config/conky: .config/conky
 	cp -r $< $@
 
-~/.config/%: .config/%
-	mkdir -p $(dir $@)
+$(SETUP_DIR)/.vim: .vim
 	ln -si `pwd`/$< $@
+	curl -fLo $</autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-~/.vim: .vim
+$(SETUP_DIR)/.Xresources: .Xresources
 	ln -si `pwd`/$< $@
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-~/.Xresources: .Xresources
-	ln -si `pwd`/$< $@
-	touch ~/.Xresources.local
+	touch $(SETUP_DIR)/.Xresources.local
 	xrdb -merge $@
 
-~/%: %
+$(SETUP_DIR)/%: %
 	ln -si `pwd`/$< $@
 
 
-setup: $(CONFIGS)
+setup: $(SETUP_DIR)/.config $(CONFIGS)
 
 clean:
 	for config in $(CONFIGS); do rm $$config; done
@@ -38,4 +48,4 @@ update:
 	git pull origin master
 
 i3config:
-	cd ~/.config/i3; [ -f config.local ] && cat config.base config.local > config || cat config.base > config
+	cd $(SETUP_DIR)/.config/i3; [ -f config.local ] && cat config.base config.local > config || cat config.base > config
