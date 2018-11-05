@@ -2,6 +2,8 @@
 
 alias open='xdg-open'
 
+alias slc='sudo $(fc -ln -1)'
+
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
@@ -13,11 +15,12 @@ alias lsd='find -type d'
 alias pgrep='pgrep -af'
 alias jobs='jobs -l'
 
+alias ...='cd ../..'
+function -() { cd -; }
+
 if [ -n "$BASH" ]; then
   alias ..='cd ..'
-  alias ...='cd ../..'
   alias ~='cd ~'
-  function -() { cd -; }
 fi
 
 function cdl() { cd $1 && ls -lAh; }
