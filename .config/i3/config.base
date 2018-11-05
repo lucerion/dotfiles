@@ -85,7 +85,7 @@ bindsym $super+f fullscreen
 
 # floating
 
-bindsym $super+e floating toggle; resize set 1000px 600px; move position center
+bindsym $super+e floating toggle
 bindsym $super+q focus mode_toggle
 
 floating_modifier $super
@@ -156,8 +156,8 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 mode "launch" {
-  bindsym g exec $browser;      mode "default"
-  bindsym v exec $editor;       mode "default"
+  bindsym b exec $browser;      mode "default"
+  bindsym e exec $editor;       mode "default"
   bindsym f exec $file_manager; mode "default"
   bindsym c exec $calc;         mode "default"
 
