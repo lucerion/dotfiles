@@ -1,24 +1,36 @@
 .DEFAULT_GOAL := update
-.PHONY: setup clean update i3config
+.PHONY: setup clean update backup restore i3config
 
-SETUP_DIR ?= ~/
+SETUP_DIR ?= ~
+BACKUP_DIR ?= ~/local_configs_backup
+
+USER_CONFIGS = $(SETUP_DIR)/.config/conky \
+							 $(SETUP_DIR)/.config/i3 \
+							 $(SETUP_DIR)/.config/vifm \
+							 $(SETUP_DIR)/.vim \
+							 $(SETUP_DIR)/.aliases \
+							 $(SETUP_DIR)/.tigrc \
+							 $(SETUP_DIR)/.Xresources \
+							 $(SETUP_DIR)/.zshrc
+
+ROOT_CONFIGS = $(SETUP_DIR)/.config/vifm \
+							 $(SETUP_DIR)/.vim \
+							 $(SETUP_DIR)/.aliases \
+							 $(SETUP_DIR)/.Xresources \
+							 $(SETUP_DIR)/.zshrc
+
+LOCAL_CONFIGS = .config/i3/config.local \
+								.vim/settings/plugins/local.vim \
+								.vim/settings/*.local.vim \
+								.config/vifm/*.local \
+								.Xresources.local
 
 ifeq (${USER}, root)
-CONFIGS = $(SETUP_DIR)/.config/vifm \
-          $(SETUP_DIR)/.vim \
-          $(SETUP_DIR)/.aliases \
-          $(SETUP_DIR)/.Xresources \
-          $(SETUP_DIR)/.zshrc
+CONFIGS = $(ROOT_CONFIGS)
 else
-CONFIGS = $(SETUP_DIR)/.config/conky \
-          $(SETUP_DIR)/.config/i3 \
-          $(SETUP_DIR)/.config/vifm \
-          $(SETUP_DIR)/.vim \
-          $(SETUP_DIR)/.aliases \
-          $(SETUP_DIR)/.tigrc \
-          $(SETUP_DIR)/.Xresources \
-          $(SETUP_DIR)/.zshrc
+CONFIGS = $(USER_CONFIGS)
 endif
+
 
 $(SETUP_DIR)/.config:
 	mkdir -p $@
@@ -47,5 +59,20 @@ clean:
 update:
 	git pull origin master
 
+backup:
+	$(call copy, $(SETUP_DIR), $(BACKUP_DIR))
+
+restore:
+	$(call copy, $(BACKUP_DIR), $(SETUP_DIR))
+
 i3config:
-	cd $(SETUP_DIR)/.config/i3; [ -f config.local ] && cat config.base config.local > config || cat config.base > config
+	cd $(SETUP_DIR)/.config/i3; [ -f config.local ] && cat config.base config.local > config || cp config.base config
+
+
+define copy
+	for config in $(LOCAL_CONFIGS); do \
+		if [ -f $$config ]; then \
+			mkdir -p $2/$$(dirname $$config) && cp $1/$$config $2/$$config; \
+		fi \
+	done
+endef
