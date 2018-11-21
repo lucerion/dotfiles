@@ -26,8 +26,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'janko-m/vim-test'
 Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'xml', 'eruby', 'eelixir', 'javascript.jsx'] }
-Plug 'gregsexton/MatchTag', { 'for': ['html', 'xml', 'eruby', 'eelixir', 'javascript.jsx'] }
 Plug 'lucerion/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
 Plug 'lucerion/vim-extract'
@@ -40,7 +38,6 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/deleft.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'kana/vim-smartword'
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'npm install instant-markdown-d' }
 Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
