@@ -39,5 +39,5 @@ case $TERM in
   ;;
 esac
 
-[ -f ~/.zshrc.local ] && . ~/.zshrc.local
+[ -f ~/.shrc.local ] && . ~/.shrc.local
 [ -f ~/.aliases ] && . ~/.aliases
