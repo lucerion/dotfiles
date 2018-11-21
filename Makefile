@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := update
-.PHONY: setup clean update backup restore i3config shit
+.PHONY: setup clean update i3config backup restore
 
 SETUP_DIR ?= ~
 BACKUP_DIR ?= ~/configs_backup
@@ -19,11 +19,13 @@ ROOT_CONFIGS = $(SETUP_DIR)/.config/vifm \
 							 $(SETUP_DIR)/.Xresources \
 							 $(SETUP_DIR)/.zshrc
 
-LOCAL_CONFIGS = .config/i3/config.local \
-								.vim/settings/plugins/local.vim \
-								.vim/settings/*.local.vim \
-								.config/vifm/*.local \
-								.Xresources.local
+BACKUP_CONFIGS ?= .config/i3/config.local \
+									.vim/settings/plugins/local.vim \
+									.vim/settings/*.local.vim \
+									.config/vifm/*.local \
+									.Xresources.local \
+									.shrc.local \
+									.aliases.local
 
 ifeq (${USER}, root)
 CONFIGS = $(ROOT_CONFIGS)
@@ -70,8 +72,8 @@ i3config:
 
 
 define copy
-	for config in $(LOCAL_CONFIGS); do \
-		if [ -f $$config ]; then \
+	for config in $(BACKUP_CONFIGS); do \
+		if [ -f $1/$$config ]; then \
 			mkdir -p $2/$$(dirname $$config) && cp $1/$$config $2/$$config; \
 		fi \
 	done
