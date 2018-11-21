@@ -40,7 +40,7 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/deleft.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'kana/vim-smartword'
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'npm install instant-markdown-d' }
 Plug 'lucerion/vim-executor'
 Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
@@ -48,11 +48,11 @@ Plug 'lucerion/vim-file-bookmark'
 Plug 'lucerion/vim-split-window-mods'
 
 " Dependencies
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " vimfiler.vim, neossh.vim
-Plug 'FelikZ/ctrlp-py-matcher'              " ctrlp.vim
-Plug 'honza/vim-snippets'                   " vim-snipmate
-Plug 'MarcWeber/vim-addon-mw-utils'         " vim-snipmate
-Plug 'tomtom/tlib_vim'                      " vim-snipmate
-Plug 'vim-scripts/l9'                       " vim-autocomplpop
-Plug 'lucerion/vim-buffr'                   " vim-extract, vim-executor
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }  " vimfiler.vim, neossh.vim
+Plug 'FelikZ/ctrlp-py-matcher'                " ctrlp.vim
+Plug 'honza/vim-snippets'                     " vim-snipmate
+Plug 'MarcWeber/vim-addon-mw-utils'           " vim-snipmate
+Plug 'tomtom/tlib_vim'                        " vim-snipmate
+Plug 'vim-scripts/l9'                         " vim-autocomplpop
+Plug 'lucerion/vim-buffr'                     " vim-extract, vim-executor
 Plug 'kana/vim-textobj-user'
