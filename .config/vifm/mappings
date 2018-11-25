@@ -21,6 +21,13 @@ nmap yp :!echo %c:p | xclip<cr>
 " name
 nmap yn :!echo %c | xclip<cr>
 
+nmap nt :tabnew<cr>
+nmap <Space>tl :tabnext<cr>
+nmap <Space>th :tabprevious<cr>
+nmap <Space>tL :tabmove -1<cr>
+nmap <Space>tH :tabmove +1<cr>
+nmap <Space>tr :tabname<Space>
+
 nmap <f2>  :rename<cr>
 nmap <f3>  :view<cr>
 nmap <f4>  :edit<cr>
