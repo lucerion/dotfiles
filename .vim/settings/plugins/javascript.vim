@@ -1,1 +1,1 @@
-Plug 'lucerion/vim-npr', { 'branch': 'add-tilde-path-support' }
+Plug 'tomarrell/vim-npr'
