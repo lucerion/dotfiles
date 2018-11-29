@@ -53,4 +53,4 @@ set shiftround
 
 set splitright
 
-source ~/.vim/settings/loader.vim
+source ~/.vim/init/plugins.vim
