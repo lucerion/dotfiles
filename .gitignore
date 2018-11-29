@@ -3,8 +3,7 @@
 .vim/plugins
 .vim/view
 .vim/autoload/plug.vim*
-.vim/settings/plugins/local.vim
-.vim/settings/*.local.vim
+.vim/after/plugin/settings
 .config/vifm/*.local
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
