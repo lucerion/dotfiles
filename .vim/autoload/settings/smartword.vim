@@ -1,10 +1,5 @@
-func! helpers#smartword#toggle() abort
-  if !exists('g:smartword_mode')
-    let g:smartword_mode = 1
-  else
-    let g:smartword_mode = !g:smartword_mode
-  endif
-
+func! settings#smartword#toggle() abort
+  let g:smartword_mode = exists('g:smartword_mode') ? !g:smartword_mode : 1
   let l:actions = {
     \ 'w':  '<Plug>(smartword-w)',
     \ 'b':  '<Plug>(smartword-b)',
@@ -20,12 +15,12 @@ func! helpers#smartword#toggle() abort
           exec l:mode.'map' l:mapping l:action
         else
           exec l:mode.'unmap' l:mapping
-        end
+        endif
       end
     endfor
   endfor
 endfunc
 
-func! helpers#smartword#status() abort
+func! settings#smartword#status() abort
   return '[SmartWord: ' . (get(g:, 'smartword_mode', 0) ? 'on' : 'off') . ']'
 endfunc
