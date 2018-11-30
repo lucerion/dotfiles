@@ -4,6 +4,7 @@
 .vim/view
 .vim/autoload/plug.vim*
 .vim/after/plugin/settings
+.vim/init/plugins/local.vim
 .config/vifm/*.local
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
