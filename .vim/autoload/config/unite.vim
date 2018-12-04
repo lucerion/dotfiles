@@ -1,4 +1,4 @@
-func! settings#unite#grep(selected_symbols_count, input) abort
+func! config#unite#grep(selected_symbols_count, input) abort
   if a:selected_symbols_count >= 1
     try
       let l:register_previous_value = @z

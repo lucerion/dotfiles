@@ -1,7 +1,7 @@
 if filereadable(expand('~/.vim/autoload/plug.vim'))
   call plug#begin('~/.vim/plugins')
-  for plugins_file in split(expand('~/.vim/init/plugins/*.vim'), '\n')
-    silent exec 'source ' . plugins_file
+  for plugin in split(expand('~/.vim/config/plugins/*.vim'), '\n')
+    silent exec 'source ' . plugin
   endfor
   call plug#end()
 endif

@@ -1,4 +1,4 @@
-func! settings#smartword#toggle() abort
+func! config#smartword#toggle() abort
   let g:smartword_mode = exists('g:smartword_mode') ? !g:smartword_mode : 1
   let l:actions = {
     \ 'w':  '<Plug>(smartword-w)',
@@ -21,6 +21,6 @@ func! settings#smartword#toggle() abort
   endfor
 endfunc
 
-func! settings#smartword#status() abort
+func! config#smartword#status() abort
   return '[SmartWord: ' . (get(g:, 'smartword_mode', 0) ? 'on' : 'off') . ']'
 endfunc
