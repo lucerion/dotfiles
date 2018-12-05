@@ -27,7 +27,8 @@ function cdl() { cd $1 && ls -lAh; }
 function mkcd() { mkdir -p $1 && cd $1; }
 function rmr() { if [ -d $1 ]; then rm -r $1; else rm $1; fi }
 
-alias grep='grep -ins --color'
+alias grep='grep -is --color'
+alias ngrep='grep -n'
 alias rgrep='rgrep -ins --color'
 
 alias cal='ncal -M -b'
