@@ -52,6 +52,8 @@ alias ssh='TERM=xterm ssh'
 
 alias ts='tig status'
 
+alias public_ip='curl icanhazip.com'
+
 
 alias ga='git add'
 alias gb='git branch'
