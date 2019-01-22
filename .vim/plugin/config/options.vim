@@ -126,7 +126,14 @@ endif
 let g:ale_sign_warning = '>'
 let g:ale_echo_msg_format = '[%linter%] %severity%: %s'
 let g:ale_linters = {
-  \ 'ruby': ['ruby', 'rubocop', 'reek']
+  \ 'ruby': ['ruby', 'rubocop', 'reek'],
+  \ 'elixir': ['credo', 'dialyxir'],
+  \ 'javascript': ['eslint']
+  \ }
+let g:ale_fixers = {
+  \ 'ruby': ['rubocop'],
+  \ 'elixir': ['mix_format'],
+  \ 'javascript': ['eslint'],
   \ }
 
 " far.vim
