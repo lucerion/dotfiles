@@ -23,7 +23,7 @@ if [ -n "$BASH" ]; then
   alias ~='cd ~'
 fi
 
-function cdl() { cd $1 && ls -lAh; }
+function cdls() { cd $1 && ls -lAh; }
 function mkcd() { mkdir -p $1 && cd $1; }
 function rmr() { if [ -d $1 ]; then rm -r $1; else rm $1; fi }
 
@@ -48,9 +48,9 @@ alias passgen='pwgen -1B'
 
 alias calc='calc -d'
 
-alias ssh='TERM=xterm ssh'
-
 alias ts='tig status'
+
+alias ports='netstat -tunlp'
 
 alias public_ip='curl icanhazip.com'
 
@@ -106,7 +106,6 @@ alias bde='bundle exec'
 alias bdl='bundle list'
 alias bdi='bundle install'
 alias bdu='bundle update'
-alias bdot='bundle outdated'
 alias bdo='bundle open'
 
 alias rk='rake'
