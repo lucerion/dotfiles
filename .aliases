@@ -57,51 +57,39 @@ alias public_ip='curl icanhazip.com'
 
 alias ga='git add'
 alias gb='git branch'
-alias gbr='git branch'
 alias gbc='git rev-parse --abbrev-ref HEAD'
 alias gch='git checkout'
-alias gco='git checkout'
 alias gcb='git chechout -b'
 alias gcp='git cherry-pick'
 alias gcl='git clone'
 alias gc='git commit'
-alias gci='git commit'
 alias gca='git commit --amend'
 alias gd='git diff'
 alias gf='git fetch'
-alias gg='git grep'
 alias gi='git init'
-alias gl='git log'
-alias glp='git log --pretty'
+alias gl='git log --pretty'
 alias gm='git merge'
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
-alias gst='git status'
 alias gsh='git stash'
+alias gbd='git branch -D'
 
 if [ -n "$ZSH_NAME" ]; then
   compdef _git ga=git-add
   compdef _git gb=git-branch
-  compdef _git gbr=git-branch
   compdef _git gch=git-checkout
-  compdef _git gco=git-checkout
-  compdef _git gcb=git-checkout
   compdef _git gcp=git-cherry-pick
   compdef _git gcl=git-clone
   compdef _git gc=git-commit
-  compdef _git gci=git-commit
   compdef _git gd=git-diff
   compdef _git gf=git-fetch
-  compdef _git gg=git-grep
   compdef _git gi=git-init
   compdef _git gl=git-log
-  compdef _git glp=git-log
   compdef _git gm=git-merge
   compdef _git gpl=git-pull
   compdef _git gps=git-push
   compdef _git gs=git-status
-  compdef _git gst=git-status
   compdef _git gsh=git-stash
 fi
 
