@@ -68,13 +68,11 @@ restore:
 	$(call copy, $(BACKUP_DIR), $(SETUP_DIR))
 
 i3config:
-	cd $(SETUP_DIR)/.config/i3; [ -f config.local ] && cat config.base config.local > config || cp config.base config
+	cd $(SETUP_DIR)/.config/i3; ([ -f config.local ] && cat config.base config.local > config) || cp config.base config
 
 
 define copy
 	for config in $(BACKUP_CONFIGS); do \
-		if [ -f $1/$$config ]; then \
-			mkdir -p $2/$$(dirname $$config) && cp $1/$$config $2/$$config; \
-		fi \
+		[ -f $1/$$config ] && mkdir -p $2/$$(dirname $$config) && cp $1/$$config $2/$$config; \
 	done
 endef
