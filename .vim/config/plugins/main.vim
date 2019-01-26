@@ -52,4 +52,3 @@ Plug 'MarcWeber/vim-addon-mw-utils'           " vim-snipmate
 Plug 'tomtom/tlib_vim'                        " vim-snipmate
 Plug 'vim-scripts/l9'                         " vim-autocomplpop
 Plug 'lucerion/vim-buffr'                     " vim-extract, vim-executor
-Plug 'kana/vim-textobj-user'
