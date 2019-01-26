@@ -1,5 +1,5 @@
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/committia.vim'
-Plug 'int3/vim-extradite'
+Plug 'lucerion/vim-extradite'
 Plug 'hotwatermorning/auto-git-diff'
