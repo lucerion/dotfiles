@@ -1,7 +1,7 @@
 let mapleader = ' '
 
-noremap Q <Nop>
-noremap q <Nop>
+noremap Q O<Esc>
+noremap q o<Esc>
 noremap <F1> <Nop>
 
 noremap <S-l> gt
@@ -108,7 +108,6 @@ let g:wordmotion_mappings = {
   \ }
 
 " vim-smartword
-nmap q :SmartWordToggle<CR>
 let g:smartword_mappings = {
   \ 'w':  'w',
   \ 'b':  'b',
