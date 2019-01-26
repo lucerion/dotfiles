@@ -11,7 +11,7 @@ if executable('ag')
 endif
 
 set statusline=%w%h\ %F\ %m
-if config#plugin#loaded('vim-fugitive', 'g:loaded_fugitive')
+if config#plugin#loaded('vim-fugitive')
   set statusline+=\ %{fugitive#statusline()}
 endif
 if config#plugin#loaded('vim-smartword')
