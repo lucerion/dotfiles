@@ -15,7 +15,7 @@ if config#plugin#loaded('vim-fugitive', 'g:loaded_fugitive')
   set statusline+=\ %{fugitive#statusline()}
 endif
 if config#plugin#loaded('vim-smartword')
-  set statusline+=\ %{config#smartword#status()}
+  set statusline+=\ %{smartword#status()}
 endif
 set statusline+=\ %r%=%l-%v/%L
 
@@ -107,6 +107,9 @@ let g:extract_hidden = 1
 
 " vim-executor
 let g:executor_reuse_buffer = 1
+
+" vim-smartword
+let g:smartword_enabled = 1
 
 " unite.vim
 let g:unite_enable_auto_select = 0

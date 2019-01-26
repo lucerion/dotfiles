@@ -109,10 +109,10 @@ let g:wordmotion_mappings = {
 
 " vim-smartword
 let g:smartword_mappings = {
-  \ 'w':  'w',
-  \ 'b':  'b',
-  \ 'e':  'e',
-  \ 'ge': 'ge'
+  \ 'w':  '<Leader><Leader>w',
+  \ 'b':  '<Leader><Leader>b',
+  \ 'e':  '<Leader><Leader>e',
+  \ 'ge': '<Leader><Leader>ge'
   \ }
 
 " sideways.vim
