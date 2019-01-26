@@ -5,7 +5,7 @@ endif
 
 if executable('ag')
   let g:grep_program = 'ag'
-  let g:grep_options = ' --vimgrep --silent --ignore tmp --ignore log --ignore vendor --ignore node_modules'
+  let g:grep_options = ' --vimgrep --hidden --silent'
 
   exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
 endif
@@ -22,7 +22,7 @@ set statusline+=\ %r%=%l-%v/%L
 " ctrlp.vim
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
-let g:ctrlp_show_hidden = 0
+let g:ctrlp_show_hidden = 1
 if exists('g:grep_program')
   let g:ctrlp_grep_command = g:grep_program . g:grep_options
 endif
