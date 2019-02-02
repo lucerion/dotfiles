@@ -3,7 +3,7 @@
 .vim/plugins
 .vim/view
 .vim/autoload/plug.vim*
-.vim/after/plugin/config
+.vim/after/plugin/lucerion
 .vim/config/plugins/local.vim
 .config/vifm/*.local
 .config/vifm/vifminfo*
