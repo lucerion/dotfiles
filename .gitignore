@@ -4,7 +4,7 @@
 .vim/view
 .vim/autoload/plug.vim*
 .vim/after/plugin/lucerion
-.vim/config/plugins/local.vim
+.vim/bundle/local.vim
 .config/vifm/*.local
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
