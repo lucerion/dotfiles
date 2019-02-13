@@ -11,7 +11,7 @@ set $calc         i3-sensible-terminal -e calc -d
 
 bindsym $super+$alt+e exit
 bindsym $super+$alt+r restart
-bindsym $super+$alt+c exec $editor ~/.config/i3/config
+bindsym $super+$alt+c exec $editor ~/.config/i3/config.base
 bindsym $super+$alt+u reload
 
 bindsym $super+Return       exec $term
