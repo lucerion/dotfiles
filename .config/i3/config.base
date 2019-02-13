@@ -1,4 +1,4 @@
-# vi: filetype=i3
+# vi: filetype=i3config
 
 set $super Mod4
 set $alt   Mod1
