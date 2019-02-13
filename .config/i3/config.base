@@ -90,6 +90,13 @@ bindsym $super+q focus mode_toggle
 
 floating_modifier $super
 
+# scrolling
+
+bindsym $super+Left   exec xdotool key Home
+bindsym $super+Right  exec xdotool key End
+bindsym $super+Up     exec xdotool key Page_Up
+bindsym $super+Down   exec xdotool key Page_Down
+
 
 ## workspaces
 
@@ -196,4 +203,6 @@ exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 
 
-## local config starts here
+## local config
+
+
