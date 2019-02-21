@@ -92,10 +92,10 @@ floating_modifier $super
 
 # scrolling
 
-bindsym $super+Left   exec xdotool key Home
-bindsym $super+Right  exec xdotool key End
-bindsym $super+Up     exec xdotool key Page_Up
-bindsym $super+Down   exec xdotool key Page_Down
+bindsym $super+left   exec xdotool key Home
+bindsym $super+right  exec xdotool key End
+bindsym $super+up     exec xdotool key Page_Up
+bindsym $super+down   exec xdotool key Page_Down
 
 
 ## workspaces
