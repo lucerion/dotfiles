@@ -1,4 +1,4 @@
-Plug 'roosta/vim-srcery'
+Plug 'srcery-colors/srcery-vim'
 Plug 'airblade/vim-rooter'
 Plug 'pbrisbin/vim-restore-cursor'
 Plug 'Shougo/vimfiler.vim'
