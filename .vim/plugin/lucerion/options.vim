@@ -70,10 +70,6 @@ endif
 " emmet-vim
 let g:user_emmet_leader_key = '<C-e>'
 
-" vim-tags
-let g:vim_tags_auto_generate = 0
-let g:vim_tags_use_language_field = 0
-
 " vim-trailing-whitespace
 let g:extra_whitespace_ignored_filetypes = ['vimfiler', 'agsv', 'far_vim', 'conque_term']
 
