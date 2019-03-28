@@ -1,4 +1,4 @@
-if lucerion#plugin#loaded('vim-srcery')
+if lucerion#plugin#loaded('srcery-vim')
   colorscheme srcery
   let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
 endif

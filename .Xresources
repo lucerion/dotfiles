@@ -22,6 +22,7 @@ xterm*VT100.Translations: #override \n\
     Ctrl Shift <Key>c: select-end(CLIPBOARD) \n\
     Ctrl Shift <Key>y: select-end(CLIPBOARD) insert-selection(CLIPBOARD)
 
+
 URxvt.termName: xterm
 URxvt.background: #000000
 URxvt.foreground: #ffffff
@@ -46,12 +47,17 @@ URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
 
 
 ! Srcery
-! https://github.com/roosta/vim-srcery
+! https://github.com/srcery-colors/srcery-terminal
 
-! special
+! special colors {{{
+
 *.foreground:   #fce8c3
 *.background:   #1c1b19
 *.cursorColor:  #fce8c3
+
+! }}}
+
+! main colors {{{
 
 ! black
 *.color0:       #1c1b19
@@ -84,5 +90,8 @@ URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
 ! white
 *.color7:       #918175
 *.color15:      #fce8c3
+
+! }}}
+
 
 #include "./.Xresources.local"
