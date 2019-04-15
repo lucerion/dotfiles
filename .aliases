@@ -142,6 +142,10 @@ alias mer='mix ecto.rollback'
 alias mes='mix ecto.migrations'
 alias iex='iex -S mix'
 alias ies='iex phoenix.server'
+alias mdi='mix dialyzer'
+alias mcr='mix credo'
+alias mfo='mix format'
+alias mte='mix test'
 
 
 local=~/.aliases.local; [ -f $local ] && . $local
