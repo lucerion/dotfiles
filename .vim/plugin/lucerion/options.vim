@@ -1,30 +1,9 @@
-if lucerion#plugin#loaded('srcery-vim')
-  colorscheme srcery
-  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
-endif
-
-if executable('ag')
-  let g:grep_program = 'ag'
-  let g:grep_options = ' --vimgrep --hidden --silent'
-
-  exec 'set grepprg=' . fnameescape(g:grep_program . g:grep_options)
-endif
-
-set statusline=%w%h\ %F\ %m
-if lucerion#plugin#loaded('vim-fugitive')
-  set statusline+=\ %{fugitive#statusline()}
-endif
-if lucerion#plugin#loaded('vim-smartword')
-  set statusline+=\ %{smartword#status()}
-endif
-set statusline+=\ %r%=%l-%v/%L
-
 " ctrlp.vim
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1
-if exists('g:grep_program')
-  let g:ctrlp_grep_command = g:grep_program . g:grep_options
+if exists('g:grep_command')
+  let g:ctrlp_grep_command = g:grep_command
 endif
 
 " ctrlp-py-matcher
@@ -116,7 +95,7 @@ if lucerion#plugin#loaded('unite.vim')
     \   'prompt_focus': 1
     \ })
 endif
-if exists('g:grep_program')
+if exists('g:grep_command')
   let g:unite_source_grep_command = g:grep_program
   let g:unite_source_grep_default_opts = g:grep_options
 endif
