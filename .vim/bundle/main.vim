@@ -43,6 +43,7 @@ Plug 'lucerion/vim-reload'
 Plug 'vim-utils/vim-husk'
 Plug 'lucerion/vim-file-bookmark'
 Plug 'lucerion/vim-split-window-mods'
+Plug 'lucerion/vim-case-converter'
 
 " Dependencies
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }  " vimfiler.vim, neossh.vim
