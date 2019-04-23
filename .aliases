@@ -146,6 +146,7 @@ alias mdi='mix dialyzer'
 alias mcr='mix credo'
 alias mfo='mix format'
 alias mte='mix test'
+alias mrn='mix run --no-halt'
 
 
 local=~/.aliases.local; [ -f $local ] && . $local
