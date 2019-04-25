@@ -147,6 +147,8 @@ alias mcr='mix credo'
 alias mfo='mix format'
 alias mte='mix test'
 alias mrn='mix run --no-halt'
+alias mse='mix ecto.create && mix ecto.migrate'
+alias mre='mix ecto.drop && mix ecto.create && mix ecto.migrate'
 
 
 local=~/.aliases.local; [ -f $local ] && . $local
