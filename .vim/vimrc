@@ -60,25 +60,3 @@ if filereadable(expand('~/.vim/autoload/plug.vim'))
   endfor
   call plug#end()
 endif
-
-if lucerion#plugin#loaded('srcery-vim')
-  colorscheme srcery
-  let [g:srcery_bold, g:srcery_italic, g:srcery_underline] = [0, 0, 0]
-endif
-
-if executable('ag')
-  let g:grep_program = 'ag'
-  let g:grep_options = '--vimgrep --hidden --silent'
-  let g:grep_command = g:grep_program . ' ' . g:grep_options
-
-  silent exec 'set grepprg=' . fnameescape(g:grep_command)
-endif
-
-set statusline=%w%h\ %F\ %m
-if lucerion#plugin#loaded('vim-fugitive')
-  set statusline+=\ %{fugitive#statusline()}
-endif
-if lucerion#plugin#loaded('vim-smartword')
-  set statusline+=\ %{smartword#status()}
-endif
-set statusline+=\ %r%=%l-%v/%L
