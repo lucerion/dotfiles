@@ -2,7 +2,7 @@
 .PHONY: setup clean update i3config backup restore
 
 SETUP_DIR ?= ~
-BACKUP_DIR ?= ~/configs_backup
+BACKUP_DIR ?= ~/local_configs_backup
 
 USER_CONFIGS = $(SETUP_DIR)/.config/conky \
 							 $(SETUP_DIR)/.config/i3 \
@@ -20,8 +20,7 @@ ROOT_CONFIGS = $(SETUP_DIR)/.config/vifm \
 							 $(SETUP_DIR)/.zshrc
 
 BACKUP_CONFIGS ?= .config/i3/config.local \
-									.vim/settings/plugins/local.vim \
-									.vim/settings/*.local.vim \
+									.vim/after/plugin/*.local.vim \
 									.config/vifm/*.local \
 									.Xresources.local \
 									.shrc.local \
@@ -61,10 +60,10 @@ clean:
 update:
 	git pull origin master
 
-backup:
+backup_local:
 	$(call copy, $(SETUP_DIR), $(BACKUP_DIR))
 
-restore:
+restore_local:
 	$(call copy, $(BACKUP_DIR), $(SETUP_DIR))
 
 i3config:
