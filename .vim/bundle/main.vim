@@ -1,3 +1,4 @@
+Plug 'lucerion/vim-config'
 Plug 'srcery-colors/srcery-vim'
 Plug 'airblade/vim-rooter'
 Plug 'pbrisbin/vim-restore-cursor'
