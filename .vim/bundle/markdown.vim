@@ -1,1 +1,1 @@
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'yarn install instant-markdown-d' }
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'yarn add instant-markdown-d' }
