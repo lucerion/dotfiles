@@ -4,27 +4,30 @@
 SETUP_DIR ?= ~
 BACKUP_DIR ?= ~/local_configs_backup
 
-USER_CONFIGS = $(SETUP_DIR)/.config/conky \
-							 $(SETUP_DIR)/.config/i3 \
-							 $(SETUP_DIR)/.config/vifm \
-							 $(SETUP_DIR)/.vim \
-							 $(SETUP_DIR)/.aliases \
-							 $(SETUP_DIR)/.tigrc \
-							 $(SETUP_DIR)/.Xresources \
-							 $(SETUP_DIR)/.zshrc
+USER_CONFIGS = \
+	$(SETUP_DIR)/.config/conky \
+	$(SETUP_DIR)/.config/i3 \
+	$(SETUP_DIR)/.config/vifm \
+	$(SETUP_DIR)/.vim \
+	$(SETUP_DIR)/.aliases \
+	$(SETUP_DIR)/.tigrc \
+	$(SETUP_DIR)/.Xresources \
+	$(SETUP_DIR)/.zshrc
 
-ROOT_CONFIGS = $(SETUP_DIR)/.config/vifm \
-							 $(SETUP_DIR)/.vim \
-							 $(SETUP_DIR)/.aliases \
-							 $(SETUP_DIR)/.Xresources \
-							 $(SETUP_DIR)/.zshrc
+ROOT_CONFIGS = \
+	$(SETUP_DIR)/.config/vifm \
+	$(SETUP_DIR)/.vim \
+	$(SETUP_DIR)/.aliases \
+	$(SETUP_DIR)/.Xresources \
+	$(SETUP_DIR)/.zshrc
 
-BACKUP_CONFIGS ?= .config/i3/config.local \
-									.vim/after/plugin/*.local.vim \
-									.config/vifm/*.local \
-									.Xresources.local \
-									.shrc.local \
-									.aliases.local
+BACKUP_CONFIGS ?= \
+	.config/i3/config.local \
+	.vim/after/plugin/*.local.vim \
+	.config/vifm/*.local \
+	.Xresources.local \
+	.shrc.local \
+	.aliases.local
 
 ifeq (${USER}, root)
 CONFIGS = $(ROOT_CONFIGS)
