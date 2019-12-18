@@ -48,7 +48,7 @@ $(SETUP_DIR)/.vim: .vim
 
 $(SETUP_DIR)/.Xresources: .Xresources
 	ln -si `pwd`/$< $@
-	touch $(SETUP_DIR)/.Xresources.local
+	curl -o $(SETUP_DIR)/.Xresources.local https://raw.githubusercontent.com/srcery-colors/srcery-terminal/master/xresources/srcery.xresources
 	xrdb -merge $@
 
 $(SETUP_DIR)/%: %
