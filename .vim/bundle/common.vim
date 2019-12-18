@@ -12,7 +12,7 @@ Plug 'brooth/far.vim'
 Plug 'markonm/traces.vim'
 Plug 'lucerion/vim-yacg'
 " Plug 'majutsushi/tagbar'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', { 'do': 'yarn add jsonlint' }
 Plug 'othree/vim-autocomplpop'
 Plug 'vim-scripts/cmdline-completion'
 Plug 'google/vim-searchindex'
