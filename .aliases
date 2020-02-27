@@ -23,6 +23,8 @@ if [ -n "$BASH" ]; then
   alias ~='cd ~'
 fi
 
+alias ppp='echo $PATH | tr -s ":" "\n"'
+
 function cdls() { cd $1 && ls -lAh; }
 function mkcd() { mkdir -p $1 && cd $1; }
 function rmr() { if [ -d $1 ]; then rm -r $1; else rm $1; fi }
