@@ -38,6 +38,9 @@ alias cal='ncal -M -b'
 alias df='df -h'
 alias du='du -h'
 
+alias dir_size='du -sh'
+alias file_size='du -shc'
+
 alias free='free -ht'
 
 alias rsync='rsync --progress'
