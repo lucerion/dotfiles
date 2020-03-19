@@ -131,9 +131,13 @@ alias gei='gem install'
 
 alias rvl='rvm list'
 alias rvu='rvm use'
+alias rvi='rvm install'
+alias rvd='rvm remove'
 alias rvg='rvm gemset'
 alias rvgl='rvm gemset list'
 alias rvgu='rvm gemset use'
+alias rvgc='rvm gemset create'
+alias rvgd='rvm gemset delete'
 
 alias rsp='rspec'
 
