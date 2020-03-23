@@ -101,12 +101,20 @@ if [ -n "$ZSH_NAME" ]; then
 fi
 
 
-alias rl='rails'
-alias rls='rails s'
-alias rlc='rails c'
-alias rlg='rails g'
-alias rld='rails d'
-alias rdbc='rails dbconsole'
+alias rl='bundle exec rails'
+alias rls='bundle exec rails s'
+alias rlc='bundle exec rails c'
+alias rlg='bundle exec rails g'
+alias rld='bundle exec rails d'
+alias rldbc='bundle exec rails dbconsole'
+alias rlap='bundle exec rake assets:precompile'
+alias rldc='bundle exec rake db:create'
+alias rldd='bundle exec rake db:drop'
+alias rldr='bundle exec rake db:rollback'
+alias rldst='bundle exec rake db:setup'
+alias rldm='bundle exec rake db:migrate'
+alias rlds='bundle exec rake db:seed'
+alias rlr='bundle exec rake routes'
 
 alias bd='bundle'
 alias bde='bundle exec'
@@ -116,18 +124,12 @@ alias bdil='bundle install --path ./vendor/bundle'
 alias bdu='bundle update'
 alias bdo='bundle open'
 
-alias rk='rake'
-alias rkap='rake assets:precompile'
-alias rkdc='rake db:create'
-alias rkdd='rake db:drop'
-alias rkdr='rake db:rollback'
-alias rkdst='rake db:setup'
-alias rkdm='rake db:migrate'
-alias rkds='rake db:seed'
-alias rkr='rake routes'
+alias rk='bundle exec rake'
+alias rsp='bundle exec rspec'
 
 alias gel='gem list'
 alias gei='gem install'
+alias geu='gem uninstall'
 
 alias rvl='rvm list'
 alias rvu='rvm use'
@@ -138,8 +140,6 @@ alias rvgl='rvm gemset list'
 alias rvgu='rvm gemset use'
 alias rvgc='rvm gemset create'
 alias rvgd='rvm gemset delete'
-
-alias rsp='rspec'
 
 
 alias mdg='mix deps.get'
