@@ -120,7 +120,7 @@ alias bd='bundle'
 alias bde='bundle exec'
 alias bdl='bundle list'
 alias bdi='bundle install'
-alias bdil='bundle install --path ./vendor/bundle'
+alias bdil='bundle install --path ./.bundle'
 alias bdu='bundle update'
 alias bdo='bundle open'
 
