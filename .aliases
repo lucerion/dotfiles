@@ -141,6 +141,8 @@ alias rvgu='rvm gemset use'
 alias rvgc='rvm gemset create'
 alias rvgd='rvm gemset delete'
 
+alias rbc='bundle exec rubocop'
+
 
 alias mdg='mix deps.get'
 alias mps='mix phoenix.server'
