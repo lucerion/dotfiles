@@ -153,8 +153,6 @@ alias med='mix ecto.drop'
 alias mem='mix ecto.migrate'
 alias mer='mix ecto.rollback'
 alias mes='mix ecto.migrations'
-alias iem='iex -S mix'
-alias ies='iex phoenix.server'
 alias mdi='mix dialyzer'
 alias mcr='mix credo'
 alias mfo='mix format'
@@ -163,6 +161,7 @@ alias mtf='mix test --failed'
 alias mrn='mix run --no-halt'
 alias mse='mix ecto.create && mix ecto.migrate'
 alias mre='mix ecto.drop && mix ecto.create && mix ecto.migrate'
-
+alias iem='iex -S mix'
+alias ies='iex phoenix.server'
 
 local=~/.aliases.local; [ -f $local ] && . $local
