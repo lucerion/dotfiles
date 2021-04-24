@@ -17,6 +17,7 @@ alias jobs='jobs -l'
 
 alias ...='cd ../..'
 function -() { cd -; }
+function \=() { calc $*; }
 
 if [ -n "$BASH" ]; then
   alias ..='cd ..'
