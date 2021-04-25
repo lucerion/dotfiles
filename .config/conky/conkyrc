@@ -7,7 +7,7 @@ conky.config = {
 };
 
 conky.text = [[
-| Br: ${exec printf "%.0f" $(xbacklight 2> /dev/null)}% \
+| Br: ${exec brightnessctl -m | awk -F, '{ print $4 }'} \
 | Vol: ${exec amixer get Master | awk -F '[]%[]' '/%/ { if ($7 == "off") { print "mute" } else { print $2"%" } }' | uniq } \
 | W:${if_up wlp2s0} ${wireless_essid wlp2s0} - ${wireless_link_qual_perc wlp2s0}% $else down $endif\
 | Mem: $mem - $memperc% \
