@@ -7,7 +7,7 @@ fileviewer */ tree %f
 filetype *.txt vim %f
 
 " img
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico,*.nef gpicview %c
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico,*.nef gpicview %c &
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico identify -verbose %f
 filextype *.svg sensible-browser %f &
 
