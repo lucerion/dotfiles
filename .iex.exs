@@ -9,9 +9,9 @@ defmodule :iex do
 
   def recompile do
     app = Mix.Project.config[:app]
-    Mix.Task.reenable "compile.elixir"
+    Mix.Task.reenable("compile.elixir")
     Application.stop(app)
-    Mix.Task.run "compile.elixir"
+    Mix.Task.run("compile.elixir")
     Application.start(app, :permanent)
   end
 end
