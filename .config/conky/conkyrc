@@ -7,6 +7,7 @@ conky.config = {
 };
 
 conky.text = [[
+| VPN: ${exec if ip link show | grep -q tun0; then echo on; else echo off; fi} \
 | Br: ${exec brightnessctl -m | awk -F, '{ print $4 }'} \
 | Vol:\
 ${if_match "${exec pactl get-sink-mute 1 | cut -f 2 -d " "}" == "yes"}\
