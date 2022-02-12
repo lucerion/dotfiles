@@ -8,7 +8,12 @@ conky.config = {
 
 conky.text = [[
 | Br: ${exec brightnessctl -m | awk -F, '{ print $4 }'} \
-| Vol: ${exec amixer get Master | awk -F '[]%[]' '/%/ { if ($7 == "off") { print "mute" } else { print $2"%" } }' | uniq } \
+| Vol:\
+${if_match "${exec pactl get-sink-mute 1 | cut -f 2 -d " "}" == "yes"}\
+ ${exec echo "muted"}\
+${else}\
+ ${exec pactl get-sink-volume 1 | grep -P '\d+%' -o | head -1}\
+${endif} \
 | W:${if_up wlp2s0} ${wireless_essid wlp2s0} - ${wireless_link_qual_perc wlp2s0}% $else down $endif\
 | Mem: $mem - $memperc% \
 | CPU: $cpu% - ${freq_g}GHz \
