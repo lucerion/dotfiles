@@ -116,6 +116,7 @@ alias rldst='bundle exec rake db:setup'
 alias rldm='bundle exec rake db:migrate'
 alias rlds='bundle exec rake db:seed'
 alias rlr='bundle exec rake routes'
+alias rlsc="bundle exec rake secret"
 
 alias bd='bundle'
 alias bde='bundle exec'
