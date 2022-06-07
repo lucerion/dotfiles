@@ -193,9 +193,8 @@ set $dmenu_options -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
 bindsym $alt+m exec dmenu_run $dmenu_options
 bindsym $alt+c exec $term -e `cat ~/.cache/dmenu_run | dmenu -p 'term' $dmenu_options`
 
-bindsym Print        exec scrot
-bindsym $super+Print exec scrot -s
-
+bindsym Print                 exec scrot
+bindsym --release Shift+Print exec scrot -s
 
 ## startup
 
