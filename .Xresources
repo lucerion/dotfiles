@@ -36,7 +36,7 @@ URxvt.scrollTtyOutput: true
 URxvt.loginShell: true
 URxvt.saveLines: 4096
 URxvt.iso14755: false
-URxvt.perl-ext: clipboard,matcher,searchable-scrollback
+URxvt.perl-ext: clipboard,matcher,searchable-scrollback,resize-font
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.clipboard.copycmd: xclip -i -selection clipboard
@@ -44,6 +44,7 @@ URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.url-launcher: sensible-browser
 URxvt.matcher.button: 1
 URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
+URxvt.keysym.Control-Shift-F: searchable-scrollback:start
 
 
 #include "./.Xresources.local"
