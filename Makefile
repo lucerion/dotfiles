@@ -12,7 +12,7 @@ USER_CONFIGS = \
 	$(SETUP_DIR)/.aliases \
 	$(SETUP_DIR)/.tigrc \
 	$(SETUP_DIR)/.Xresources \
-	$(SETUP_DIR)/.zshrc
+	$(SETUP_DIR)/.zshrc \
 	$(SETUP_DIR)/.zprofile
 
 ROOT_CONFIGS = \
