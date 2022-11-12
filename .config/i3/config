@@ -201,6 +201,4 @@ bindsym --release Shift+Print exec scrot -s
 exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 
-
-## local config
-
+include ./config.local
