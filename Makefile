@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := update
-.PHONY: setup clean update i3config backup restore
+.PHONY: setup clean update backup restore
 
 SETUP_DIR ?= ~
 BACKUP_DIR ?= ~/local_configs_backup
@@ -69,10 +69,6 @@ backup_local:
 
 restore_local:
 	$(call copy, $(BACKUP_DIR), $(SETUP_DIR))
-
-i3config:
-	cd $(SETUP_DIR)/.config/i3; ([ -f config.local ] && cat config.base config.local > config) || cp config.base config
-
 
 define copy
 	for config in $(BACKUP_CONFIGS); do \
