@@ -7,23 +7,27 @@ conky.config = {
 };
 
 conky.text = [[
-| VPN: ${exec if ip link show | grep -q tun0; then echo on; else echo off; fi} \
-| Br: ${exec brightnessctl -m | awk -F, '{ print $4 }'} \
-| Vol:\
+  [
+    { "full_text": "VPN: ${exec if ip link show | grep -q tun0; then echo on; else echo off; fi}" },
+    { "full_text": "Br: ${exec brightnessctl -m | awk -F, '{ print $4 }'}" },
+    { "full_text": "Vol:\
 ${if_match "${exec pactl get-sink-mute 1 | cut -f 2 -d " "}" == "yes"}\
  muted\
 $else\
  ${exec pactl get-sink-volume 1 | grep -P '\d+%' -o | head -1}\
-$endif \
-| W:\
+$endif"
+    },
+    { "full_text": "W:\
 ${if_up wlp2s0}\
  ${wireless_essid wlp2s0} - ${wireless_link_qual_perc wlp2s0}%\
 $else\
  down\
-$endif \
-| Mem: $mem - $memperc% \
-| CPU: $cpu% - ${freq_g}GHz \
-| Bat: $battery_short \
-| ${exec skb 1} \
-| ${time %d.%m.%y %H:%M}
+$endif"
+    },
+    { "full_text": "Mem: $mem - $memperc%" },
+    { "full_text": "CPU: $cpu% - ${freq_g}GHz" },
+    { "full_text": "Bat: $battery_short" },
+    { "full_text": "${exec skb 1}" },
+    { "full_text": "${time %d.%m.%y %H:%M}" }
+  ],
 ]];
