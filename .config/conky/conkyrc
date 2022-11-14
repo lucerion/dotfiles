@@ -27,7 +27,7 @@ $endif"
     { "full_text": "Mem: $mem - $memperc%" },
     { "full_text": "CPU: $cpu% - ${freq_g}GHz" },
     { "full_text": "Bat: $battery_short" },
-    { "full_text": "${exec skb 1}" },
+    { "full_text": "${exec ~/.local/bin/skb 1}" },
     { "full_text": "${time %d.%m.%y %H:%M}" }
   ],
 ]];
