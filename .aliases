@@ -82,6 +82,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
 alias gsh='git stash'
+alias gsu='git submodule update --remote'
 
 if [ -n "$ZSH_NAME" ]; then
   compdef _git ga=git-add
