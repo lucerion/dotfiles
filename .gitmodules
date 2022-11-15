@@ -1,0 +1,234 @@
+[submodule ".vim/pack/common/start/vim-config"]
+	path = .vim/pack/common/start/vim-config
+	url = https://github.com/lucerion/vim-config
+[submodule ".vim/pack/common/start/srcery-vim"]
+	path = .vim/pack/common/start/srcery-vim
+	url = https://github.com/srcery-colors/srcery-vim
+[submodule ".vim/pack/common/start/vim-rooter"]
+	path = .vim/pack/common/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+[submodule ".vim/pack/common/start/vim-restore-cursor"]
+	path = .vim/pack/common/start/vim-restore-cursor
+	url = https://github.com/pbrisbin/vim-restore-cursor
+[submodule ".vim/pack/common/start/vimfiler.vim"]
+	path = .vim/pack/common/start/vimfiler.vim
+	url = https://github.com/Shougo/vimfiler.vim
+[submodule ".vim/pack/common/start/unite.vim"]
+	path = .vim/pack/common/start/unite.vim
+	url = https://github.com/Shougo/unite.vim
+[submodule ".vim/pack/common/start/ctrlp.vim"]
+	path = .vim/pack/common/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule ".vim/pack/common/start/far.vim"]
+	path = .vim/pack/common/start/far.vim
+	url = https://github.com/brooth/far.vim
+[submodule ".vim/pack/common/start/traces.vim"]
+	path = .vim/pack/common/start/traces.vim
+	url = https://github.com/markonm/traces.vim
+[submodule ".vim/pack/common/start/vim-yacg"]
+	path = .vim/pack/common/start/vim-yacg
+	url = https://github.com/lucerion/vim-yacg
+[submodule ".vim/pack/common/start/ale"]
+	path = .vim/pack/common/start/ale
+	url = https://github.com/w0rp/ale
+[submodule ".vim/pack/common/start/cmdline-completion"]
+	path = .vim/pack/common/start/cmdline-completion
+	url = https://github.com/vim-scripts/cmdline-completion
+[submodule ".vim/pack/common/start/vim-searchindex"]
+	path = .vim/pack/common/start/vim-searchindex
+	url = https://github.com/google/vim-searchindex
+[submodule ".vim/pack/common/start/vim-snipmate"]
+	path = .vim/pack/common/start/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
+[submodule ".vim/pack/common/start/caw.vim"]
+	path = .vim/pack/common/start/caw.vim
+	url = https://github.com/tyru/caw.vim
+[submodule ".vim/pack/common/start/delimitMate"]
+	path = .vim/pack/common/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+[submodule ".vim/pack/common/start/vim-surround"]
+	path = .vim/pack/common/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/common/start/vim-pasta"]
+	path = .vim/pack/common/start/vim-pasta
+	url = https://github.com/sickill/vim-pasta
+[submodule ".vim/pack/common/start/whitespaste.vim"]
+	path = .vim/pack/common/start/whitespaste.vim
+	url = https://github.com/AndrewRadev/whitespaste.vim
+[submodule ".vim/pack/common/start/vim-endwise"]
+	path = .vim/pack/common/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule ".vim/pack/common/start/splitjoin.vim"]
+	path = .vim/pack/common/start/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule ".vim/pack/common/start/switch.vim"]
+	path = .vim/pack/common/start/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim
+[submodule ".vim/pack/common/start/vim-test"]
+	path = .vim/pack/common/start/vim-test
+	url = https://github.com/janko-m/vim-test
+[submodule ".vim/pack/common/start/vim-polyglot"]
+	path = .vim/pack/common/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/common/start/vim-trailing-whitespace"]
+	path = .vim/pack/common/start/vim-trailing-whitespace
+	url = https://github.com/lucerion/vim-trailing-whitespace
+[submodule ".vim/pack/common/start/vim-signature"]
+	path = .vim/pack/common/start/vim-signature
+	url = https://github.com/kshenoy/vim-signature
+[submodule ".vim/pack/common/start/vim-extract"]
+	path = .vim/pack/common/start/vim-extract
+	url = https://github.com/lucerion/vim-extract
+[submodule ".vim/pack/common/start/tabline.vim"]
+	path = .vim/pack/common/start/tabline.vim
+	url = https://github.com/mkitt/tabline.vim
+[submodule ".vim/pack/common/start/file-line"]
+	path = .vim/pack/common/start/file-line
+	url = https://github.com/lervag/file-line
+[submodule ".vim/pack/common/start/vim-indent-object"]
+	path = .vim/pack/common/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule ".vim/pack/common/start/smartpairs.vim"]
+	path = .vim/pack/common/start/smartpairs.vim
+	url = https://github.com/gorkunov/smartpairs.vim
+[submodule ".vim/pack/common/start/dsf.vim"]
+	path = .vim/pack/common/start/dsf.vim
+	url = https://github.com/AndrewRadev/dsf.vim
+[submodule ".vim/pack/common/start/sideways.vim"]
+	path = .vim/pack/common/start/sideways.vim
+	url = https://github.com/AndrewRadev/sideways.vim
+[submodule ".vim/pack/common/start/deleft.vim"]
+	path = .vim/pack/common/start/deleft.vim
+	url = https://github.com/AndrewRadev/deleft.vim
+[submodule ".vim/pack/common/start/vim-wordmotion"]
+	path = .vim/pack/common/start/vim-wordmotion
+	url = https://github.com/chaoren/vim-wordmotion
+[submodule ".vim/pack/common/start/vim-smartword"]
+	path = .vim/pack/common/start/vim-smartword
+	url = https://github.com/lucerion/vim-smartword
+[submodule ".vim/pack/common/start/vim-executor"]
+	path = .vim/pack/common/start/vim-executor
+	url = https://github.com/lucerion/vim-executor
+[submodule ".vim/pack/common/start/vim-reload"]
+	path = .vim/pack/common/start/vim-reload
+	url = https://github.com/lucerion/vim-reload
+[submodule ".vim/pack/common/start/vim-husk"]
+	path = .vim/pack/common/start/vim-husk
+	url = https://github.com/vim-utils/vim-husk
+[submodule ".vim/pack/common/start/vim-file-bookmark"]
+	path = .vim/pack/common/start/vim-file-bookmark
+	url = https://github.com/lucerion/vim-file-bookmark
+[submodule ".vim/pack/common/start/vim-split-window-mods"]
+	path = .vim/pack/common/start/vim-split-window-mods
+	url = https://github.com/lucerion/vim-split-window-mods
+[submodule ".vim/pack/common/start/vim-case-converter"]
+	path = .vim/pack/common/start/vim-case-converter
+	url = https://github.com/lucerion/vim-case-converter
+[submodule ".vim/pack/common/start/vim-project-settings"]
+	path = .vim/pack/common/start/vim-project-settings
+	url = https://github.com/lucerion/vim-project-settings
+[submodule ".vim/pack/common/opt/vimfiler-prompt"]
+	path = .vim/pack/common/opt/vimfiler-prompt
+	url = https://github.com/romgrk/vimfiler-prompt
+[submodule ".vim/pack/common/opt/neossh.vim"]
+	path = .vim/pack/common/opt/neossh.vim
+	url = https://github.com/Shougo/neossh.vim
+[submodule ".vim/pack/common/opt/vim-ags"]
+	path = .vim/pack/common/opt/vim-ags
+	url = https://github.com/gabesoft/vim-ags
+[submodule ".vim/pack/common/opt/tagbar"]
+	path = .vim/pack/common/opt/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule ".vim/pack/common/opt/jumpy.vim"]
+	path = .vim/pack/common/opt/jumpy.vim
+	url = https://github.com/arp242/jumpy.vim
+[submodule ".vim/pack/elixir/start/alchemist.vim"]
+	path = .vim/pack/elixir/start/alchemist.vim
+	url = https://github.com/slashmili/alchemist.vim
+[submodule ".vim/pack/elixir/start/phoenix.vim"]
+	path = .vim/pack/elixir/start/phoenix.vim
+	url = https://github.com/c-brenn/phoenix.vim
+[submodule ".vim/pack/elixir/start/vim-mix-format"]
+	path = .vim/pack/elixir/start/vim-mix-format
+	url = https://github.com/mhinz/vim-mix-format
+[submodule ".vim/pack/git/start/vim-gitgutter"]
+	path = .vim/pack/git/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule ".vim/pack/git/start/vim-fugitive"]
+	path = .vim/pack/git/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/git/start/committia.vim"]
+	path = .vim/pack/git/start/committia.vim
+	url = https://github.com/rhysd/committia.vim
+[submodule ".vim/pack/git/start/auto-git-diff"]
+	path = .vim/pack/git/start/auto-git-diff
+	url = https://github.com/hotwatermorning/auto-git-diff
+[submodule ".vim/pack/git/start/diffconflicts"]
+	path = .vim/pack/git/start/diffconflicts
+	url = https://github.com/whiteinge/diffconflicts
+[submodule ".vim/pack/git/start/gv.vim"]
+	path = .vim/pack/git/start/gv.vim
+	url = https://github.com/junegunn/gv.vim
+[submodule ".vim/pack/html/start/emmet-vim"]
+	path = .vim/pack/html/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule ".vim/pack/html/start/MatchTag"]
+	path = .vim/pack/html/start/MatchTag
+	url = https://github.com/gregsexton/MatchTag
+[submodule ".vim/pack/html/start/tagalong.vim"]
+	path = .vim/pack/html/start/tagalong.vim
+	url = https://github.com/AndrewRadev/tagalong.vim
+[submodule ".vim/pack/javascript/start/vim-npr"]
+	path = .vim/pack/javascript/start/vim-npr
+	url = https://github.com/tomarrell/vim-npr
+[submodule ".vim/pack/ruby/start/vim-rails"]
+	path = .vim/pack/ruby/start/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule ".vim/pack/ruby/start/vim-i18n-rails"]
+	path = .vim/pack/ruby/start/vim-i18n-rails
+	url = https://github.com/lucerion/vim-i18n-rails
+[submodule ".vim/pack/ruby/start/vim-bundler"]
+	path = .vim/pack/ruby/start/vim-bundler
+	url = https://github.com/tpope/vim-bundler
+[submodule ".vim/pack/ruby/start/vim-rubygems"]
+	path = .vim/pack/ruby/start/vim-rubygems
+	url = https://github.com/lucerion/vim-rubygems
+[submodule ".vim/pack/ruby/opt/vim-rvm"]
+	path = .vim/pack/ruby/opt/vim-rvm
+	url = https://github.com/tpope/vim-rvm
+[submodule ".vim/pack/ruby/opt/vim-rake"]
+	path = .vim/pack/ruby/opt/vim-rake
+	url = https://github.com/tpope/vim-rake
+[submodule ".vim/pack/deps/start/vimproc.vim"]
+	path = .vim/pack/deps/start/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim
+[submodule ".vim/pack/deps/start/ctrlp-py-matcher"]
+	path = .vim/pack/deps/start/ctrlp-py-matcher
+	url = https://github.com/FelikZ/ctrlp-py-matcher
+[submodule ".vim/pack/deps/start/vim-snippets"]
+	path = .vim/pack/deps/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule ".vim/pack/deps/start/vim-addon-mw-utils"]
+	path = .vim/pack/deps/start/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule ".vim/pack/deps/start/tlib_vim"]
+	path = .vim/pack/deps/start/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule ".vim/pack/deps/start/l9"]
+	path = .vim/pack/deps/start/l9
+	url = https://github.com/vim-scripts/l9
+[submodule ".vim/pack/deps/start/vim-buffr"]
+	path = .vim/pack/deps/start/vim-buffr
+	url = https://github.com/lucerion/vim-buffr
+[submodule ".vim/pack/deps/start/Conque-Shell"]
+	path = .vim/pack/deps/start/Conque-Shell
+	url = https://github.com/oplatek/Conque-Shell
+[submodule ".vim/pack/deps/start/vim-projectionist"]
+	path = .vim/pack/deps/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
+[submodule ".vim/pack/markdown/start/vim-instant-markdown"]
+	path = .vim/pack/markdown/start/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown
+[submodule ".vim/pack/common/opt/vim-autocomplpop"]
+	path = .vim/pack/common/opt/vim-autocomplpop
+	url = https://github.com/othree/vim-autocomplpop
