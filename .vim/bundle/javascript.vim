@@ -1,1 +1,0 @@
-Plug 'tomarrell/vim-npr'

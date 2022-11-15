@@ -52,11 +52,3 @@ set smartindent
 set shiftround
 
 set splitright
-
-if filereadable(expand('~/.vim/autoload/plug.vim'))
-  call plug#begin('~/.vim/plugins')
-  for plugin in split(expand('~/.vim/bundle/*.vim'), '\n')
-    silent exec 'source ' . plugin
-  endfor
-  call plug#end()
-endif
