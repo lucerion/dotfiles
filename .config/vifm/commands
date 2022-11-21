@@ -17,13 +17,11 @@ command config :vim $MYVIFMRC
 command extract 7z x %f
 command szip 7z a -mx=9 %f.7z %f
 command zip 7z a -mx=9 -tzip %f.zip %f
-command rar rar a %f.rar %f
 command tar tar -cf %f.tar %f
 command gz tar -zcf %f.tar.gz %f
 command bz tar -jcf %f.tar.bz %f
 command unbz tar -jxf %f
 command ungz tar -zxf %f
-command unrar unrar x %f
 
 " aliases
 command man :apropos %a
