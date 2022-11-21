@@ -1,28 +1,3 @@
-xterm*faceName: Monospace
-xterm*faceSize: 10
-xterm*boldMode: false
-xterm*allowBoldFonts: false
-xterm*background: rgb:00/00/00
-xterm*foreground: rgb:ff/ff/ff
-xterm*scrollBar: true
-xterm*selectToClipboard: true
-xterm*rightScrollBar: true
-xterm*alwaysUseMods: true
-xterm*scrollKey: true
-xterm*fastScroll: true
-xterm*jumpScroll: true
-xterm*multiScroll: true
-xterm*loginShell: true
-xterm*saveLines: 4096
-xterm*metaSendsEscape: false
-xterm*eightBitInput: false
-xterm*utf8Title: true
-xterm*VT100.Translations: #override \n\
-    Ctrl Shift <Key>v: insert-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>c: select-end(CLIPBOARD) \n\
-    Ctrl Shift <Key>y: select-end(CLIPBOARD) insert-selection(CLIPBOARD)
-
-
 URxvt.termName: xterm
 URxvt.background: #000000
 URxvt.foreground: #ffffff
