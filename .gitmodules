@@ -197,7 +197,7 @@
 	path = .vim/pack/ruby/opt/vim-rvm
 	url = https://github.com/tpope/vim-rvm
 [submodule ".vim/pack/ruby/opt/vim-rake"]
-	path = .vim/pack/ruby/opt/vim-rake
+	path = .vim/pack/ruby/start/vim-rake
 	url = https://github.com/tpope/vim-rake
 [submodule ".vim/pack/deps/start/vimproc.vim"]
 	path = .vim/pack/deps/start/vimproc.vim
