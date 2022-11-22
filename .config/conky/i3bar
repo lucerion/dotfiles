@@ -1,0 +1,57 @@
+#!/bin/sh
+
+conky_config=~/.config/conky/conkyrc
+
+green_color='#00ff00'
+white_color='#ffffff'
+grey_color='#808080'
+
+on_text='on'
+off_text='off'
+muted_text='muted'
+
+start() {
+  # https://i3wm.org/docs/user-contributed/conky-i3bar.html
+  echo '{ "version": 1 }'
+  echo '['
+  echo '[],'
+  conky -c $conky_config
+}
+
+vpn() {
+  is_on=$(ip link show | grep -c tun0)
+
+  case $1 in
+  text)
+    if [ $is_on = 1 ]; then echo $on_text; else echo $off_text; fi
+  ;;
+  color)
+    if [ $is_on = 1 ]; then echo $green_color; else echo $white_color; fi
+  ;;
+  esac
+}
+
+brightness() {
+  brightnessctl -m | awk -F, '{ print $4 }'
+}
+
+volume() {
+  if [ $(pactl get-sink-mute 1 | cut -f 2 -d " ") = "no" ]; then is_muted=0; else is_muted=1; fi
+
+  case $1 in
+    text)
+      current_volume=$(pactl get-sink-volume 1 | grep -P '\d+%' -o | head -1)
+      if [ $is_muted = 1 ]; then echo $muted_text; else echo $current_volume; fi
+    ;;
+    color)
+      if [ $is_muted = 1 ]; then echo $grey_color; else echo $white_color; fi
+    ;;
+  esac
+}
+
+case $1 in
+  start) start;;
+  vpn) vpn $2;;
+  brightness) brightness;;
+  volume) volume $2;;
+esac
