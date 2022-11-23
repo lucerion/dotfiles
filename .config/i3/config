@@ -176,7 +176,7 @@ bindsym $alt+e mode "launch"
 
 
 bar {
-  status_command ~/.config/conky/i3bar start
+  status_command i3status
   separator_symbol "|"
   font $font_monospace
 
