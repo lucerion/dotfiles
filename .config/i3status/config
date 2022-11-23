@@ -1,0 +1,73 @@
+general {
+        colors = true
+        interval = 1
+        color_good = "#ffffff"
+        color_bad ="#ff0000"
+        color_degraded = "#ffff00"
+}
+
+order += "path_exists VPN"
+order += "read_file brightness"
+order += "volume master"
+order += "wireless _first_"
+order += "memory"
+order += "cpu_usage"
+order += "battery all"
+order += "read_file keyboard_layout"
+order += "tztime local"
+
+path_exists VPN {
+        path = "/proc/sys/net/ipv4/conf/tun0"
+        format = "VPN: on"
+        format_down = "VPN: off"
+        color_good = "#00ff00"
+        color_bad = "#ffffff"
+}
+
+read_file brightness {
+        format = "Br: %content"
+        format_bad = "Br: %error"
+        path = "~/.config/brightness"
+}
+
+volume master {
+        format = "Vol: %volume"
+        format_muted = "Vol: muted"
+        device = "pulse:1"
+        color_degraded = "#888888"
+}
+
+wireless _first_ {
+        format_up = "W: %essid -%quality"
+        format_down = "W: down"
+        color_degraded = "#ffffff"
+        color_bad = "#808080"
+}
+
+memory {
+        format = "Mem: %used"
+}
+
+cpu_usage {
+        format = "CPU: %usage"
+}
+
+battery all {
+        format = "B: %percentage %status"
+        integer_battery_capacity = true
+        status_full = "F"
+        status_chr = "C"
+        status_bat = "D"
+        status_unk = "U"
+        format_down = "N"
+}
+
+read_file keyboard_layout {
+        format = "%content"
+        format_bad = "%error"
+        path = "~/.config/keyboard_layout"
+}
+
+tztime local {
+        format = "%d.%m.%y %H:%M"
+}
