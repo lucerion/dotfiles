@@ -21,5 +21,4 @@ URxvt.matcher.button: 1
 URxvt.print-pipe: cat > $HOME/$(echo urxvt-$(date +'%Y-%m-%d-%H-%M-%S'))
 URxvt.keysym.Control-Shift-F: searchable-scrollback:start
 
-
 #include "./.Xresources.local"

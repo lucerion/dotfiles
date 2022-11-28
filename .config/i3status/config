@@ -27,7 +27,7 @@ path_exists VPN {
 read_file brightness {
         format = "Br: %content"
         format_bad = "Br: %error"
-        path = "~/.config/brightness"
+        path = "/tmp/brightness"
 }
 
 volume master {
@@ -65,7 +65,7 @@ battery all {
 read_file keyboard_layout {
         format = "%content"
         format_bad = "%error"
-        path = "~/.config/keyboard_layout"
+        path = "/tmp/keyboard_layout"
 }
 
 tztime local {
