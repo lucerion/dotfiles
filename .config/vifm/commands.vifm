@@ -1,5 +1,3 @@
-" vi: filetype=vifm
-
 command df df -h %m 2> /dev/null
 command dirSize du -sh %S
 command size du -shc %f %m
@@ -27,4 +25,4 @@ command ungz tar -zxf %f
 command man :apropos %a
 
 
-source ~/.config/vifm/commands.local
+source ~/.config/vifm/commands.local.vifm

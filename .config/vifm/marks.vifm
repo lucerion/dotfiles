@@ -1,0 +1,6 @@
+mark r /
+mark h ~/
+mark t ~/.trash
+
+
+source ~/.config/vifm/marks.local.vifm

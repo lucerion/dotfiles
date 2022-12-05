@@ -1,5 +1,3 @@
-" vi: filetype=vifm
-
 " dir
 fileviewer */ tree %f
 
@@ -56,4 +54,4 @@ filextype *.tg,*.gp,*.gp3,*.gp4,*.gp5 tuxguitar %f &
 filextype *.torrent deluge %f &
 
 
-source ~/.config/vifm/filetypes.local
+source ~/.config/vifm/filetypes.local.vifm
