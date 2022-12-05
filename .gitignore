@@ -1,7 +1,7 @@
 .config/i3/config.local
 .vim/view
 .vim/after/plugin/*.local.vim
-.config/vifm/*.local
+.config/vifm/*.local.vifm
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
 .config/vifm/scripts
