@@ -1,0 +1,11 @@
+# vim: ft=cfg
+
+[global]
+  font = Monospace 10
+  frame_width = 1
+  corner_radius = 3
+  background = "#151515"
+  foreground = "#eeeeee"
+  frame_color = "#333333"
+
+  mouse_right_click = context
