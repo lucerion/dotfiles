@@ -24,5 +24,4 @@ command ungz tar -zxf %f
 " aliases
 command man :apropos %a
 
-
 source ~/.config/vifm/commands.local.vifm

@@ -62,7 +62,6 @@ alias public_ip='curl icanhazip.com'
 
 alias ssh='TERM=xterm ssh'
 
-
 alias ga='git add'
 alias gb='git branch'
 alias gbd='git branch -D'
@@ -101,7 +100,6 @@ if [ -n "$ZSH_NAME" ]; then
   compdef _git gs=git-status
   compdef _git gsh=git-stash
 fi
-
 
 alias rl='bundle exec rails'
 alias rls='bundle exec rails s'
@@ -145,7 +143,6 @@ alias rvgc='rvm gemset create'
 alias rvgd='rvm gemset delete'
 
 alias rbc='bundle exec rubocop'
-
 
 alias mdg='mix deps.get'
 alias mps='mix phoenix.server'
