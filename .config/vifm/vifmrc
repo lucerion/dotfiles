@@ -23,7 +23,6 @@ set nowrap
 set timefmt="%d.%m.%y %H:%M"
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
-
 source ~/.config/vifm/vifmrc.local.vifm
 source ~/.config/vifm/marks.vifm
 source ~/.config/vifm/filetypes.vifm
