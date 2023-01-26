@@ -235,3 +235,6 @@
 [submodule ".vim/pack/deps/start/vifm.vim"]
 	path = .vim/pack/deps/start/vifm.vim
 	url = https://github.com/vifm/vifm.vim
+[submodule ".vim/pack/common/start/copilot.vim"]
+	path = .vim/pack/common/opt/copilot.vim
+	url = https://github.com/github/copilot.vim.git
