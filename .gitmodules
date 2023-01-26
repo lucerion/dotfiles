@@ -95,7 +95,7 @@
 	path = .vim/pack/common/start/dsf.vim
 	url = https://github.com/AndrewRadev/dsf.vim
 [submodule ".vim/pack/common/start/sideways.vim"]
-	path = .vim/pack/common/start/sideways.vim
+	path = .vim/pack/common/opt/sideways.vim
 	url = https://github.com/AndrewRadev/sideways.vim
 [submodule ".vim/pack/common/start/deleft.vim"]
 	path = .vim/pack/common/start/deleft.vim
@@ -110,7 +110,7 @@
 	path = .vim/pack/common/start/vim-executor
 	url = https://github.com/lucerion/vim-executor
 [submodule ".vim/pack/common/start/vim-reload"]
-	path = .vim/pack/common/start/vim-reload
+	path = .vim/pack/common/opt/vim-reload
 	url = https://github.com/lucerion/vim-reload
 [submodule ".vim/pack/common/start/vim-husk"]
 	path = .vim/pack/common/start/vim-husk
@@ -161,10 +161,10 @@
 	path = .vim/pack/git/start/committia.vim
 	url = https://github.com/rhysd/committia.vim
 [submodule ".vim/pack/git/start/auto-git-diff"]
-	path = .vim/pack/git/start/auto-git-diff
+	path = .vim/pack/git/opt/auto-git-diff
 	url = https://github.com/hotwatermorning/auto-git-diff
 [submodule ".vim/pack/git/start/diffconflicts"]
-	path = .vim/pack/git/start/diffconflicts
+	path = .vim/pack/git/opt/diffconflicts
 	url = https://github.com/whiteinge/diffconflicts
 [submodule ".vim/pack/git/start/gv.vim"]
 	path = .vim/pack/git/start/gv.vim
