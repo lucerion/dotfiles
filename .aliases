@@ -164,4 +164,19 @@ alias mre='mix ecto.drop && mix ecto.create && mix ecto.migrate'
 alias iem='iex -S mix'
 alias ies='iex phoenix.server'
 
+alias dkil='docker image ls'
+alias dkcl='docker container ls'
+alias dkex='docker exec -it'
+alias dkrn='docker run -it'
+alias dkpr='docker system prune -a --volumes'
+
+alias dcup='docker-compose up'
+alias dcdn='docker-compose down'
+alias dcrs='docker-compose restart'
+alias dcbd='docker-compose build'
+alias dcrn='docker-compose run'
+alias dcex='docker-compose exec'
+alias dcil='docker-compose images'
+alias dccl='docker-compose ps'
+
 local=~/.aliases.local; [ -f $local ] && . $local
