@@ -19,6 +19,7 @@ bindsym $super+Shift+Return exec $term; move left
 
 
 # fonts
+
 set $font_monospace pango:Monospace 10
 set $font_terminus  -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 set $font_fixed     -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
@@ -26,12 +27,14 @@ set $font_fixed     -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
 font $font_monospace
 
 # colors                border  backgr  text
+
 client.focused          #333333 #151515 #eeeeee
 client.focused_inactive #222222 #111111 #dddddd
 client.unfocused        #111111 #000000 #888888
 client.urgent           #000000 #900000 #ffffff
 
 # borders
+
 bindsym $super+b border toggle
 
 
@@ -91,6 +94,11 @@ floating_modifier $alt
 
 tiling_drag modifier
 
+# scratchpad
+
+bindsym $super+minus move scratchpad
+bindsym $super+plus scratchpad show; floating toggle
+
 
 ## workspaces
 
@@ -131,6 +139,10 @@ bindsym $super+Shift+parenright  move workspace 10
 workspace_auto_back_and_forth yes
 
 
+## modes
+
+# resize
+
 mode "resize" {
   bindsym k             resize grow   up    10px
   bindsym l             resize grow   down  10px
@@ -156,6 +168,8 @@ mode "resize" {
 }
 bindsym $super+r mode "resize"
 
+# launch
+
 mode "launch" {
   bindsym b exec $browser;      mode "default"
   bindsym e exec $editor;       mode "default"
@@ -166,6 +180,8 @@ mode "launch" {
 }
 bindsym $alt+e mode "launch"
 
+
+## status and workspace bar
 
 bar {
   status_command i3status
@@ -184,13 +200,17 @@ bar {
 ## key bindings
 
 # dmenu
+
 set $dmenu_options -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
 
 bindsym $alt+m exec dmenu_run $dmenu_options
 bindsym $alt+c exec $term -e `dmenu_path | dmenu -p 'term' $dmenu_options`
 
+# screenshot
+
 bindsym           Print       exec scrot
 bindsym --release Shift+Print exec scrot -s
+
 
 ## startup
 
@@ -198,5 +218,6 @@ exec_always --no-startup-id dunst
 
 exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo,by' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
+
 
 include ./config.local
