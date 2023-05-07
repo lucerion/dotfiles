@@ -1,6 +1,6 @@
 .config/i3/config.local
 .vim/view
-.vim/after/plugin/*.local.vim
+.vim/pack/common/start/vim-config-local
 .config/vifm/*.local.vifm
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
