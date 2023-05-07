@@ -13,6 +13,7 @@ command rsync !!rsync %a
 command config :vim $MYVIFMRC
 
 command extract 7z x %f
+command extractToDir 7z x %f -o %a
 command szip 7z a -mx=9 %f.7z %f
 command zip 7z a -mx=9 -tzip %f.zip %f
 command tar tar -cf %f.tar %f
