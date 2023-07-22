@@ -10,11 +10,8 @@
 [submodule ".vim/pack/common/start/vim-restore-cursor"]
 	path = .vim/pack/common/start/vim-restore-cursor
 	url = https://github.com/pbrisbin/vim-restore-cursor
-[submodule ".vim/pack/common/start/vimfiler.vim"]
-	path = .vim/pack/common/start/vimfiler.vim
-	url = https://github.com/Shougo/vimfiler.vim
 [submodule ".vim/pack/common/start/unite.vim"]
-	path = .vim/pack/common/start/unite.vim
+	path = .vim/pack/deps/start/unite.vim
 	url = https://github.com/Shougo/unite.vim
 [submodule ".vim/pack/common/start/ctrlp.vim"]
 	path = .vim/pack/common/start/ctrlp.vim
@@ -235,3 +232,6 @@
 [submodule ".vim/pack/common/start/copilot.vim"]
 	path = .vim/pack/common/opt/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule ".vim/pack/common/start/vifm.vim"]
+	path = .vim/pack/common/start/vifm.vim
+	url = https://github.com/vifm/vifm.vim
