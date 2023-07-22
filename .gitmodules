@@ -10,12 +10,6 @@
 [submodule ".vim/pack/common/start/vim-restore-cursor"]
 	path = .vim/pack/common/start/vim-restore-cursor
 	url = https://github.com/pbrisbin/vim-restore-cursor
-[submodule ".vim/pack/common/start/unite.vim"]
-	path = .vim/pack/deps/start/unite.vim
-	url = https://github.com/Shougo/unite.vim
-[submodule ".vim/pack/common/start/ctrlp.vim"]
-	path = .vim/pack/common/start/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule ".vim/pack/common/start/far.vim"]
 	path = .vim/pack/common/start/far.vim
 	url = https://github.com/brooth/far.vim
@@ -127,12 +121,6 @@
 [submodule ".vim/pack/common/opt/vimfiler-prompt"]
 	path = .vim/pack/common/opt/vimfiler-prompt
 	url = https://github.com/romgrk/vimfiler-prompt
-[submodule ".vim/pack/common/opt/neossh.vim"]
-	path = .vim/pack/common/opt/neossh.vim
-	url = https://github.com/Shougo/neossh.vim
-[submodule ".vim/pack/common/opt/vim-ags"]
-	path = .vim/pack/common/opt/vim-ags
-	url = https://github.com/gabesoft/vim-ags
 [submodule ".vim/pack/common/opt/tagbar"]
 	path = .vim/pack/common/opt/tagbar
 	url = https://github.com/majutsushi/tagbar
@@ -163,9 +151,6 @@
 [submodule ".vim/pack/git/start/diffconflicts"]
 	path = .vim/pack/git/opt/diffconflicts
 	url = https://github.com/whiteinge/diffconflicts
-[submodule ".vim/pack/git/start/gv.vim"]
-	path = .vim/pack/git/start/gv.vim
-	url = https://github.com/junegunn/gv.vim
 [submodule ".vim/pack/html/start/emmet-vim"]
 	path = .vim/pack/html/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim
@@ -196,12 +181,6 @@
 [submodule ".vim/pack/ruby/opt/vim-rake"]
 	path = .vim/pack/ruby/start/vim-rake
 	url = https://github.com/tpope/vim-rake
-[submodule ".vim/pack/deps/start/vimproc.vim"]
-	path = .vim/pack/deps/start/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim
-[submodule ".vim/pack/deps/start/ctrlp-py-matcher"]
-	path = .vim/pack/deps/start/ctrlp-py-matcher
-	url = https://github.com/FelikZ/ctrlp-py-matcher
 [submodule ".vim/pack/deps/start/vim-snippets"]
 	path = .vim/pack/deps/start/vim-snippets
 	url = https://github.com/honza/vim-snippets
@@ -235,3 +214,9 @@
 [submodule ".vim/pack/common/start/vifm.vim"]
 	path = .vim/pack/common/start/vifm.vim
 	url = https://github.com/vifm/vifm.vim
+[submodule ".vim/pack/common/start/fzf"]
+	path = .vim/pack/common/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule ".vim/pack/common/start/fzf.vim"]
+	path = .vim/pack/common/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
