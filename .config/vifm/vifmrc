@@ -13,6 +13,7 @@ set sortnumbers
 set scrolloff=4
 windo set number
 windo set numberwidth=1
+windo vsplit
 
 set smartcase
 set nohlsearch
