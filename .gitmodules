@@ -170,16 +170,16 @@
 	path = .vim/pack/ruby/start/vim-i18n-rails
 	url = https://github.com/lucerion/vim-i18n-rails
 [submodule ".vim/pack/ruby/start/vim-bundler"]
-	path = .vim/pack/ruby/start/vim-bundler
+	path = .vim/pack/ruby/opt/vim-bundler
 	url = https://github.com/tpope/vim-bundler
 [submodule ".vim/pack/ruby/start/vim-rubygems"]
-	path = .vim/pack/ruby/start/vim-rubygems
+	path = .vim/pack/ruby/opt/vim-rubygems
 	url = https://github.com/lucerion/vim-rubygems
 [submodule ".vim/pack/ruby/opt/vim-rvm"]
 	path = .vim/pack/ruby/opt/vim-rvm
 	url = https://github.com/tpope/vim-rvm
 [submodule ".vim/pack/ruby/opt/vim-rake"]
-	path = .vim/pack/ruby/start/vim-rake
+	path = .vim/pack/ruby/opt/vim-rake
 	url = https://github.com/tpope/vim-rake
 [submodule ".vim/pack/deps/start/vim-snippets"]
 	path = .vim/pack/deps/start/vim-snippets
