@@ -1,6 +1,3 @@
-[submodule ".vim/pack/common/start/vim-config"]
-	path = .vim/pack/common/start/vim-config
-	url = https://github.com/lucerion/vim-config
 [submodule ".vim/pack/common/start/srcery-vim"]
 	path = .vim/pack/common/start/srcery-vim
 	url = https://github.com/srcery-colors/srcery-vim
@@ -220,3 +217,6 @@
 [submodule ".vim/pack/common/start/fzf.vim"]
 	path = .vim/pack/common/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule ".vim/pack/common/start/lucerion-vim-config"]
+	path = .vim/pack/common/start/lucerion-vim-config
+	url = https://github.com/lucerion/lucerion-vim-config
