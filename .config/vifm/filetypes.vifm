@@ -6,8 +6,8 @@ filetype *.txt vim %f
 
 " img
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico,*.nef gpicview %c &
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico identify -verbose %f
 filextype *.svg sensible-browser %f &
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.ico identify -verbose %f
 
 " audio
 filextype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f &
@@ -21,6 +21,7 @@ filextype *.m3u vlc %f &
 
 " office
 filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd libreoffice %f &
+fileviewer *.doc,*.docx antiword %f
 
 " pdf
 filextype *.pdf qpdfview %f &,evince %f &
