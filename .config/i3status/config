@@ -33,7 +33,7 @@ read_file brightness {
 volume master {
         format = "Vol: %volume"
         format_muted = "Vol: muted"
-        device = "pulse:1"
+        device = "default"
         color_degraded = "#888888"
 }
 
