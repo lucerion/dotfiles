@@ -201,21 +201,18 @@ bar {
 
 # dmenu
 
-set $dmenu_options -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
-
-bindsym $alt+m exec $term -e `dmenu_path | dmenu $dmenu_options`
+set $dmenu_command $term -e `dmenu_path | dmenu -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"`
+bindsym $alt+m exec $dmenu_command
 
 # screenshot
 
-bindsym           Print       exec scrot
-bindsym --release Shift+Print exec scrot -s
+bindsym Print exec scrot
+bindsym --release $super+Print exec scrot -s
 
 
 ## startup
 
 exec_always --no-startup-id dunst
-
-exec xset -b
 exec setxkbmap -layout 'us,ru:2+typo,by' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
 
 
