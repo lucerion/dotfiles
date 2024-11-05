@@ -162,6 +162,7 @@ alias mrn='mix run --no-halt'
 alias mse='mix ecto.create && mix ecto.migrate'
 alias mre='mix ecto.drop && mix ecto.create && mix ecto.migrate'
 alias iem='iex -S mix'
+alias mce='mix compile.elixir'
 
 alias dkil='docker image ls'
 alias dkcl='docker container ls'
