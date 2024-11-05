@@ -103,9 +103,6 @@
 [submodule ".vim/pack/common/start/vim-husk"]
 	path = .vim/pack/common/start/vim-husk
 	url = https://github.com/vim-utils/vim-husk
-[submodule ".vim/pack/common/start/vim-file-bookmark"]
-	path = .vim/pack/common/start/vim-file-bookmark
-	url = https://github.com/lucerion/vim-file-bookmark
 [submodule ".vim/pack/common/start/vim-split-window-mods"]
 	path = .vim/pack/common/start/vim-split-window-mods
 	url = https://github.com/lucerion/vim-split-window-mods
