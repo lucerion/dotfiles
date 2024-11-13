@@ -201,8 +201,8 @@ bar {
 
 # dmenu
 
-set $dmenu_command $term -e `dmenu_path | dmenu -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"`
-bindsym $alt+m exec $dmenu_command
+set $dmenu_options -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
+bindsym $alt+m exec $term -e `dmenu_path | dmenu $dmenu_options`
 
 # screenshot
 
