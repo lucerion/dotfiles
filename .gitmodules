@@ -13,9 +13,6 @@
 [submodule ".vim/pack/common/start/traces.vim"]
 	path = .vim/pack/common/start/traces.vim
 	url = https://github.com/markonm/traces.vim
-[submodule ".vim/pack/common/start/vim-yacg"]
-	path = .vim/pack/common/start/vim-yacg
-	url = https://github.com/lucerion/vim-yacg
 [submodule ".vim/pack/common/start/ale"]
 	path = .vim/pack/common/start/ale
 	url = https://github.com/w0rp/ale
@@ -97,9 +94,6 @@
 [submodule ".vim/pack/common/start/vim-executor"]
 	path = .vim/pack/common/start/vim-executor
 	url = https://github.com/lucerion/vim-executor
-[submodule ".vim/pack/common/start/vim-reload"]
-	path = .vim/pack/common/opt/vim-reload
-	url = https://github.com/lucerion/vim-reload
 [submodule ".vim/pack/common/start/vim-husk"]
 	path = .vim/pack/common/start/vim-husk
 	url = https://github.com/vim-utils/vim-husk
@@ -109,12 +103,6 @@
 [submodule ".vim/pack/common/start/vim-case-converter"]
 	path = .vim/pack/common/start/vim-case-converter
 	url = https://github.com/lucerion/vim-case-converter
-[submodule ".vim/pack/common/start/vim-project-settings"]
-	path = .vim/pack/common/start/vim-project-settings
-	url = https://github.com/lucerion/vim-project-settings
-[submodule ".vim/pack/common/opt/vimfiler-prompt"]
-	path = .vim/pack/common/opt/vimfiler-prompt
-	url = https://github.com/romgrk/vimfiler-prompt
 [submodule ".vim/pack/common/opt/tagbar"]
 	path = .vim/pack/common/opt/tagbar
 	url = https://github.com/majutsushi/tagbar
