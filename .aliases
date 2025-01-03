@@ -58,7 +58,7 @@ alias ts='tig status'
 
 alias ports='netstat -tunlp'
 
-alias public_ip='curl icanhazip.com'
+alias my_ip='curl icanhazip.com'
 
 alias ssh='TERM=xterm ssh'
 
