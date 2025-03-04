@@ -1,0 +1,14 @@
+[user]
+  name =
+  email =
+  editor = vim
+[diff]
+  tool = vimdiff
+[color]
+  ui = true
+[push]
+  default = current
+[pull]
+  default = current
+[include]
+  path = .gitconfig.local
