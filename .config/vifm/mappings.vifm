@@ -15,9 +15,9 @@ nmap ov :term -e vim &<cr>
 nmap cv :term -e vim %f &<cr>
 
 " path
-nmap yp :!echo %c:p | xclip<cr>
+nmap yp :!echo %c:p | xclip -selection clipboard<cr>
 " name
-nmap yn :!echo %c | xclip<cr>
+nmap yn :!echo %c | xclip -selection clipboard<cr>
 
 nmap nt :tabnew<cr>
 nmap <Space>tl :tabnext<cr>
