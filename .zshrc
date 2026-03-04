@@ -29,7 +29,6 @@ SAVEHIST=4096
 bindkey -e
 bindkey "^X^E" edit-command-line
 
-export TERM='rxvt'
 export EDITOR='vim'
 export VISUAL='vim'
 
@@ -38,6 +37,15 @@ case $TERM in
     precmd () { print -Pn "\e]0;%n@%m: %~\a" }
   ;;
 esac
+
+# titles in tmux
+function set_tmux_window_title {
+  if [[ -n "$TMUX" ]]; then
+    print -Pn "\ek%~\e\\"
+  fi
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd set_tmux_window_title
 
 [ -f ~/.shrc.local ] && . ~/.shrc.local
 [ -f ~/.aliases ] && . ~/.aliases
