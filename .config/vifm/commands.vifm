@@ -6,7 +6,7 @@ command free free -ht %m
 
 command diff vimdiff %f %F
 command run !! ./%f
-command term !i3-sensible-terminal %a
+command term !i3-sensible-terminal -e tmux %a
 command vim !vim %a
 command rsync !!rsync %a
 
