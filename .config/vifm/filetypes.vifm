@@ -24,16 +24,16 @@ fileviewer *.doc antiword %f
 fileviewer *.docx pandoc %f -t plain
 fileviewer *.xlsx xlsx2csv %f | column --separator=, -t
 fileviewer *.xls xls2csv %f | column --separator=, -t
+filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd libreoffice %f &
 filetype *.xlsx xlsx2csv %f | vim -
 filetype *.xls xls2csv %f | vim -
 filetype *.doc antiword %f | vim -
 filetype *.docx pandoc %f -t plain | vim -
-filextype *.doc,*.docx,*.xls,*.xlsx,*.rtf,*.ppt,*.pptx,*.pps,*.odt,*.ott,*.sxw,*.stw,*.vsd libreoffice %f &
 
 " pdf
 fileviewer *.pdf pdftotext %f -
-filetype *.pdf pdftotext %f - | vim -
 filextype *.pdf qpdfview %f &
+filetype *.pdf pdftotext %f - | vim -
 
 " djvu
 filextype *.djvu qpdfview %f &,djview %f &
@@ -42,16 +42,16 @@ filextype *.djvu qpdfview %f &,djview %f &
 filextype *.fb2,*.mobi,*.epub,*.chm fbreader %f &
 
 " web
-filetype *.html,*.htm vim %f
 filextype *.html,*.htm sensible-browser %f &
+filetype *.html,*.htm vim %f
 
 " archives
-filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.7z,*.rar file-roller %c &
-filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.tgz,*.tar.gz,*.tbz2,*.tar.bz2 tar -tjf %c
 fileviewer *.gz gzip -l %c
 fileviewer *.zip,*.7z	7z l %c
 fileviewer *.rar rar l %c
+filextype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.jar,*.war,*.ear,*.7z,*.rar file-roller %c &
+filetype *.tgz,*.tar.gz,*.tbz2,*.tar.bz2,*.gz,*.gzip,*.zip,*.iso FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
 
 " wine
 filextype *.exe wine %f &
