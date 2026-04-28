@@ -11,7 +11,10 @@ filextype *.svg,*.webp sensible-browser %f &
 
 " audio
 fileviewer *.mp3,*.wav,*.flac,*.ogg,*.m4a mp3info %f
-filextype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f &
+" filextype *.mp3,*.wav,*.flac,*.ogg,*.m4a vlc %f &
+" filextype *.mp3,*.wav,*.flac,*.ogg mocp %f
+filextype *.mp3 mpg123 %f
+filextype *.wav,*.flac,*.ogg play %f
 
 " video
 filextype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.mov vlc %f &
