@@ -131,6 +131,7 @@ alias rsp='bundle exec rspec'
 alias gel='gem list'
 alias gei='gem install'
 alias geu='gem uninstall'
+alias gec='gem uninstall -aIx'
 
 alias rvl='rvm list'
 alias rvu='rvm use'
