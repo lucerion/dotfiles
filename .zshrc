@@ -22,6 +22,9 @@ zle -N edit-command-line
 export PROMPT="%~> "
 export RPROMPT="%n@%M"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+export IEX_HOME="$XDG_CONFIG_HOME/iex"
+
 HISTFILE=~/.zsh_history
 HISTSIZE=4096
 SAVEHIST=4096
@@ -47,5 +50,6 @@ function set_tmux_window_title {
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd set_tmux_window_title
 
-[ -f ~/.shrc.local ] && . ~/.shrc.local
-[ -f ~/.aliases ] && . ~/.aliases
+[ -f "$XDG_CONFIG_HOME/zsh/shrc.local" ] && . "$XDG_CONFIG_HOME/zsh/shrc.local"
+[ -f "$XDG_CONFIG_HOME/zsh/aliases" ] && . "$XDG_CONFIG_HOME/zsh/aliases"
+[ -f "$XDG_CONFIG_HOME/zsh/aliases.local" ] && . "$XDG_CONFIG_HOME/zsh/aliases.local"

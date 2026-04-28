@@ -179,5 +179,3 @@ alias dcrn='docker compose run'
 alias dcex='docker compose exec'
 alias dcil='docker compose images'
 alias dccl='docker compose ps'
-
-local=~/.aliases.local; [ -f $local ] && . $local

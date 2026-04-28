@@ -1,10 +1,12 @@
-.config/i3/config.local
-.vim/view
-.vim/pack/local
+.config/git/*.local
+.config/i3/*.local
 .config/vifm/*.local.vifm
 .config/vifm/vifminfo*
 .config/vifm/vifm-help.txt
 .config/vifm/scripts
 .config/vifm/trash
+.config/zsh/*.local
+.vim/view
+.vim/pack/local
 .Xresources.local
 *~
