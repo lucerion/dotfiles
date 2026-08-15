@@ -197,22 +197,4 @@ bar {
 }
 
 
-## key bindings
-
-# dmenu
-
-set $dmenu_options -i -nb "#111" -nf "#fff" -sb "#222" -fn "terminus-12"
-# bindsym $super+m exec $term -e `dmenu_path | dmenu $dmenu_options`
-
-# screenshot
-
-bindsym Print exec --no-startup-id scrot
-bindsym --release $super+Print exec --no-startup-id scrot -s
-
-
-## startup
-
-exec --no-startup-id dunst
-# exec_always --no-startup-id setxkbmap -layout 'us,ru:2+typo,by' -option 'grp:caps_toggle' -option 'lv3:ralt_switch'
-
 include ./config.local
